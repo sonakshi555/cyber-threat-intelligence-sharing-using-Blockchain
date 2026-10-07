@@ -3,7 +3,20 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": {"dev": "vite", "build": "vite build"},
-  "dependencies": {"@vitejs/plugin-react": "latest", "vite": "latest", "react": "latest", "react-dom": "latest", "lucide-react": "latest", "tailwindcss": "latest", "@tailwindcss/vite": "latest"},
-  "devDependencies": {}
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "latest",
+    "@vercel/blob": "^2.8.0",
+    "@vitejs/plugin-react": "latest",
+    "firebase": "^12.19.0",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "recharts": "^3.10.1",
+    "tailwindcss": "latest",
+    "vite": "latest"
+  }
 }

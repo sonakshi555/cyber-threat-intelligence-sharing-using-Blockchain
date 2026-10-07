@@ -23,6 +23,7 @@ class Web3Client:
     def __init__(self):
         self.rpc_url = os.getenv("RPC_URL", "http://127.0.0.1:8545")
         self.address = os.getenv("CONTRACT_ADDRESS", "")
+        self.private_key = os.getenv("BLOCKCHAIN_PRIVATE_KEY", "")
         self.web3 = Web3(Web3.HTTPProvider(self.rpc_url, request_kwargs={"timeout": 2}))
         self._fallback_records: list[dict[str, Any]] = []
 
@@ -34,9 +35,25 @@ class Web3Client:
         try:
             if not self.address or not self.web3.is_connected():
                 raise ConnectionError("Configured RPC or contract is unavailable")
-            account = self.web3.eth.accounts[0]
+            if self.private_key:
+                account = self.web3.eth.account.from_key(self.private_key)
+                sender = account.address
+            else:
+                sender = self.web3.eth.accounts[0]
             contract = self.web3.eth.contract(address=Web3.to_checksum_address(self.address), abi=ABI)
-            tx_hash = contract.functions.anchorReport(org_name, attack_type, self._bytes32(report_hash), self._bytes32(sensitive_hash), record_count).transact({"from": account})
+            function = contract.functions.anchorReport(org_name, attack_type, self._bytes32(report_hash), self._bytes32(sensitive_hash), record_count)
+            if self.private_key:
+                transaction = function.build_transaction({
+                    "from": sender,
+                    "nonce": self.web3.eth.get_transaction_count(sender),
+                    "chainId": self.web3.eth.chain_id,
+                    "gas": 500000,
+                    "gasPrice": self.web3.eth.gas_price,
+                })
+                signed = self.web3.eth.account.sign_transaction(transaction, self.private_key)
+                tx_hash = self.web3.eth.send_raw_transaction(signed.raw_transaction)
+            else:
+                tx_hash = function.transact({"from": sender})
             receipt = self.web3.eth.wait_for_transaction_receipt(tx_hash, timeout=30)
             return {"mode": "on-chain", "tx_hash": receipt.transactionHash.hex(), "block_number": receipt.blockNumber, "record_id": None}
         except Exception:
