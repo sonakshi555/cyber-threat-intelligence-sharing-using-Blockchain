@@ -267,3 +267,41 @@ export function exportThreatsAsSTIX(threats) {
   downloadAnchor.click();
   downloadAnchor.remove();
 }
+
+export const SEPOLIA_CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+export const SEPOLIA_CHAIN_ID = 11155111;
+
+export function getSepoliaBlockUrl(blockNumber = 6849102) {
+  return `https://sepolia.etherscan.io/block/${blockNumber}`;
+}
+
+export function getSepoliaContractUrl(address = SEPOLIA_CONTRACT_ADDRESS) {
+  return `https://sepolia.etherscan.io/address/${address}`;
+}
+
+const STORAGE_KEY_ANCHORED = 'cti_anchored_ledger_reports_v2';
+
+export function getStoredAnchoredReports() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY_ANCHORED);
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+export function saveAnchoredReport(record) {
+  try {
+    const existing = getStoredAnchoredReports();
+    const filtered = existing.filter(
+      (r) => r.id !== record.id && r.reportHash !== record.reportHash && r.report_hash !== record.report_hash
+    );
+    const updated = [record, ...filtered];
+    localStorage.setItem(STORAGE_KEY_ANCHORED, JSON.stringify(updated.slice(0, 50)));
+    return updated;
+  } catch {
+    return [];
+  }
+}

@@ -107,9 +107,34 @@ class Web3Client:
                 "top_indicators": ["syn_flood", "credential_leak", "lateral_smb", "c2_beacon"]
             }
         ]
+        self._load_fallback_from_disk()
         self._ledger_cache: list[dict[str, Any]] | None = None
         self._ledger_cache_time: float = 0.0
         self._cache_ttl_seconds: float = 15.0
+
+    def _fallback_file_path(self) -> str:
+        import tempfile
+        return os.path.join(tempfile.gettempdir(), "cti_blockchain_fallback.json")
+
+    def _save_fallback_to_disk(self) -> None:
+        try:
+            import json
+            with open(self._fallback_file_path(), "w") as f:
+                json.dump(self._fallback_records, f, indent=2)
+        except Exception:
+            pass
+
+    def _load_fallback_from_disk(self) -> None:
+        try:
+            import json
+            path = self._fallback_file_path()
+            if os.path.exists(path):
+                with open(path, "r") as f:
+                    data = json.load(f)
+                    if isinstance(data, list) and len(data) > 0:
+                        self._fallback_records = data
+        except Exception:
+            pass
 
     @staticmethod
     def _bytes32(value: str) -> bytes:
@@ -174,6 +199,7 @@ class Web3Client:
                 "top_indicators": top_indicators or ["volumetric_spike", "anomalous_payload", "session_drift"]
             }
             self._fallback_records.insert(0, new_record)
+            self._save_fallback_to_disk()
             self._invalidate_cache()
             return {"mode": "simulated", "tx_hash": tx_hex, "block_number": block_number, "record_id": record_id}
 

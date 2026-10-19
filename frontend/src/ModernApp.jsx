@@ -32,7 +32,7 @@ import {
 import { auth, firebaseConfigured } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { apiFetch } from './api';
-import { generateMitigationForAttack } from './threatData';
+import { generateMitigationForAttack, getStoredAnchoredReports, saveAnchoredReport } from './threatData';
 import {
   getStoredSession,
   loginWithCredentials,
@@ -704,15 +704,26 @@ export default function ModernApp() {
       const response = await apiFetch('/api/blockchain/ledger', opts);
       if (response.ok) {
         const payload = await response.json();
-        setRecords(payload.records || []);
+        const serverRecords = payload.records || [];
+        const localApproved = getStoredAnchoredReports();
+        const localHashes = new Set(localApproved.map((r) => r.reportHash || r.report_hash));
+        const merged = [
+          ...localApproved,
+          ...serverRecords.filter((r) => !localHashes.has(r.reportHash || r.report_hash)),
+        ];
+        setRecords(merged);
       }
     } catch {
-      setRecords([]);
+      setRecords(getStoredAnchoredReports());
     }
   };
 
   // Restore stored session on mount (instant zero-latency startup)
   useEffect(() => {
+    const localApproved = getStoredAnchoredReports();
+    if (localApproved.length > 0) {
+      setRecords(localApproved);
+    }
     const stored = getStoredSession();
     if (stored) {
       setCurrentUser(stored);
@@ -771,12 +782,16 @@ export default function ModernApp() {
   // Handle optimistic ledger update from Admin approval
   const handleLedgerUpdated = (newRecord) => {
     if (newRecord) {
+      saveAnchoredReport(newRecord);
       setRecords((prev) => [
         newRecord,
-        ...prev.filter((r) => r.reportHash !== newRecord.reportHash && r.id !== newRecord.id),
+        ...prev.filter(
+          (r) =>
+            (r.reportHash || r.report_hash) !== (newRecord.reportHash || newRecord.report_hash) &&
+            r.id !== newRecord.id
+        ),
       ]);
     }
-    refresh({ skipCache: true });
   };
 
   // Role-specific navigation pages:

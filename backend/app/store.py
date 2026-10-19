@@ -12,7 +12,13 @@ except ImportError:
     firebase_admin = None
     firestore = None
 
+import json
+import tempfile
+from pathlib import Path
+
 # In-memory store fallback when Firestore credentials are unavailable
+_PERSISTENCE_FILE = Path(tempfile.gettempdir()) / "cti_reports_store.json"
+
 _memory_reports: dict[str, dict[str, Any]] = {
     "rep-pending-01": {
         "id": "rep-pending-01",
@@ -49,6 +55,23 @@ _memory_reports: dict[str, dict[str, Any]] = {
 }
 _memory_audit: list[dict[str, Any]] = []
 
+def _save_store_to_disk() -> None:
+    try:
+        _PERSISTENCE_FILE.write_text(json.dumps(_memory_reports, indent=2))
+    except Exception:
+        pass
+
+def _load_store_from_disk() -> None:
+    try:
+        if _PERSISTENCE_FILE.exists():
+            data = json.loads(_PERSISTENCE_FILE.read_text())
+            if isinstance(data, dict):
+                _memory_reports.update(data)
+    except Exception:
+        pass
+
+_load_store_from_disk()
+
 
 def is_firestore_available() -> bool:
     try:
@@ -74,6 +97,7 @@ class MemoryDocRef:
     def update(self, fields: dict[str, Any]) -> None:
         if self.id in _memory_reports:
             _memory_reports[self.id].update(fields)
+            _save_store_to_disk()
 
 
 def create_report(data: dict[str, Any]) -> str:
@@ -93,6 +117,7 @@ def create_report(data: dict[str, Any]) -> str:
     else:
         new_id = f"rep_{uuid.uuid4().hex[:12]}"
         _memory_reports[new_id] = {"id": new_id, **report_data}
+        _save_store_to_disk()
         return new_id
 
 
