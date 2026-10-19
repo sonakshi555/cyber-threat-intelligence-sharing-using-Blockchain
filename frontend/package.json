@@ -18,5 +18,8 @@
     "recharts": "^3.10.1",
     "tailwindcss": "latest",
     "vite": "latest"
+  },
+  "devDependencies": {
+    "vercel": "^63.1.0"
   }
 }
