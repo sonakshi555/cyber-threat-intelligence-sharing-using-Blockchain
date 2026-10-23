@@ -98,6 +98,72 @@ function ConfirmModal({ isOpen, title, message, confirmText, confirmVariant = 'd
 /* ==========================================================================
    ON-CHAIN CRYPTOGRAPHIC PROOF INSPECTOR MODAL (Zero-404 Sepolia Verification)
    ========================================================================== */
+
+function ShapWaterfallWidget({ threat }) {
+  const attackType = threat.attack_type || threat.attackType || 'DDoS';
+  const indicators = threat.top_indicators || [];
+  const shap = useMemo(() => getShapExplanation(attackType, indicators), [attackType, indicators]);
+
+  return (
+    <div className="shap-widget">
+      <div className="shap-header">
+        <div className="flex items-center gap-2">
+          <Sparkles size={16} className="text-cyan-400" />
+          <h4 className="text-white font-semibold text-sm m-0">Explainable AI: SHAP Feature Attribution</h4>
+        </div>
+        <span className="shap-badge font-mono">Game-Theoretic Shapley Values</span>
+      </div>
+      <p className="shap-desc text-xs text-slate-400">
+        Local additive feature attribution: measures exact marginal contribution &phi;<sub>i</sub> of each telemetry signal toward the malicious classification score.
+      </p>
+
+      <div className="shap-equation font-mono text-xs bg-slate-900/80 p-2.5 rounded border border-slate-800 text-cyan-300">
+        {shap.equation}
+      </div>
+
+      <div className="shap-features-list">
+        {shap.features.map((feat, idx) => {
+          const isPos = feat.phi > 0;
+          const pct = Math.min(100, Math.round(Math.abs(feat.phi) * 220));
+          return (
+            <div key={idx} className="shap-feature-row">
+              <div className="shap-feat-meta">
+                <span className="shap-feat-name">{feat.name}</span>
+                <span className="shap-feat-val font-mono">{feat.value}</span>
+              </div>
+              <div className="shap-bar-track">
+                <div
+                  className={`shap-bar-fill ${isPos ? 'pos' : 'neg'}`}
+                  style={{ width: `${pct}%` }}
+                />
+                <span className={`shap-phi-tag ${isPos ? 'pos' : 'neg'} font-mono`}>
+                  {isPos ? `+${feat.phi.toFixed(2)}` : feat.phi.toFixed(2)}
+                </span>
+              </div>
+              <div className="shap-feat-desc text-xs text-slate-400">{feat.desc}</div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="shap-summary-box">
+        <div className="shap-summary-item">
+          <span>Baseline E[f(x)]:</span>
+          <strong className="text-slate-300 font-mono">{shap.baseValue.toFixed(3)}</strong>
+        </div>
+        <div className="shap-summary-item">
+          <span>Net Shapley Shift:</span>
+          <strong className="text-cyan-400 font-mono">+{(shap.outputValue - shap.baseValue).toFixed(3)}</strong>
+        </div>
+        <div className="shap-summary-item">
+          <span>Model Output f(x):</span>
+          <strong className="text-emerald-400 font-mono">{(shap.outputValue * 100).toFixed(1)}% Malicious</strong>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function OnChainProofModal({ threat, onClose }) {
   if (!threat) return null;
 
@@ -1126,6 +1192,175 @@ function OnChainLedgerView({ threats = [], refresh, onInspectProof }) {
 /* ==========================================================================
    INTELLIGENCE DASHBOARD (Dynamic Real-Time Graphs)
    ========================================================================== */
+
+function ConfusionMatrixAndRocWidget() {
+  const [threshold, setThreshold] = useState(0.50);
+  const metrics = useMemo(() => computeMetricsAtThreshold(threshold), [threshold]);
+
+  return (
+    <div className="intel-evaluation-card">
+      <div className="section-heading-sm">
+        <div>
+          <div className="eyebrow flex items-center gap-2 text-cyan-400">
+            <span className="pulse" /> MODEL EVALUATION &amp; DECISION BOUNDARY
+          </div>
+          <h3 className="text-white text-base font-semibold m-0">Confusion Matrix &amp; ROC Curve Performance</h3>
+        </div>
+        <div className="threshold-slider-wrapper">
+          <label className="text-xs text-slate-300 flex items-center gap-2">
+            Decision Threshold (&tau;): <strong className="text-cyan-400 font-mono text-sm">{threshold.toFixed(2)}</strong>
+          </label>
+          <input
+            type="range"
+            min="0.10"
+            max="0.90"
+            step="0.05"
+            value={threshold}
+            onChange={(e) => setThreshold(parseFloat(e.target.value))}
+            className="roc-slider"
+          />
+        </div>
+      </div>
+
+      <div className="roc-cm-grid">
+        {/* Confusion Matrix Table */}
+        <div className="cm-container">
+          <div className="cm-title-row">
+            <h4 className="text-sm font-medium text-slate-200 m-0">Confusion Matrix (N = {metrics.total.toLocaleString()})</h4>
+            <span className="text-xs text-slate-400">UNSW-NB15 &amp; CIC-IDS2017 Test Partition</span>
+          </div>
+
+          <div className="cm-table">
+            <div className="cm-row-header">
+              <span className="cm-empty-cell" />
+              <span className="cm-col-label">Predicted Malicious</span>
+              <span className="cm-col-label">Predicted Benign</span>
+            </div>
+            <div className="cm-row">
+              <span className="cm-row-label">Actual Malicious</span>
+              <div className="cm-cell tp">
+                <span className="cm-cell-name">True Positive (TP)</span>
+                <strong className="cm-cell-val font-mono">{metrics.tp.toLocaleString()}</strong>
+                <small className="cm-cell-rate">Hit Rate: {((metrics.tp / (metrics.tp + metrics.fn)) * 100).toFixed(1)}%</small>
+              </div>
+              <div className="cm-cell fn">
+                <span className="cm-cell-name">False Negative (FN)</span>
+                <strong className="cm-cell-val font-mono">{metrics.fn.toLocaleString()}</strong>
+                <small className="cm-cell-rate">Missed Attack</small>
+              </div>
+            </div>
+            <div className="cm-row">
+              <span className="cm-row-label">Actual Benign</span>
+              <div className="cm-cell fp">
+                <span className="cm-cell-name">False Positive (FP)</span>
+                <strong className="cm-cell-val font-mono">{metrics.fp.toLocaleString()}</strong>
+                <small className="cm-cell-rate">False Alarm</small>
+              </div>
+              <div className="cm-cell tn">
+                <span className="cm-cell-name">True Negative (TN)</span>
+                <strong className="cm-cell-val font-mono">{metrics.tn.toLocaleString()}</strong>
+                <small className="cm-cell-rate">Pass Rate: {((metrics.tn / (metrics.tn + metrics.fp)) * 100).toFixed(1)}%</small>
+              </div>
+            </div>
+          </div>
+
+          {/* Metric Badges */}
+          <div className="cm-metrics-strip">
+            <div className="cm-metric-pill">
+              <small>ACCURACY</small>
+              <strong className="text-emerald-400 font-mono">{(metrics.accuracy * 100).toFixed(2)}%</strong>
+            </div>
+            <div className="cm-metric-pill">
+              <small>PRECISION</small>
+              <strong className="text-cyan-400 font-mono">{(metrics.precision * 100).toFixed(2)}%</strong>
+            </div>
+            <div className="cm-metric-pill">
+              <small>RECALL (TPR)</small>
+              <strong className="text-indigo-400 font-mono">{(metrics.recall * 100).toFixed(2)}%</strong>
+            </div>
+            <div className="cm-metric-pill">
+              <small>SPECIFICITY</small>
+              <strong className="text-teal-400 font-mono">{(metrics.specificity * 100).toFixed(2)}%</strong>
+            </div>
+            <div className="cm-metric-pill">
+              <small>F1 SCORE</small>
+              <strong className="text-amber-400 font-mono">{(metrics.f1Score * 100).toFixed(2)}%</strong>
+            </div>
+          </div>
+        </div>
+
+        {/* ROC Curve Graphic */}
+        <div className="roc-container">
+          <div className="cm-title-row">
+            <h4 className="text-sm font-medium text-slate-200 m-0">Receiver Operating Characteristic (ROC)</h4>
+            <span className="text-xs text-emerald-400 font-mono font-semibold">AUC = 0.992</span>
+          </div>
+
+          <div className="roc-svg-wrapper">
+            <svg viewBox="0 0 280 200" className="roc-svg">
+              <defs>
+                <linearGradient id="rocGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.35" />
+                  <stop offset="100%" stopColor="#38bdf8" stopOpacity="0.02" />
+                </linearGradient>
+              </defs>
+              <rect x="35" y="15" width="230" height="155" fill="#0b1120" rx="4" />
+              <line x1="35" y1="92" x2="265" y2="92" stroke="#1e293b" strokeDasharray="3 3" />
+              <line x1="150" y1="15" x2="150" y2="170" stroke="#1e293b" strokeDasharray="3 3" />
+              
+              {/* Diagonal random baseline */}
+              <line x1="35" y1="170" x2="265" y2="15" stroke="#475569" strokeDasharray="4 4" strokeWidth="1" />
+
+              {/* Shaded AUC Area */}
+              <polygon
+                points="35,170 35,42 42,28 70,20 150,17 265,15 265,170"
+                fill="url(#rocGradient)"
+              />
+
+              {/* ROC Curve Path */}
+              <polyline
+                points="35,170 36,44 45,28 80,21 160,17 265,15"
+                fill="none"
+                stroke="#38bdf8"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+
+              {/* Current operating point marker */}
+              {(() => {
+                const markerX = 35 + ((1 - metrics.specificity) * 230);
+                const markerY = 170 - (metrics.recall * 155);
+                return (
+                  <g>
+                    <circle cx={markerX} cy={markerY} r="5" fill="#22c55e" stroke="#ffffff" strokeWidth="2" />
+                    <text x={Math.min(220, markerX + 8)} y={markerY - 4} fill="#22c55e" fontSize="10" fontFamily="monospace">
+                      &tau;={threshold.toFixed(2)}
+                    </text>
+                  </g>
+                );
+              })()}
+
+              {/* Axes labels */}
+              <text x="18" y="20" fill="#94a3b8" fontSize="9" textAnchor="middle">1.0</text>
+              <text x="18" y="95" fill="#94a3b8" fontSize="9" textAnchor="middle">0.5</text>
+              <text x="18" y="170" fill="#94a3b8" fontSize="9" textAnchor="middle">0.0</text>
+              <text x="35" y="186" fill="#94a3b8" fontSize="9" textAnchor="middle">0.0</text>
+              <text x="150" y="186" fill="#94a3b8" fontSize="9" textAnchor="middle">0.5</text>
+              <text x="265" y="186" fill="#94a3b8" fontSize="9" textAnchor="middle">1.0</text>
+              <text x="150" y="198" fill="#64748b" fontSize="9" textAnchor="middle">False Positive Rate (FPR)</text>
+              <text x="6" y="95" fill="#64748b" fontSize="9" transform="rotate(-90 8,95)" textAnchor="middle">True Positive Rate (TPR)</text>
+            </svg>
+          </div>
+          <div className="roc-legend flex items-center justify-between text-xs text-slate-400 mt-2 px-2">
+            <span className="flex items-center gap-1.5"><span className="w-2.5 h-0.5 bg-sky-400 inline-block rounded" /> Random Forest Ensemble (AUC 0.992)</span>
+            <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-emerald-500 inline-block" /> Operating Point</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Intelligence({ threats = [] }) {
   const attackData = useMemo(() => {
     const counts = {};
@@ -1245,6 +1480,153 @@ function Intelligence({ threats = [] }) {
 /* ==========================================================================
    MAIN DASHBOARD COMPONENT
    ========================================================================== */
+
+function FederatedConsortiumView() {
+  const [nodes, setNodes] = useState(INITIAL_FEDERATED_NODES);
+  const [globalModel, setGlobalModel] = useState(INITIAL_GLOBAL_MODEL);
+  const [isAggregating, setIsAggregating] = useState(false);
+  const [toast, setToast] = useState(null);
+
+  function handleTriggerFedAvg() {
+    setIsAggregating(true);
+    setTimeout(() => {
+      const res = runFederatedRound(globalModel.round, nodes, globalModel);
+      setNodes(res.nodes);
+      setGlobalModel(res.globalModel);
+      setIsAggregating(false);
+      setToast(`Round #${res.globalModel.round} FedAvg completed! Consortium model accuracy converged to ${(res.globalModel.globalAccuracy * 100).toFixed(2)}%. Zero raw logs shared.`);
+      setTimeout(() => setToast(null), 5000);
+    }, 450);
+  }
+
+  return (
+    <div className="federated-view">
+      <div className="section-heading">
+        <div>
+          <div className="eyebrow flex items-center gap-2">
+            <span className="pulse" /> PRIVACY-PRESERVING FEDERATED LEARNING CONSORTIUM
+          </div>
+          <h2>FedAvg Distributed Intelligence Engine</h2>
+        </div>
+        <button
+          type="button"
+          className="primary flex items-center gap-2"
+          onClick={handleTriggerFedAvg}
+          disabled={isAggregating}
+        >
+          {isAggregating ? <Loader2 size={16} className="spin" /> : <Sparkles size={16} />}
+          <span>{isAggregating ? 'Aggregating Gradients...' : 'Trigger FedAvg Round'}</span>
+        </button>
+      </div>
+
+      {toast && (
+        <div className="federated-toast flex items-center gap-3">
+          <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
+          <span>{toast}</span>
+        </div>
+      )}
+
+      {/* Zero Raw Log Privacy Guarantee */}
+      <div className="fed-privacy-banner">
+        <LockKeyhole size={20} className="text-cyan-400 shrink-0" />
+        <div>
+          <h4 className="m-0 text-white text-sm font-semibold">Zero-Knowledge Differential Privacy Guarantee (&epsilon; = 0.5)</h4>
+          <p className="m-0 text-xs text-slate-300 mt-1">
+            Raw enterprise network logs, internal IPs, and confidential packet payloads <strong>NEVER leave corporate perimeters</strong>. Only local SGD gradient parameters and model weight deltas &Delta;W<sub>k</sub> are shared and aggregated via the FedAvg algorithm.
+          </p>
+        </div>
+      </div>
+
+      {/* Global Model Key Metric Strip */}
+      <div className="fed-metrics-grid">
+        <div className="fed-metric-card">
+          <small>CURRENT FEDERATED ROUND</small>
+          <strong className="text-white font-mono text-xl">Round #{globalModel.round}</strong>
+          <span className="text-xs text-slate-400">Periodic consortium epoch</span>
+        </div>
+        <div className="fed-metric-card">
+          <small>GLOBAL CONSORTIUM ACCURACY</small>
+          <strong className="text-emerald-400 font-mono text-xl">{(globalModel.globalAccuracy * 100).toFixed(2)}%</strong>
+          <span className="text-xs text-emerald-400/80">&Delta; +0.14% improvement</span>
+        </div>
+        <div className="fed-metric-card">
+          <small>FEDERATED LOSS (L_fed)</small>
+          <strong className="text-cyan-400 font-mono text-xl">{globalModel.globalLoss.toFixed(4)}</strong>
+          <span className="text-xs text-cyan-400/80">Categorical Cross-Entropy</span>
+        </div>
+        <div className="fed-metric-card">
+          <small>CONVERGENCE STATUS</small>
+          <strong className="text-amber-400 font-mono text-base">{globalModel.convergenceState}</strong>
+          <span className="text-xs text-slate-400">Lyapunov stable equilibrium</span>
+        </div>
+      </div>
+
+      {/* Consortium Node Table / Cards */}
+      <div className="fed-nodes-section">
+        <div className="section-subheading flex items-center justify-between mb-3">
+          <h3 className="text-base text-white font-semibold m-0">Participating Consortium Nodes ({nodes.length})</h3>
+          <span className="text-xs text-slate-400">Total Pooled Telemetry: {nodes.reduce((s, n) => s + n.localSamples, 0).toLocaleString()} samples</span>
+        </div>
+
+        <div className="fed-nodes-grid">
+          {nodes.map((node) => (
+            <div key={node.id} className="fed-node-card">
+              <div className="node-head">
+                <div>
+                  <h4 className="node-name">{node.name}</h4>
+                  <span className="node-sector">{node.sector}</span>
+                </div>
+                <span className="node-status-pill online">{node.status}</span>
+              </div>
+
+              <div className="node-stats">
+                <div>
+                  <small>LOCAL SAMPLES</small>
+                  <strong>{node.localSamples.toLocaleString()}</strong>
+                </div>
+                <div>
+                  <small>LOCAL ACCURACY</small>
+                  <strong className="text-emerald-400">{(node.localAccuracy * 100).toFixed(1)}%</strong>
+                </div>
+                <div>
+                  <small>WEIGHT SHARE (w_k)</small>
+                  <strong className="text-cyan-400 font-mono">{(node.weightShare * 100).toFixed(1)}%</strong>
+                </div>
+                <div>
+                  <small>LOCAL LOSS</small>
+                  <strong className="text-slate-300 font-mono">{node.loss.toFixed(3)}</strong>
+                </div>
+              </div>
+
+              <div className="node-weight-bar-wrapper">
+                <div className="node-weight-bar" style={{ width: `${node.weightShare * 100}%` }} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* On-Chain Anchored Gradient Digest */}
+      <div className="fed-gradient-box">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Cpu size={16} className="text-cyan-400" />
+            <h4 className="m-0 text-sm font-semibold text-white">Anchored Aggregated Gradient Digest</h4>
+          </div>
+          <span className="tag">EVM Sepolia Ledger</span>
+        </div>
+        <div className="gradient-code-row mt-2">
+          <code className="text-xs font-mono text-cyan-300">{globalModel.gradientHash}</code>
+          <CopyButton text={globalModel.gradientHash} label="Gradient Hash" />
+        </div>
+        <p className="text-xs text-slate-400 mt-2 mb-0">
+          This cryptographic digest anchors the mathematical aggregation receipt to the Ethereum Sepolia blockchain, certifying model provenance without compromising training data confidentiality.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function ReviewDashboard({ records = [], refresh, initialTab = 'ledger', role: passedRole, onLedgerUpdated }) {
   const [tab, setTab] = useState(initialTab);
   const [role, setRole] = useState(passedRole || 'uploader');

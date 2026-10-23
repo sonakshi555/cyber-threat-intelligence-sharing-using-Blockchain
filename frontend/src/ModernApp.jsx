@@ -28,11 +28,13 @@ import {
   EyeOff,
   UserPlus,
   LogIn,
+  Network,
+  Coins,
 } from 'lucide-react';
 import { auth, firebaseConfigured } from './firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import { apiFetch } from './api';
-import { generateMitigationForAttack, getStoredAnchoredReports, saveAnchoredReport } from './threatData';
+import { generateMitigationForAttack, getStoredAnchoredReports, saveAnchoredReport, getStoredTokenBalance, getReputationTier } from './threatData';
 import {
   getStoredSession,
   loginWithCredentials,
@@ -695,6 +697,7 @@ export default function ModernApp() {
   const [currentUser, setCurrentUser] = useState(null);
   const [view, setView] = useState('process');
   const [records, setRecords] = useState([]);
+  const [tokenBalance, setTokenBalance] = useState(150);
   const authReady = useRef(false);
 
   const role = currentUser?.role || 'uploader';
@@ -727,6 +730,7 @@ export default function ModernApp() {
     const stored = getStoredSession();
     if (stored) {
       setCurrentUser(stored);
+      setTokenBalance(getStoredTokenBalance(stored.organization || stored.name));
       if (stored.role === 'public') {
         setView('public');
       } else {
@@ -810,6 +814,8 @@ export default function ModernApp() {
         { id: 'review', label: 'Approval queue', icon: ClipboardCheck, badge: 'Admin' },
         { id: 'ledger', label: 'On-chain ledger', icon: Database },
         { id: 'intelligence', label: 'Intelligence', icon: LineChart },
+      { id: 'federated', label: 'Federated learning', icon: Network },
+        { id: 'federated', label: 'Federated learning', icon: Network },
         { id: 'public', label: 'Public dashboard', icon: Globe },
       ];
     }
@@ -907,6 +913,15 @@ export default function ModernApp() {
           </div>
 
           <div className="header-right-tools">
+            {/* Live CTIX Consortium Incentive Token Balance */}
+            <div className="ctix-wallet-chip" title="Consortium CTIX Incentive Token Balance">
+              <Coins size={14} className="text-amber-400" />
+              <strong className="text-amber-300 font-mono">{tokenBalance} CTIX</strong>
+              <span className="ctix-tier-badge" style={{ color: getReputationTier(tokenBalance).badgeColor }}>
+                · {getReputationTier(tokenBalance).tier}
+              </span>
+            </div>
+
             {/* Real Network Consensus Status */}
             <div className="node-status-pill">
               <span className="pulse" />
