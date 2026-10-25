@@ -387,11 +387,79 @@ function ModernLogin({ onLoginSuccess }) {
         </div>
       </section>
 
-      <div className="login-orbit">
-        <div className="orbit-core">
-          <Fingerprint size={40} />
-          <strong>SHA-256</strong>
-          <small>TRUST LAYER</small>
+      <div className="login-showcase">
+        <div className="telemetry-showcase-card">
+          <div className="telemetry-card-head">
+            <div className="flex items-center gap-2">
+              <span className="pulse" />
+              <span className="telemetry-eyebrow font-mono">SEPOLIA CONSENSUS · LIVE TELEMETRY</span>
+            </div>
+            <span className="telemetry-block-badge font-mono">Block #6,849,742</span>
+          </div>
+
+          <div className="telemetry-stat-row">
+            <div className="telemetry-stat-tile">
+              <span className="tile-label">CONSORTIUM NODES</span>
+              <strong className="tile-value text-cyan-400">5 Active</strong>
+              <small className="tile-sub">Fin, Tech, Health, Gov</small>
+            </div>
+            <div className="telemetry-stat-tile">
+              <span className="tile-label">AI VERIFICATION</span>
+              <strong className="tile-value text-emerald-400">98.4% Acc</strong>
+              <small className="tile-sub">SHAP Game-Theoretic</small>
+            </div>
+            <div className="telemetry-stat-tile">
+              <span className="tile-label">PRIVACY SHIELD</span>
+              <strong className="tile-value text-indigo-400">100% SHA-256</strong>
+              <small className="tile-sub">Zero PII / IP Leakage</small>
+            </div>
+            <div className="telemetry-stat-tile">
+              <span className="tile-label">CTIX REWARD</span>
+              <strong className="tile-value text-amber-400">+25 CTIX</strong>
+              <small className="tile-sub">Per Verified Incident</small>
+            </div>
+          </div>
+
+          <div className="telemetry-threat-stream">
+            <div className="stream-header font-mono">
+              <Terminal size={13} className="text-cyan-400" />
+              <span>REAL-TIME CONSORTIUM ANCHORED STREAM</span>
+            </div>
+            <div className="stream-item">
+              <div className="stream-dot ddos" />
+              <div className="stream-info">
+                <span className="stream-title">CloudScale Telecom · DDoS Volumetric Scrub</span>
+                <span className="stream-meta font-mono">48,200 Flows · Block #6849102 · Finalized</span>
+              </div>
+              <span className="stream-badge font-mono text-emerald-400">+25 CTIX</span>
+            </div>
+            <div className="stream-item">
+              <div className="stream-dot malware" />
+              <div className="stream-info">
+                <span className="stream-title">BioGenetics Labs · Reverse Process Injection</span>
+                <span className="stream-meta font-mono">8,940 Hosts · Block #6849388 · Finalized</span>
+              </div>
+              <span className="stream-badge font-mono text-emerald-400">+25 CTIX</span>
+            </div>
+            <div className="stream-item">
+              <div className="stream-dot phish" />
+              <div className="stream-info">
+                <span className="stream-title">Apex Financial · Executive BEC Phishing</span>
+                <span className="stream-meta font-mono">12,500 Inboxes · Block #6849240 · Finalized</span>
+              </div>
+              <span className="stream-badge font-mono text-emerald-400">+25 CTIX</span>
+            </div>
+          </div>
+
+          <div className="telemetry-proof-snippet">
+            <div className="proof-snippet-head">
+              <LockKeyhole size={12} className="text-cyan-400" />
+              <span className="font-mono">CRYPTO PROOF MERKLE DIGEST</span>
+            </div>
+            <code className="proof-snippet-code">
+              0x51c72ea89104fa28b81920cae84102947190f829104cb91283749201948201fa
+            </code>
+          </div>
         </div>
       </div>
     </main>
