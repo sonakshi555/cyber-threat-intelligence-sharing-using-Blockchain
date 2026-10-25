@@ -21,11 +21,11 @@ app = FastAPI(title="Cyber Threat Blockchain API", version="1.0.0")
 # Enable GZip compression for payloads > 500 bytes to cut network latency
 app.add_middleware(GZipMiddleware, minimum_size=500)
 
-allowed_origins = [origin.strip() for origin in os.getenv("FRONTEND_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173,https://frontend-bice-two-62.vercel.app").split(",") if origin.strip()]
+allowed_origins = [origin.strip() for origin in os.getenv("FRONTEND_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173,https://frontend-bice-two-62.vercel.app,https://decentralized-threat-intel.vercel.app,https://cyber-threat-blockchain.vercel.app,https://decentralized-cti.vercel.app,https://cti-anchor.vercel.app").split(",") if origin.strip()]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
-    allow_origin_regex=r"https://frontend-[a-z0-9-]+-1da23cs171cs-4002\.vercel\.app",
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
