@@ -1,409 +1,251 @@
-# Local Runbook
+# Local Runbook & Operations Manual
 
-## Choose a blockchain mode
+This runbook provides comprehensive instructions for configuring, operating, debugging, and deploying the **CTI / ANCHOR** decentralized cyber threat intelligence platform locally on **Windows (PowerShell)** and **Linux / WSL**.
 
-Use one of these modes before starting the application:
+---
 
-- **Sepolia:** recommended when reports must survive restarts. The deployed contract and anchored report metadata remain on the Sepolia testnet.
-- **Local Hardhat:** useful for development. Restarting the Hardhat node resets the blockchain, so all local reports disappear and the contract must be deployed again.
-- **Simulated fallback:** used automatically when the RPC or contract is unavailable. The API remains usable, but records are kept only in backend memory and are not on-chain.
+## 🧭 Architectural Modes
 
-The application does not upload the raw CSV to the blockchain. It stores the organization, attack type, record count, report hash, sensitive-data hash, timestamp, and submitter address. The frontend displays these ledger records through the backend API.
+Before running the application, determine which blockchain mode fits your current task:
 
-## Stop the local services
+| Mode | Persistence | Requirement | Typical Use Case |
+| :--- | :--- | :--- | :--- |
+| **Sepolia Testnet (Production)** | Full (Immutable on Ethereum) | Sepolia RPC endpoint + funded wallet with Sepolia ETH | End-to-end testing, live demos, presentation |
+| **Local Hardhat (Development)** | Resets on process termination | None (runs entirely on local `127.0.0.1:8545`) | Fast offline feature testing, smart contract development |
+| **Simulated Fallback** | In-Memory (clears on API restart) | None (automatic fallback when node is offline) | Quick frontend testing without blockchain setup |
 
-Use `Ctrl+C` in each terminal running a service:
+---
 
-1. Hardhat node on port `8545`
-2. FastAPI on port `8000`
-3. Vite frontend, usually on port `5173`
+## 🛑 Clean Process Shutdown & Port Clearing
 
-If a terminal is closed and a port is still occupied, run:
+The application uses three default ports:
+- **Port `8545`**: Hardhat local JSON-RPC node
+- **Port `8000`**: FastAPI Python backend
+- **Port `5173`**: Vite React development server
 
+### On Linux / macOS / WSL:
 ```bash
-# Stop the Hardhat node
+# Stop any processes occupying application ports
 fuser -k 8545/tcp 2>/dev/null || true
-
-# Stop FastAPI and its reload process
 fuser -k 8000/tcp 2>/dev/null || true
-
-# Stop Vite if needed
 fuser -k 5173/tcp 2>/dev/null || true
+
+# Verify ports are clear
+ss -ltn | grep -E ':8545|:8000|:5173' || echo "All ports are free"
 ```
 
-Confirm that the ports are free:
+### On Windows PowerShell:
+```powershell
+# Check for occupying processes
+Get-NetTCPConnection -LocalPort 8545,8000,5173 -ErrorAction SilentlyContinue | Select-Object LocalPort,OwningProcess
 
-```bash
-ss -ltn | grep -E ':8545|:8000|:5173' || echo "All local service ports are free"
+# Kill process on port 8000 (example):
+# Stop-Process -Id <PID> -Force
 ```
 
-## Local Hardhat workflow
+---
 
-Open three WSL terminals from the project root: `/home/sonu/cti`.
+## 💻 Workflow 1: Local Hardhat Node Development
 
-### Terminal 1: Hardhat blockchain
+Use this workflow to test smart contract logic and ledger updates locally without spending testnet gas.
 
+Open three separate terminals from the project root (`c:\Users\Sonakshi\Documents\cti` or `~/cti` in WSL):
+
+### Terminal 1: Hardhat Blockchain Node
 ```bash
-cd ~/cti/contracts
+cd contracts
+npm install
 node node_modules/hardhat/internal/cli/cli.js node
 ```
+*Leave this terminal running. It generates 20 local test accounts pre-funded with 10,000 ETH on `http://127.0.0.1:8545`.*
 
-Leave this terminal running.
-
-### Terminal 2: Deploy the contract
-
+### Terminal 2: Deploy Contracts & Auto-Sync
 In a second terminal:
-
 ```bash
-cd ~/cti/contracts
+cd contracts
 node node_modules/hardhat/internal/cli/cli.js compile
 node node_modules/hardhat/internal/cli/cli.js run scripts/deploy.js --network localhost
 ```
+*The `deploy.js` script automatically updates `backend/.env` with the new `CONTRACT_ADDRESS`.*
 
-The deployment script automatically updates `backend/.env` with the new contract address.
-
-The address can change whenever the Hardhat node is restarted.
-
-### Terminal 3: FastAPI backend
-
+### Terminal 3: FastAPI Backend
 ```bash
-cd ~/cti/backend
-.venv/bin/uvicorn app.main:app --reload --port 8000
+cd backend
+python -m venv .venv
+
+# On Linux/WSL:
+source .venv/bin/activate
+# On Windows PowerShell:
+.venv\Scripts\activate
+
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
 ```
-
-Verify it:
-
+Verify the backend:
 ```bash
 curl http://127.0.0.1:8000/api/health
 ```
-
 Expected response:
-
 ```json
-{"status":"ok"}
+{"status": "ok"}
 ```
 
-### Terminal 4: React frontend
-
+### Terminal 4: Vite React Frontend
 ```bash
-cd ~/cti/frontend
+cd frontend
+npm install
 npm run dev
 ```
+Open the Vite URL printed in your console (typically `http://localhost:5173`).
 
-Open the Vite URL shown in the terminal, usually:
+---
 
-```text
-http://localhost:5173
-```
+## 🌐 Workflow 2: Persistent Ethereum Sepolia Mode
 
-## Persistent Sepolia setup
+Use Sepolia when you want reports, threat signatures, and CTIX rewards to persist permanently across restarts and be verifiable on [Sepolia Etherscan](https://sepolia.etherscan.io).
 
-Use Sepolia when you want the contract and reports to survive local restarts. Sepolia is a public Ethereum testnet, so use a dedicated test wallet only. Never use a wallet that contains real funds.
+### Step 1: Configure Sepolia RPC & Deployer Wallet
+1. Obtain a Sepolia RPC URL from [Infura](https://infura.io) or [Alchemy](https://alchemy.com):
+   `https://sepolia.infura.io/v3/<YOUR_API_KEY>`
+2. Create a dedicated test wallet (e.g. MetaMask) and claim free testnet ETH from a Sepolia faucet (e.g. `sepoliafaucet.com` or `cloud.google.com/application/web3/faucet/ethereum/sepolia`).
+3. Set your credentials in `contracts/.env`:
+   ```env
+   SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/<YOUR_KEY>
+   DEPLOYER_PRIVATE_KEY=0x<YOUR_PRIVATE_KEY>
+   ```
 
-### 1. Create a Sepolia RPC endpoint
-
-Create a Sepolia endpoint with a provider such as Infura or Alchemy. Keep the endpoint URL private. It normally looks like:
-
-```text
-https://sepolia.infura.io/v3/<project-id>
-```
-
-### 2. Create and fund a deployment wallet
-
-Create a dedicated test wallet and fund it with Sepolia ETH from a Sepolia faucet. You need the wallet's private key for deployment and backend transaction signing.
-
-Never paste the private key into chat, commit it, or put it in a screenshot.
-
-### 3. Configure Hardhat
-
-In WSL, copy the example file:
-
+### Step 2: Compile & Deploy to Sepolia
 ```bash
-cd ~/cti
-cp contracts/.env.example contracts/.env
-chmod 600 contracts/.env
-nano contracts/.env
-```
-
-Set the two values in `contracts/.env`:
-
-```env
-SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/<project-id>
-DEPLOYER_PRIVATE_KEY=0x<deployment-wallet-private-key>
-```
-
-Save the file and return to the shell. Do not commit this file; it is ignored by Git.
-
-### 4. Compile and deploy once
-
-Run:
-
-```bash
-cd ~/cti/contracts
+cd contracts
 npm install
 npm run compile
 npm run deploy:sepolia
 ```
+*Take note of the deployed contract addresses printed in the terminal.*
 
-The deployment command prints an address similar to:
-
-```text
-ThreatReportLedger deployed to: 0x...
-```
-
-The deployment script automatically writes the printed address into `backend/.env` when that file already exists. You do not need to copy the address manually. Deploy again only if the contract code changes or the local chain is intentionally replaced.
-
-### 5. Configure the backend
-
-Create the backend environment file only if it does not already exist:
-
-```bash
-cd ~/cti
-test -f backend/.env || cp backend/.env.example backend/.env
-chmod 600 backend/.env
-nano backend/.env
-```
-
-Set:
-
+### Step 3: Configure Backend Environment
+Edit `backend/.env`:
 ```env
-RPC_URL=https://sepolia.infura.io/v3/<project-id>
-CONTRACT_ADDRESS=0x<deployed-sepolia-contract-address>
-BLOCKCHAIN_PRIVATE_KEY=0x<same-wallet-private-key>
+RPC_URL=https://sepolia.infura.io/v3/<YOUR_KEY>
+CONTRACT_ADDRESS=0x5FbDB2315678afecb367f032d93F642f64180aa3
+BLOCKCHAIN_PRIVATE_KEY=0x<SAME_TEST_WALLET_PRIVATE_KEY>
+FRONTEND_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,https://decentralized-cti.vercel.app
+ADMIN_EMAILS=admin@cyberanchor.io,your-email@example.com
 ```
 
-Use the same RPC endpoint and wallet that were used for deployment. The wallet must retain Sepolia ETH because every report anchor is a blockchain write transaction.
+### Step 4: Daily Startup in Sepolia Mode
+*You do **not** need to run Hardhat node or redeploy contracts.* Simply run:
 
-### 6. Start Sepolia mode
-
-Do not start the local Hardhat node. Start only the backend and frontend.
-
-Terminal 1, backend:
-
+**Terminal 1 (Backend):**
 ```bash
-cd ~/cti/backend
-source .venv/bin/activate
+cd backend
+source .venv/bin/activate  # or .venv\Scripts\activate on Windows
 uvicorn app.main:app --reload --port 8000
 ```
 
-Terminal 2, frontend:
-
+**Terminal 2 (Frontend):**
 ```bash
-cd ~/cti/frontend
-npm run dev -- --host 0.0.0.0
+cd frontend
+npm run dev
 ```
 
-Open:
+---
 
-```text
-http://localhost:5173
-```
+## 🧠 Interactive Modules & How to Test Locally
 
-Verify the backend before uploading a report:
+### 1. Explainable AI (SHAP Waterfall Attribution)
+- Navigate to the **AI & Insights** tab (or inspect any threat card in the **Threat Feed**).
+- The SHAP drawer visualizes local feature importance values ($\phi_i$) for tree-based ensemble models.
+- Inspect the baseline expectation $E[f(x)]$ and see how individual features (e.g., `packet_rate`, `syn_flood_flags`, `flow_duration`) shifted the classification probability towards malicious ($f(x)$).
 
-```bash
-curl http://127.0.0.1:8000/api/health
-curl http://127.0.0.1:8000/api/blockchain/ledger
-```
+### 2. Federated Learning (FedAvg) Consortium Simulator
+- Open the **Federated Learning** tab under **AI & Insights**.
+- Click **"Initialize Consortium Round"** to run a simulated decentralized model training iteration across 5 institutions (Barclays, CloudScale, NHS Trust, Vodafone, JPMorgan).
+- Observe private local gradient generation, hash commitment, and round accuracy convergence without raw telemetry leakage.
 
-Expected health response:
+### 3. ML Model Evaluation Suite (Confusion Matrix & ROC Curves)
+- Move the **Decision Threshold Slider** ($\tau$) between `0.00` and `1.00`.
+- Notice how True Positives, False Positives, False Negatives, and True Negatives recalculate in real-time.
+- Observe the ROC Curve operating point indicator slide along the high-AUC (0.992) curve.
 
-```json
-{"status":"ok"}
-```
+### 4. Validator Quorum & CTIX Incentive Distribution
+- Sign in as an **Admin** user (email matching `ADMIN_EMAILS` or demo toggle).
+- Navigate to the **Consensus** tab.
+- Click **"Approve & Anchor Threat"** on any pending report.
+- The platform triggers the smart contract call, updates the quorum bar to 100%, and increments the submitter's wallet balance by **+25 CTIX tokens**.
+- Click on any anchored transaction hash to open the `OnChainProofModal` displaying block height, cryptographic root hash, and gas metrics.
 
-### 7. Daily startup after deployment
+---
 
-You do not need to run `npm run deploy:sepolia` again. Start only:
+## 🔒 Firebase Authentication & Google OAuth
 
-```bash
-cd ~/cti/backend
-source .venv/bin/activate
-uvicorn app.main:app --reload --port 8000
-```
+The application supports both Credential (Email/Password) login and Google OAuth.
 
-```bash
-cd ~/cti/frontend
-npm run dev -- --host 0.0.0.0
-```
+### Firebase Configuration Setup:
+1. Open the [Firebase Console](https://console.firebase.google.com/).
+2. Enable **Authentication** $\rightarrow$ **Sign-in method** $\rightarrow$ **Email/Password** and **Google**.
+3. Under **Authentication** $\rightarrow$ **Settings** $\rightarrow$ **Authorized domains**, ensure the following domains are listed:
+   - `localhost`
+   - `127.0.0.1`
+   - `decentralized-cti.vercel.app`
+   - `frontend-bice-two-62.vercel.app`
+4. Copy the web config into `frontend/.env`:
+   ```env
+   VITE_API_URL=http://localhost:8000
+   VITE_FIREBASE_API_KEY=AIzaSy...
+   VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+   VITE_FIREBASE_PROJECT_ID=your-project
+   VITE_FIREBASE_STORAGE_BUCKET=your-project.firebasestorage.app
+   VITE_FIREBASE_MESSAGING_SENDER_ID=...
+   VITE_FIREBASE_APP_ID=1:...
+   ```
+5. Google OAuth uses `prompt: 'select_account'` so users can switch between multiple Google accounts on every sign-in attempt.
 
-Redeploy only when the contract code changes or the deployed contract must be replaced. The deployment script updates `CONTRACT_ADDRESS` in `backend/.env`; restart FastAPI afterward so it reloads the new value.
+---
 
-Sepolia is persistent, but it is still a testnet: transactions can take time, the RPC provider can rate-limit requests, and the wallet needs Sepolia ETH for writes.
+## 🚀 Production Deployment & Domain Management
 
-### 8. Current configured Sepolia deployment
+### Live Production Endpoints:
+- **Primary Domain**: [https://decentralized-cti.vercel.app](https://decentralized-cti.vercel.app)
+- **Backend API**: [https://backend-nine-smoky-22.vercel.app](https://backend-nine-smoky-22.vercel.app)
 
-This workspace currently uses the deployed contract:
-
-```text
-0xe31baE0021071B004b12449a4C846d90D0AA71D5
-```
-
-For normal daily use, do not start Hardhat and do not deploy again. Open two WSL terminals:
-
-Terminal 1, backend:
-
-```bash
-cd ~/cti/backend
-source .venv/bin/activate
-uvicorn app.main:app --reload --port 8000
-```
-
-Terminal 2, frontend:
-
-```bash
-cd ~/cti/frontend
-npm run dev -- --host 0.0.0.0
-```
-
-Check the configuration before opening the frontend:
-
-```bash
-curl http://127.0.0.1:8000/api/health
-curl http://127.0.0.1:8000/api/blockchain/ledger
-```
-
-The ledger may initially contain an empty `records` array. After a successful submission, it will contain the on-chain report record.
-
-## Register a threat log
-
-After either local or Sepolia mode is running:
-
-1. Open the Vite URL, usually `http://localhost:5173`.
-2. Sign in with the demo login. Select `Admin` or `Uploader`.
-3. Select **Process evidence**.
-4. Enter an organization name.
-5. Select the attack vector.
-6. Choose a CSV file and submit it.
-7. Wait for analysis and the blockchain transaction to finish.
-8. Open **On-chain ledger** or select **Refresh ledger** to view the registered record.
-
-For a successful blockchain write, the response shown by the API contains a receipt like:
-
+### Edge Canonical Redirect:
+In `frontend/vercel.json`, an edge redirect rule is established:
 ```json
 {
-	"receipt": {
-		"mode": "on-chain",
-		"tx_hash": "0x...",
-		"block_number": 12345678
-	}
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "frontend-bice-two-62.vercel.app" }],
+      "destination": "https://decentralized-cti.vercel.app/$1",
+      "permanent": true
+    }
+  ]
 }
 ```
+Any incoming traffic hitting the legacy `frontend-bice-two-62.vercel.app` domain receives an immediate **`HTTP 308 Permanent Redirect`** directly at Vercel's edge network, preserving all route parameters.
 
-The `tx_hash` can be searched on a Sepolia block explorer. A record appearing in the frontend is not by itself proof of persistence; confirm that the receipt says `"mode": "on-chain"`.
-
-Do not submit the same file repeatedly unless duplicate ledger entries are intended. Every successful submission creates a new blockchain record. Restarting the backend or frontend does not create a new record.
-
-## Verify the ledger from the API
-
-With FastAPI running, request the records directly:
-
+### Deploying Frontend Updates:
 ```bash
-curl http://127.0.0.1:8000/api/blockchain/ledger
+cd frontend
+npm run build
+.\node_modules\.bin\vercel.cmd --prod --yes
 ```
 
-For Sepolia mode, the response is read from the deployed contract. For local mode, it is read from the current Hardhat node. For simulated mode, it is read from temporary backend memory.
-
-## Important notes
-
-- Do not start a second Hardhat node while port `8545` is already in use.
-- Do not start a second FastAPI process while port `8000` is already in use.
-- `http://127.0.0.1:8000/` may show `{"detail":"Not Found"}`. Use `/api/health` or `/docs` instead.
-- Restarting the Hardhat node resets its local blockchain, so deploy the contract again. The deployment script updates `backend/.env` automatically.
-- After changing `backend/.env`, restart FastAPI because the blockchain client reads environment variables when the process starts.
-- If a submission returns `"mode": "simulated"`, check the RPC URL, contract address, wallet private key, wallet Sepolia ETH balance, and that the deployed contract is on the same network as `RPC_URL`.
-- Keep `contracts/.env` and `backend/.env` out of Git. Never put private keys in `.env.example`, screenshots, commits, or chat messages.
-
-## Firebase login
-
-1. In the Firebase console, create or select a project.
-2. Open **Authentication > Sign-in method** and enable **Email/Password**.
-3. Register a Web app under **Project settings > Your apps**.
-4. In WSL, create the frontend environment file:
-
+### Deploying Backend Updates:
 ```bash
-cd ~/cti
-cp frontend/.env.example frontend/.env
-chmod 600 frontend/.env
-nano frontend/.env
+cd backend
+..\frontend\node_modules\.bin\vercel.cmd --prod --yes
 ```
 
-Set the Firebase web configuration values and keep the local API URL:
+---
 
-```env
-VITE_API_URL=http://localhost:8000
-VITE_FIREBASE_API_KEY=your-firebase-web-api-key
-VITE_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your-project-id
-VITE_FIREBASE_STORAGE_BUCKET=your-project-id.firebasestorage.app
-VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
-VITE_FIREBASE_APP_ID=your-firebase-app-id
-```
+## 🛠️ Common Troubleshooting
 
-Restart Vite after changing these values. The login screen supports creating an account and signing in. Firebase restores the session after a page refresh, and **Sign out** ends the Firebase session.
-
-## Deploy the frontend to Vercel
-
-Vercel hosts the Vite frontend. Deploy FastAPI separately on a Python-capable host such as Render, Railway, or Fly.io.
-
-1. Deploy the `backend` directory to the Python host and configure the existing backend variables from `backend/.env`.
-2. Set the backend variable `FRONTEND_ORIGINS` to the final Vercel URL, such as `https://your-app.vercel.app`.
-3. Verify the deployed API at `https://your-api-host.example.com/api/health`.
-4. Import the repository into Vercel and set the project root to `frontend`.
-5. Add these Vercel environment variables for Preview and Production:
-
-```env
-VITE_API_URL=https://your-api-host.example.com
-VITE_FIREBASE_API_KEY=your-firebase-web-api-key
-VITE_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your-project-id
-VITE_FIREBASE_STORAGE_BUCKET=your-project-id.firebasestorage.app
-VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
-VITE_FIREBASE_APP_ID=your-firebase-app-id
-```
-
-6. Add the Vercel domain under Firebase **Authentication > Settings > Authorized domains**.
-7. Redeploy Vercel after saving the variables.
-
-Never put `BLOCKCHAIN_PRIVATE_KEY` or a Firebase Admin service-account key in Vercel frontend variables. Those belong only in the backend environment.
-
-## Approval workflow setup
-
-Report submission now creates a Firestore record with `status=pending`. It does not write to the blockchain. The administrator reviews the report, enters the verified solution, and chooses **Approve & anchor** or **Reject**. Only approval calls `anchorReport`.
-
-In the Firebase console:
-
-1. Enable Firestore Database.
-2. Open **Project settings > Service accounts** and generate a new private key.
-3. Add the complete service-account JSON as `FIREBASE_SERVICE_ACCOUNT_JSON` in the backend Vercel project.
-4. Set `ADMIN_EMAILS` to the administrator email address or comma-separated addresses.
-5. Add the backend variables for Production and redeploy the backend.
-
-The backend uses these Firestore collections:
-
-```text
-threat_reports: pending, approved, rejected, and anchoring reports
-threat_audit: submission, approval, and rejection audit events
-```
-
-After signing in, an administrator sees **Approval queue** and **Intelligence** tabs inside the ledger area. Other authenticated users can submit evidence and view approved intelligence, but cannot approve or anchor reports.
-
-## Large CSV uploads with Vercel Blob
-
-The frontend handles large files automatically:
-
-```text
-Choose CSV -> upload to Vercel Blob -> send Blob URL to FastAPI -> process -> anchor hashes
-```
-
-In the Vercel `frontend` project:
-
-1. Open **Storage** and create a **Blob** store.
-2. Connect the store to the `frontend` project.
-3. Confirm that Vercel adds `BLOB_READ_WRITE_TOKEN` to the project environment.
-4. Make sure it is available for **Production**.
-5. Redeploy the frontend.
-
-The application accepts CSV files up to 100 MB and sends the Blob URL to `/api/threat/process-and-anchor-url`. Users do not manually copy or paste Blob URLs. The backend downloads the file, processes it, anchors the hashes, and removes its temporary copy.
-
-For local development, run `vercel dev` from `frontend` instead of only `npm run dev`; the Blob upload function is located at `frontend/api/upload.js`.
+| Issue | Cause | Solution |
+| :--- | :--- | :--- |
+| `{"detail": "Not Found"}` at `http://localhost:8000/` | Root path has no static handler | Expected behavior; test `/api/health` or open `/docs` for Swagger UI |
+| Mode indicates `simulated` instead of `on-chain` | RPC unavailable or wallet out of Sepolia ETH | Check `RPC_URL` and `BLOCKCHAIN_PRIVATE_KEY` in `backend/.env` |
+| CORS error in browser console | Origin not in backend whitelist | Confirm `FRONTEND_ORIGINS` in `backend/.env` includes `http://localhost:5173` |
+| Google OAuth popup blocked | Browser pop-up blocker or unauthorized domain | Allow popups for localhost and add domain to Firebase Console Authorized Domains |
+| Large CSV fails upload | Serverless payload size limit | Ensure `BLOB_READ_WRITE_TOKEN` is configured in Vercel project storage |
