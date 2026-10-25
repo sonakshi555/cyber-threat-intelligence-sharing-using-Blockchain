@@ -158,13 +158,12 @@
     border-radius: 8px;
   }
 
-  /* Faint decentralised grid background for the app shell */
+  /* Faint decentralised grid background for the app shell - NO clipping or content masking */
   .bg-grid {
     background-image:
       linear-gradient(rgb(255 255 255 / 0.025) 1px, transparent 1px),
       linear-gradient(90deg, rgb(255 255 255 / 0.025) 1px, transparent 1px);
     background-size: 48px 48px;
-    mask-image: radial-gradient(ellipse at top, #000 20%, transparent 75%);
   }
 
   /* Live status dot */

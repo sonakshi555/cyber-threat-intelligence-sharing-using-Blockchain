@@ -187,8 +187,8 @@ export function AiInsightsPage({ threats = [], selectedThreat }) {
                   className="flex flex-col gap-1.5 rounded-xl border border-line bg-surface p-3.5"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-semibold text-fg">{feat.name}</span>
-                    <span className="font-mono text-xs text-subtle">{feat.value}</span>
+                    <span className="text-sm font-semibold text-fg">{feat.name}</span>
+                    <span className="font-mono text-xs text-accent font-medium">{feat.value}</span>
                   </div>
 
                   <div className="relative flex items-center gap-3">
@@ -209,7 +209,7 @@ export function AiInsightsPage({ threats = [], selectedThreat }) {
                     </span>
                   </div>
 
-                  <span className="text-[11.5px] text-muted">{feat.desc}</span>
+                  <span className="text-xs text-muted leading-relaxed">{feat.desc}</span>
                 </div>
               );
             })}
@@ -218,18 +218,18 @@ export function AiInsightsPage({ threats = [], selectedThreat }) {
           {/* Summary Box */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 rounded-xl border border-line bg-surface p-4 text-center font-mono">
             <div>
-              <span className="text-[10px] text-subtle uppercase block">Baseline E[f(x)]</span>
-              <strong className="text-sm text-muted">{shap.baseValue.toFixed(3)}</strong>
+              <span className="text-xs text-muted uppercase block">Baseline E[f(x)]</span>
+              <strong className="text-base text-fg font-bold">{shap.baseValue.toFixed(3)}</strong>
             </div>
             <div>
-              <span className="text-[10px] text-subtle uppercase block">Net Shapley Shift</span>
-              <strong className="text-sm text-accent">
+              <span className="text-xs text-muted uppercase block">Net Shapley Shift</span>
+              <strong className="text-base text-accent font-bold">
                 +{(shap.outputValue - shap.baseValue).toFixed(3)}
               </strong>
             </div>
             <div>
-              <span className="text-[10px] text-subtle uppercase block">Malicious Confidence f(x)</span>
-              <strong className="text-sm text-ok">
+              <span className="text-xs text-muted uppercase block">Malicious Confidence f(x)</span>
+              <strong className="text-base text-ok font-bold">
                 {(shap.outputValue * 100).toFixed(1)}% Malicious
               </strong>
             </div>

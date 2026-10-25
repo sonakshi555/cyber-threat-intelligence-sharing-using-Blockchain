@@ -94,8 +94,8 @@ function AppContent() {
         onNavigate={setActivePage}
       />
 
-      <div className="flex flex-1">
-        {/* Responsive Sidebar */}
+      <div className="relative flex flex-1 w-full min-h-[calc(100vh-4rem)]">
+        {/* Responsive Hover-Expandable Sidebar */}
         <AppSidebar
           activePage={activePage}
           onNavigate={setActivePage}
@@ -107,8 +107,8 @@ function AppContent() {
         />
 
         {/* Main Workspace */}
-        <main className="flex-1 overflow-y-auto px-4 py-6 md:px-8 bg-grid">
-          <div className="mx-auto max-w-7xl animate-fade-up">
+        <main className="flex-1 min-w-0 px-4 py-8 md:px-8 lg:px-10 bg-grid pb-28">
+          <div className="mx-auto max-w-7xl">
             {activePage === 'landing' && (
               <LandingPage
                 onLaunchApp={() => setActivePage('dashboard')}
