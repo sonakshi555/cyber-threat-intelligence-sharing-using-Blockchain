@@ -15,6 +15,10 @@ import {
   CheckCircle2,
   Globe,
   Terminal,
+  Mail,
+  Lock,
+  ArrowRight,
+  User,
   Sparkles,
   Copy,
   Check,
@@ -39,6 +43,7 @@ import {
   getStoredSession,
   loginWithCredentials,
   registerNewAccount,
+  loginWithGoogle,
   logoutUser,
 } from './authStore';
 
@@ -106,6 +111,24 @@ function ModernLogin({ onLoginSuccess }) {
     }
   }
 
+  // Google OAuth handler
+  async function handleGoogleSignIn() {
+    setBusy(true);
+    setError('');
+    try {
+      const res = await loginWithGoogle();
+      setBusy(false);
+      if (res.success) {
+        onLoginSuccess(res.user);
+      } else {
+        setError(res.error || 'Google authentication failed.');
+      }
+    } catch (err) {
+      setBusy(false);
+      setError('Unable to authenticate with Google.');
+    }
+  }
+
   // Create Account submit
   async function handleSignUp(e) {
     e.preventDefault();
@@ -136,7 +159,6 @@ function ModernLogin({ onLoginSuccess }) {
     }
   }
 
-  // Helper function to fill test credentials into inputs
   const fillTestCredentials = (testEmail, testPass) => {
     setTab('signin');
     setEmail(testEmail);
@@ -146,72 +168,61 @@ function ModernLogin({ onLoginSuccess }) {
 
   return (
     <main className="login-screen">
-      <div className="login-mark">
-        <ShieldAlert size={21} /> CTI / ANCHOR · DECENTRALIZED THREAT SHARING
-      </div>
+      <div className="login-card-wrapper">
+        {/* Left Side: Authentication Form */}
+        <div className="login-card-left">
+          <h3 className="auth-card-title">
+            {tab === 'signin' ? 'Sign in to continue to CTI / ANCHOR' : 'Sign up to join CTI / ANCHOR'}
+          </h3>
 
-      <section className="login-panel">
-        <div className="eyebrow">
-          DECENTRALIZED OPERATIONS CONSOLE <span>v2.0</span>
-        </div>
-        <h1>
-          Decentralized Cyber
-          <br />
-          <em>Threat Sharing</em> Platform.
-        </h1>
-        <p className="muted">
-          Anchor verified cyber threat evidence to Ethereum Sepolia, access shared incident intelligence,
-          and explore how global organizations solved critical attacks.
-        </p>
-
-        {/* Auth Mode Toggle Tabs (Sign In vs Create Account) */}
-        <div className="auth-tab-switch">
+          {/* Google OAuth Button */}
           <button
             type="button"
-            className={`auth-tab-btn ${tab === 'signin' ? 'active' : ''}`}
-            onClick={() => {
-              setTab('signin');
-              setError('');
-            }}
+            className="google-oauth-btn"
+            onClick={handleGoogleSignIn}
+            disabled={busy}
           >
-            <LogIn size={14} />
-            <span>Sign In</span>
+            <svg className="google-icon" viewBox="0 0 24 24" width="18" height="18">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <span>Continue with Google</span>
           </button>
-          <button
-            type="button"
-            className={`auth-tab-btn ${tab === 'signup' ? 'active' : ''}`}
-            onClick={() => {
-              setTab('signup');
-              setError('');
-            }}
-          >
-            <UserPlus size={14} />
-            <span>Create New Account</span>
-          </button>
-        </div>
 
-        {/* SIGN IN FORM */}
-        {tab === 'signin' ? (
-          <form className="login-fields" onSubmit={handleSignIn}>
-            <label>
-              WORK / OFFICIAL EMAIL
-              <input
-                type="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                placeholder="e.g. operator@security.org"
-                required
-              />
-            </label>
-            <label>
-              PASSWORD
-              <div className="password-input-wrap">
+          <div className="auth-divider">
+            <span>OR</span>
+          </div>
+
+          {error && (
+            <div className="form-error-banner">
+              <AlertTriangle size={14} />
+              <span>{error}</span>
+            </div>
+          )}
+
+          {tab === 'signin' ? (
+            /* Sign In Form */
+            <form className="auth-form-fields" onSubmit={handleSignIn}>
+              <div className="auth-input-group">
+                <Mail size={16} className="auth-input-icon" />
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email address"
+                  required
+                />
+              </div>
+
+              <div className="auth-input-group">
+                <Lock size={16} className="auth-input-icon" />
                 <input
                   type={showPassword ? 'text' : 'password'}
                   value={password}
-                  onChange={(event) => setPassword(event.target.value)}
-                  minLength={6}
-                  placeholder="••••••••"
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Password"
                   required
                 />
                 <button
@@ -223,242 +234,185 @@ function ModernLogin({ onLoginSuccess }) {
                   {showPassword ? <EyeOff size={15} /> : <Eye size={15} />}
                 </button>
               </div>
-            </label>
 
-            {error && <div className="form-error-banner"><AlertTriangle size={14} /><span>{error}</span></div>}
+              <button type="submit" className="auth-submit-btn" disabled={busy}>
+                <span>{busy ? 'Verifying...' : 'Sign in'}</span>
+                <ArrowRight size={16} />
+              </button>
 
-            <button className="primary full" disabled={busy}>
-              {busy ? 'Verifying Credentials...' : 'Sign In & Enter Console'}{' '}
-              <ArrowUpRight size={16} />
-            </button>
-
-            {/* Test Credentials Reference Helper (Click-to-fill) */}
-            <div className="test-credentials-box">
-              <span className="test-cred-title">VERIFIED TEST CREDENTIALS:</span>
-              <div className="test-cred-chips">
-                <button
-                  type="button"
-                  className="test-cred-chip chip-admin"
-                  onClick={() => fillTestCredentials('admin@cyberthreat.org', 'admin123')}
-                  title="Click to fill Admin credentials"
-                >
-                  <ShieldAlert size={12} />
-                  <span>Admin: admin@cyberthreat.org</span>
-                </button>
-                <button
-                  type="button"
-                  className="test-cred-chip chip-org"
-                  onClick={() => fillTestCredentials('soc@northstar.security', 'org123')}
-                  title="Click to fill Organization credentials"
-                >
-                  <Building2 size={12} />
-                  <span>Org: soc@northstar.security</span>
-                </button>
-                <button
-                  type="button"
-                  className="test-cred-chip chip-public"
-                  onClick={() => fillTestCredentials('researcher@public.intel', 'public123')}
-                  title="Click to fill Public Researcher credentials"
-                >
-                  <Globe size={12} />
-                  <span>Public: researcher@public.intel</span>
+              <div className="auth-footer-toggle">
+                Don't have an account?{' '}
+                <button type="button" onClick={() => { setTab('signup'); setError(''); }}>
+                  Sign up
                 </button>
               </div>
-            </div>
-          </form>
-        ) : (
-          /* CREATE NEW ACCOUNT FORM */
-          <form className="login-fields" onSubmit={handleSignUp}>
-            <label>
-              FULL NAME / OPERATOR ALIAS
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="e.g. Elena Rostova · Lead Auditor"
-                required
-              />
-            </label>
-
-            <label>
-              OFFICIAL EMAIL ADDRESS
-              <input
-                type="email"
-                value={signupEmail}
-                onChange={(e) => setSignupEmail(e.target.value)}
-                placeholder="e.g. elena@defense.org"
-                required
-              />
-            </label>
-
-            <label>
-              CHOOSE SECURE PASSWORD
-              <input
-                type="password"
-                value={signupPassword}
-                onChange={(e) => setSignupPassword(e.target.value)}
-                minLength={6}
-                placeholder="At least 6 characters"
-                required
-              />
-            </label>
-
-            {/* Role Selection */}
-            <div className="role-selection-group">
-              <span className="role-select-label">SELECT ACCOUNT ROLE &amp; PERMISSION:</span>
-              <div className="role-cards-grid">
-                <div
-                  className={`role-select-card ${signupRole === 'uploader' ? 'selected' : ''}`}
-                  onClick={() => setSignupRole('uploader')}
-                >
-                  <div className="card-radio-head">
-                    <Building2 size={15} />
-                    <strong>Organization / Enterprise SOC</strong>
-                  </div>
-                  <small>Upload evidence datasets, inspect on-chain ledger &amp; view verified mitigation analytics.</small>
-                </div>
-
-                <div
-                  className={`role-select-card ${signupRole === 'public' ? 'selected' : ''}`}
-                  onClick={() => setSignupRole('public')}
-                >
-                  <div className="card-radio-head">
-                    <Globe size={15} />
-                    <strong>Public Threat Researcher</strong>
-                  </div>
-                  <small>Explore decentralized telemetry, view verified attack mitigations &amp; export STIX 2.1 intelligence.</small>
-                </div>
-
-                <div
-                  className={`role-select-card ${signupRole === 'admin' ? 'selected' : ''}`}
-                  onClick={() => setSignupRole('admin')}
-                >
-                  <div className="card-radio-head">
-                    <ShieldAlert size={15} />
-                    <strong>System Administrator</strong>
-                  </div>
-                  <small>Full clearance: Review pending evidence, approve &amp; anchor reports to Ethereum blockchain.</small>
-                </div>
-              </div>
-            </div>
-
-            {/* Conditional Fields based on selected role */}
-            {signupRole === 'uploader' && (
-              <label>
-                ORGANIZATION / COMPANY NAME
+            </form>
+          ) : (
+            /* Sign Up Form */
+            <form className="auth-form-fields" onSubmit={handleSignUp}>
+              <div className="auth-input-group">
+                <User size={16} className="auth-input-icon" />
                 <input
                   type="text"
-                  value={orgName}
-                  onChange={(e) => setOrgName(e.target.value)}
-                  placeholder="e.g. Apex FinTech / Global Logistics SOC"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Full name / Operator alias"
                   required
                 />
-              </label>
-            )}
+              </div>
 
-            {signupRole === 'admin' && (
-              <label>
-                SYSTEM ADMINISTRATOR SECURITY KEY
-                <div className="admin-key-input-wrap">
-                  <KeyRound size={15} className="admin-key-icon" />
+              <div className="auth-input-group">
+                <Mail size={16} className="auth-input-icon" />
+                <input
+                  type="email"
+                  value={signupEmail}
+                  onChange={(e) => setSignupEmail(e.target.value)}
+                  placeholder="Email address"
+                  required
+                />
+              </div>
+
+              <div className="auth-input-group">
+                <Lock size={16} className="auth-input-icon" />
+                <input
+                  type="password"
+                  value={signupPassword}
+                  onChange={(e) => setSignupPassword(e.target.value)}
+                  minLength={6}
+                  placeholder="Password (min 6 chars)"
+                  required
+                />
+              </div>
+
+              {/* Role Selection */}
+              <div className="role-mini-picker">
+                <span className="role-picker-label">Select Account Role:</span>
+                <div className="role-pill-group">
+                  <button
+                    type="button"
+                    className={`role-pill-btn ${signupRole === 'uploader' ? 'active' : ''}`}
+                    onClick={() => setSignupRole('uploader')}
+                  >
+                    <Building2 size={13} /> Enterprise SOC
+                  </button>
+                  <button
+                    type="button"
+                    className={`role-pill-btn ${signupRole === 'public' ? 'active' : ''}`}
+                    onClick={() => setSignupRole('public')}
+                  >
+                    <Globe size={13} /> Public Researcher
+                  </button>
+                  <button
+                    type="button"
+                    className={`role-pill-btn ${signupRole === 'admin' ? 'active' : ''}`}
+                    onClick={() => setSignupRole('admin')}
+                  >
+                    <ShieldAlert size={13} /> Admin
+                  </button>
+                </div>
+              </div>
+
+              {signupRole === 'uploader' && (
+                <div className="auth-input-group">
+                  <Building2 size={16} className="auth-input-icon" />
+                  <input
+                    type="text"
+                    value={orgName}
+                    onChange={(e) => setOrgName(e.target.value)}
+                    placeholder="Organization / Company name"
+                    required
+                  />
+                </div>
+              )}
+
+              {signupRole === 'admin' && (
+                <div className="auth-input-group">
+                  <KeyRound size={16} className="auth-input-icon text-amber-400" />
                   <input
                     type="text"
                     value={adminKey}
                     onChange={(e) => setAdminKey(e.target.value)}
-                    placeholder="Enter security key (e.g. CTI-ADMIN-2026)"
+                    placeholder="Admin Security Key (CTI-ADMIN-2026)"
                     required
                   />
                 </div>
-                <small className="field-hint">Master key: <code>CTI-ADMIN-2026</code></small>
-              </label>
-            )}
+              )}
 
-            {error && <div className="form-error-banner"><AlertTriangle size={14} /><span>{error}</span></div>}
+              <button type="submit" className="auth-submit-btn" disabled={busy}>
+                <span>{busy ? 'Creating...' : 'Create account'}</span>
+                <ArrowRight size={16} />
+              </button>
 
-            <button className="primary full" disabled={busy}>
-              {busy ? 'Creating & Verifying Account...' : 'Create Account & Enter Console'}{' '}
-              <ArrowUpRight size={16} />
-            </button>
-          </form>
-        )}
+              <div className="auth-footer-toggle">
+                Already have an account?{' '}
+                <button type="button" onClick={() => { setTab('signin'); setError(''); }}>
+                  Sign in
+                </button>
+              </div>
+            </form>
+          )}
 
-        <div className="login-foot">
-          <LockKeyhole size={14} /> Decentralized Trust Protocol · EVM Immutable Ledger
+          {/* Quick Demo Credentials Bar */}
+          <div className="quick-demo-creds">
+            <span className="demo-creds-title">Quick Test Accounts:</span>
+            <div className="demo-creds-row">
+              <button
+                type="button"
+                className="demo-pill admin"
+                onClick={() => fillTestCredentials('admin@cyberthreat.org', 'admin123')}
+                title="Fill Admin credentials"
+              >
+                Admin
+              </button>
+              <button
+                type="button"
+                className="demo-pill org"
+                onClick={() => fillTestCredentials('soc@northstar.security', 'org123')}
+                title="Fill Enterprise SOC credentials"
+              >
+                Org SOC
+              </button>
+              <button
+                type="button"
+                className="demo-pill public"
+                onClick={() => fillTestCredentials('researcher@public.intel', 'public123')}
+                title="Fill Public Analyst credentials"
+              >
+                Public
+              </button>
+            </div>
+          </div>
         </div>
-      </section>
 
-      <div className="login-showcase">
-        <div className="telemetry-showcase-card">
-          <div className="telemetry-card-head">
-            <div className="flex items-center gap-2">
+        {/* Right Side: Minimalist Branding (Matching Reference Image) */}
+        <div className="login-card-right">
+          <div className="brand-minimal-display">
+            <div className="brand-minimal-mark">
+              <ShieldAlert size={38} className="text-emerald-400" />
+            </div>
+            <h2 className="brand-minimal-title">CTI / ANCHOR</h2>
+            <div className="brand-taglines">
+              <p>Autonomous Cyber Defense.</p>
+              <p>Decentralized Ethereum Consensus.</p>
+              <p>Zero-Knowledge AI Intelligence.</p>
+            </div>
+
+            <div className="brand-triad-tags">
+              <span className="triad-tag cyber">
+                <ShieldCheck size={12} /> Cybersecurity
+              </span>
+              <span className="triad-tag blockchain">
+                <Database size={12} /> Blockchain
+              </span>
+              <span className="triad-tag ai">
+                <Sparkles size={12} /> AI / ML
+              </span>
+            </div>
+
+            <div className="brand-live-status-pill">
               <span className="pulse" />
-              <span className="telemetry-eyebrow font-mono">SEPOLIA CONSENSUS · LIVE TELEMETRY</span>
+              <span>Sepolia Consensus · FedAvg Round #14 · 98.4% Acc</span>
             </div>
-            <span className="telemetry-block-badge font-mono">Block #6,849,742</span>
-          </div>
-
-          <div className="telemetry-stat-row">
-            <div className="telemetry-stat-tile">
-              <span className="tile-label">CONSORTIUM NODES</span>
-              <strong className="tile-value text-cyan-400">5 Active</strong>
-              <small className="tile-sub">Fin, Tech, Health, Gov</small>
-            </div>
-            <div className="telemetry-stat-tile">
-              <span className="tile-label">AI VERIFICATION</span>
-              <strong className="tile-value text-emerald-400">98.4% Acc</strong>
-              <small className="tile-sub">SHAP Game-Theoretic</small>
-            </div>
-            <div className="telemetry-stat-tile">
-              <span className="tile-label">PRIVACY SHIELD</span>
-              <strong className="tile-value text-indigo-400">100% SHA-256</strong>
-              <small className="tile-sub">Zero PII / IP Leakage</small>
-            </div>
-            <div className="telemetry-stat-tile">
-              <span className="tile-label">CTIX REWARD</span>
-              <strong className="tile-value text-amber-400">+25 CTIX</strong>
-              <small className="tile-sub">Per Verified Incident</small>
-            </div>
-          </div>
-
-          <div className="telemetry-threat-stream">
-            <div className="stream-header font-mono">
-              <Terminal size={13} className="text-cyan-400" />
-              <span>REAL-TIME CONSORTIUM ANCHORED STREAM</span>
-            </div>
-            <div className="stream-item">
-              <div className="stream-dot ddos" />
-              <div className="stream-info">
-                <span className="stream-title">CloudScale Telecom · DDoS Volumetric Scrub</span>
-                <span className="stream-meta font-mono">48,200 Flows · Block #6849102 · Finalized</span>
-              </div>
-              <span className="stream-badge font-mono text-emerald-400">+25 CTIX</span>
-            </div>
-            <div className="stream-item">
-              <div className="stream-dot malware" />
-              <div className="stream-info">
-                <span className="stream-title">BioGenetics Labs · Reverse Process Injection</span>
-                <span className="stream-meta font-mono">8,940 Hosts · Block #6849388 · Finalized</span>
-              </div>
-              <span className="stream-badge font-mono text-emerald-400">+25 CTIX</span>
-            </div>
-            <div className="stream-item">
-              <div className="stream-dot phish" />
-              <div className="stream-info">
-                <span className="stream-title">Apex Financial · Executive BEC Phishing</span>
-                <span className="stream-meta font-mono">12,500 Inboxes · Block #6849240 · Finalized</span>
-              </div>
-              <span className="stream-badge font-mono text-emerald-400">+25 CTIX</span>
-            </div>
-          </div>
-
-          <div className="telemetry-proof-snippet">
-            <div className="proof-snippet-head">
-              <LockKeyhole size={12} className="text-cyan-400" />
-              <span className="font-mono">CRYPTO PROOF MERKLE DIGEST</span>
-            </div>
-            <code className="proof-snippet-code">
-              0x51c72ea89104fa28b81920cae84102947190f829104cb91283749201948201fa
-            </code>
           </div>
         </div>
       </div>
