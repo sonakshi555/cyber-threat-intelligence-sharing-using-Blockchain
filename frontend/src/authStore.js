@@ -1,6 +1,14 @@
 // Decentralized Cyber Threat Sharing Platform - Authentication & Credential Verification Store
 import { auth, firebaseConfigured } from './firebase';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut as fbSignOut } from 'firebase/auth';
+import {
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signOut as fbSignOut,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
+} from 'firebase/auth';
 
 const USERS_STORAGE_KEY = 'cti_registered_users';
 const SESSION_STORAGE_KEY = 'cti_session';
@@ -278,44 +286,86 @@ export async function logoutUser() {
 }
 
 
-export async function loginWithGoogle() {
-  // 1. Try Firebase Google Auth if configured
-  if (firebaseConfigured && auth) {
-    try {
-      const { GoogleAuthProvider, signInWithPopup } = await import('firebase/auth');
-      const provider = new GoogleAuthProvider();
-      const userCredential = await signInWithPopup(auth, provider);
-      const token = await userCredential.user.getIdToken();
-      const normEmail = (userCredential.user.email || '').toLowerCase();
-      const role = normEmail.includes('admin')
-        ? 'admin'
-        : normEmail.includes('public')
-        ? 'public'
-        : 'uploader';
-      const user = {
-        email: normEmail,
-        name: userCredential.user.displayName || normEmail.split('@')[0],
-        role,
-        organization: role === 'uploader' ? 'Enterprise SOC' : 'Cyber Defense',
-        badge: role === 'admin' ? 'System Admin' : role === 'public' ? 'Public Researcher' : 'Enterprise SOC',
-        authProvider: 'google.com',
-      };
-      setStoredSession(user, token);
-      return { success: true, user };
-    } catch (fbErr) {
-      console.warn('Firebase Google Auth popup cancelled or unsupported in current host:', fbErr);
-    }
-  }
+/* --------------------------------------------------------------------------
+   Google OAuth (Firebase Authentication)
+   - Always shows Google's account chooser (prompt=select_account), so the
+     user can pick any of their existing Google accounts.
+   - Falls back to a full-page redirect when the browser blocks popups
+     (common in Brave / Safari / mobile).
+   - Never fabricates a session: real errors are surfaced to the UI.
+   -------------------------------------------------------------------------- */
+const GOOGLE_ERRORS = {
+  'auth/operation-not-allowed':
+    'Google sign-in is not enabled for this project yet. Enable it in Firebase Console → Authentication → Sign-in method → Google.',
+  'auth/unauthorized-domain':
+    'This domain is not authorised for Google sign-in. Add it in Firebase Console → Authentication → Settings → Authorised domains.',
+  'auth/network-request-failed': 'Network error while contacting Google. Check your connection and try again.',
+  'auth/internal-error': 'Google sign-in failed due to an internal error. Please try again.',
+  'auth/too-many-requests': 'Too many attempts. Please wait a moment and try again.',
+  'auth/account-exists-with-different-credential': 'An account already exists with this email using a different sign-in method.',
+};
 
-  // 2. Instant Zero-Latency Google OAuth verified session fallback
-  const defaultGoogleUser = {
-    email: 'operator.google@security-consortium.org',
-    name: 'Google Verified Security Lead',
-    role: 'uploader',
-    organization: 'Global Cloud Defense',
-    badge: 'Enterprise SOC',
+function googleProvider() {
+  const provider = new GoogleAuthProvider();
+  provider.addScope('email');
+  provider.addScope('profile');
+  provider.setCustomParameters({ prompt: 'select_account' });
+  return provider;
+}
+
+/** Build the app session object from a Firebase Google credential. */
+async function sessionFromGoogleCredential(credential) {
+  const token = await credential.user.getIdToken();
+  const normEmail = (credential.user.email || '').toLowerCase();
+  // Re-use a role the user already registered with locally, if any.
+  const known = getRegisteredUsers()[normEmail];
+  const role = known?.role || (normEmail.includes('admin') ? 'admin' : normEmail.includes('public') ? 'public' : 'uploader');
+  const user = {
+    email: normEmail,
+    name: credential.user.displayName || known?.name || normEmail.split('@')[0],
+    photoURL: credential.user.photoURL || null,
+    role,
+    organization: known?.organization || (role === 'uploader' ? 'Enterprise SOC' : 'Cyber Defense'),
+    badge: role === 'admin' ? 'System Admin' : role === 'public' ? 'Public Researcher' : 'Enterprise SOC',
     authProvider: 'google.com',
   };
-  setStoredSession(defaultGoogleUser, `cti-google-token-${Date.now()}`);
-  return { success: true, user: defaultGoogleUser };
+  setStoredSession(user, token);
+  return user;
+}
+
+export async function loginWithGoogle() {
+  if (!firebaseConfigured || !auth) {
+    return {
+      success: false,
+      error: 'Google sign-in is not configured in this environment (missing VITE_FIREBASE_* variables).',
+    };
+  }
+  try {
+    // NOTE: signInWithPopup must be called synchronously from the click
+    // handler (no awaits before it) or browsers will block the popup.
+    const credential = await signInWithPopup(auth, googleProvider());
+    return { success: true, user: await sessionFromGoogleCredential(credential) };
+  } catch (err) {
+    const code = err?.code || '';
+    if (code === 'auth/popup-blocked' || code === 'auth/operation-not-supported-in-this-environment') {
+      await signInWithRedirect(auth, googleProvider());
+      return { success: false, redirecting: true };
+    }
+    if (code === 'auth/popup-closed-by-user' || code === 'auth/cancelled-popup-request' || code === 'auth/user-cancelled') {
+      return { success: false, cancelled: true };
+    }
+    console.error('Google sign-in failed:', err);
+    return { success: false, error: GOOGLE_ERRORS[code] || `Google sign-in failed (${code || 'unknown error'}).` };
+  }
+}
+
+/** Completes a redirect-based Google sign-in after the page reloads. */
+export async function completeGoogleRedirect() {
+  if (!firebaseConfigured || !auth) return null;
+  try {
+    const credential = await getRedirectResult(auth);
+    return credential ? await sessionFromGoogleCredential(credential) : null;
+  } catch (err) {
+    return { error: GOOGLE_ERRORS[err?.code] || 'Google sign-in failed after redirect.' };
+  }
 }
