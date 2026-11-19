@@ -1,0 +1,1101 @@
+log_id,timestamp,auth_service,attacker_ip,target_port,username_attempted,auth_status,failed_attempt_velocity,username_entropy_score,ssh_client_version,geo_country,attack_type,label
+BF-40000,2026-11-18T15:44:36.778347,SSH,45.247.181.19,22,user,FAILED,496,4.73,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40001,2026-11-18T15:44:38.778347,REST-AuthGateway,45.248.113.140,443,test,FAILED,496,5.16,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40002,2026-11-18T15:44:40.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,3,1.38,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40003,2026-11-18T15:44:42.778347,REST-AuthGateway,45.113.21.222,443,admin,FAILED,348,5.12,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40004,2026-11-18T15:44:44.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.87,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40005,2026-11-18T15:44:46.778347,SSH,45.139.130.108,22,test,FAILED,400,4.64,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40006,2026-11-18T15:44:48.778347,SSH,45.199.36.189,22,oracle,FAILED,586,5.13,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40007,2026-11-18T15:44:50.778347,REST-AuthGateway,45.213.27.90,443,root,FAILED,608,5.03,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40008,2026-11-18T15:44:52.778347,RDP,45.116.89.20,3389,admin,FAILED,618,4.92,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40009,2026-11-18T15:44:54.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,2.07,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40010,2026-11-18T15:44:56.778347,RDP,45.174.221.230,3389,service,FAILED,427,4.92,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40011,2026-11-18T15:44:58.778347,REST-AuthGateway,45.110.146.222,443,oracle,FAILED,368,5.13,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40012,2026-11-18T15:45:00.778347,SSH,45.194.61.250,22,postgres,FAILED,654,4.9,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40013,2026-11-18T15:45:02.778347,SSH,45.202.115.50,22,service,FAILED,475,4.94,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40014,2026-11-18T15:45:04.778347,RDP,45.167.148.208,3389,administrator,FAILED,492,5.0,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40015,2026-11-18T15:45:06.778347,REST-AuthGateway,45.199.19.2,443,oracle,FAILED,670,4.66,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40016,2026-11-18T15:45:08.778347,SSH,45.168.230.243,22,backup,FAILED,529,4.51,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40017,2026-11-18T15:45:10.778347,RDP,45.239.3.193,3389,service,FAILED,635,4.91,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40018,2026-11-18T15:45:12.778347,REST-AuthGateway,45.132.52.222,443,root,FAILED,438,5.07,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40019,2026-11-18T15:45:14.778347,REST-AuthGateway,45.141.7.91,443,oracle,FAILED,431,4.74,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40020,2026-11-18T15:45:16.778347,RDP,45.124.67.138,3389,oracle,FAILED,351,4.96,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40021,2026-11-18T15:45:18.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.37,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40022,2026-11-18T15:45:20.778347,SSH,45.248.28.101,22,guest,FAILED,476,5.14,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40023,2026-11-18T15:45:22.778347,RDP,45.169.219.3,3389,guest,FAILED,473,5.17,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40024,2026-11-18T15:45:24.778347,RDP,45.245.90.118,3389,administrator,FAILED,426,4.82,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40025,2026-11-18T15:45:26.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.81,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40026,2026-11-18T15:45:28.778347,SSH,45.110.240.142,22,backup,FAILED,537,4.62,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40027,2026-11-18T15:45:30.778347,RDP,45.104.199.73,3389,service,FAILED,545,4.89,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40028,2026-11-18T15:45:32.778347,SSH,45.215.29.223,22,test,FAILED,640,5.13,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40029,2026-11-18T15:45:34.778347,SSH,45.140.24.10,22,service,FAILED,364,4.63,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40030,2026-11-18T15:45:36.778347,REST-AuthGateway,45.223.232.77,443,admin,FAILED,325,5.19,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40031,2026-11-18T15:45:38.778347,REST-AuthGateway,45.124.213.208,443,user,FAILED,673,4.61,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40032,2026-11-18T15:45:40.778347,REST-AuthGateway,45.196.43.180,443,test,FAILED,352,4.68,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40033,2026-11-18T15:45:42.778347,RDP,45.245.207.89,3389,test,FAILED,469,4.91,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40034,2026-11-18T15:45:44.778347,RDP,45.198.103.35,3389,test,FAILED,579,4.93,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40035,2026-11-18T15:45:46.778347,RDP,45.119.223.183,3389,service,FAILED,401,4.54,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40036,2026-11-18T15:45:48.778347,REST-AuthGateway,45.175.181.62,443,root,FAILED,447,4.58,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40037,2026-11-18T15:45:50.778347,SSH,45.102.246.53,22,service,FAILED,338,4.85,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40038,2026-11-18T15:45:52.778347,SSH,45.116.227.13,22,admin,FAILED,650,5.06,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40039,2026-11-18T15:45:54.778347,REST-AuthGateway,45.199.232.243,443,postgres,FAILED,668,4.8,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40040,2026-11-18T15:45:56.778347,REST-AuthGateway,45.185.82.184,443,test,FAILED,538,4.84,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40041,2026-11-18T15:45:58.778347,REST-AuthGateway,45.200.171.46,443,oracle,FAILED,624,5.18,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40042,2026-11-18T15:46:00.778347,REST-AuthGateway,45.207.202.77,443,backup,FAILED,450,4.54,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40043,2026-11-18T15:46:02.778347,REST-AuthGateway,45.149.147.13,443,backup,FAILED,483,4.94,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40044,2026-11-18T15:46:04.778347,REST-AuthGateway,45.129.205.239,443,admin,FAILED,515,5.16,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40045,2026-11-18T15:46:06.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.85,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40046,2026-11-18T15:46:08.778347,SSH,45.106.232.37,22,service,FAILED,335,4.92,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40047,2026-11-18T15:46:10.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.75,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40048,2026-11-18T15:46:12.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.2,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40049,2026-11-18T15:46:14.778347,REST-AuthGateway,45.125.26.246,443,service,FAILED,363,4.94,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40050,2026-11-18T15:46:16.778347,REST-AuthGateway,45.159.224.123,443,postgres,FAILED,448,4.58,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40051,2026-11-18T15:46:18.778347,SSH,45.145.179.96,22,guest,FAILED,659,5.16,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40052,2026-11-18T15:46:20.778347,RDP,45.143.189.154,3389,user,FAILED,472,5.02,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40053,2026-11-18T15:46:22.778347,RDP,45.135.245.191,3389,administrator,FAILED,602,4.57,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40054,2026-11-18T15:46:24.778347,RDP,45.101.8.140,3389,admin,FAILED,589,4.59,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40055,2026-11-18T15:46:26.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.77,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40056,2026-11-18T15:46:28.778347,RDP,45.149.193.118,3389,service,FAILED,463,4.71,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40057,2026-11-18T15:46:30.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.92,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40058,2026-11-18T15:46:32.778347,RDP,45.147.7.191,3389,admin,FAILED,360,4.79,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40059,2026-11-18T15:46:34.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.38,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40060,2026-11-18T15:46:36.778347,SSH,45.145.162.50,22,administrator,FAILED,488,4.96,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40061,2026-11-18T15:46:38.778347,REST-AuthGateway,45.219.123.237,443,user,FAILED,330,5.05,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40062,2026-11-18T15:46:40.778347,SSH,45.170.165.57,22,administrator,FAILED,515,4.81,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40063,2026-11-18T15:46:42.778347,REST-AuthGateway,45.122.125.153,443,admin,FAILED,636,5.17,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40064,2026-11-18T15:46:44.778347,RDP,45.130.155.183,3389,admin,FAILED,543,4.98,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40065,2026-11-18T15:46:46.778347,SSH,45.115.222.65,22,oracle,FAILED,560,4.86,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40066,2026-11-18T15:46:48.778347,REST-AuthGateway,45.128.87.250,443,guest,FAILED,642,4.63,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40067,2026-11-18T15:46:50.778347,SSH,45.207.129.8,22,postgres,FAILED,435,5.0,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40068,2026-11-18T15:46:52.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.45,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40069,2026-11-18T15:46:54.778347,REST-AuthGateway,45.240.141.127,443,administrator,FAILED,595,5.18,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40070,2026-11-18T15:46:56.778347,RDP,45.181.130.12,3389,administrator,FAILED,356,5.18,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40071,2026-11-18T15:46:58.778347,RDP,45.204.175.31,3389,guest,FAILED,516,5.17,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40072,2026-11-18T15:47:00.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.79,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40073,2026-11-18T15:47:02.778347,RDP,45.196.129.65,3389,service,FAILED,656,4.88,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40074,2026-11-18T15:47:04.778347,SSH,45.104.149.171,22,administrator,FAILED,571,4.92,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40075,2026-11-18T15:47:06.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.76,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40076,2026-11-18T15:47:08.778347,RDP,45.112.12.199,3389,postgres,FAILED,416,4.52,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40077,2026-11-18T15:47:10.778347,RDP,45.185.157.174,3389,backup,FAILED,395,4.75,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40078,2026-11-18T15:47:12.778347,REST-AuthGateway,45.175.168.50,443,backup,FAILED,675,4.67,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40079,2026-11-18T15:47:14.778347,REST-AuthGateway,45.170.218.190,443,root,FAILED,451,4.92,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40080,2026-11-18T15:47:16.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.29,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40081,2026-11-18T15:47:18.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.68,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40082,2026-11-18T15:47:20.778347,REST-AuthGateway,45.231.213.130,443,root,FAILED,497,4.64,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40083,2026-11-18T15:47:22.778347,RDP,45.119.196.41,3389,root,FAILED,450,5.11,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40084,2026-11-18T15:47:24.778347,RDP,45.122.4.127,3389,root,FAILED,554,5.1,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40085,2026-11-18T15:47:26.778347,RDP,45.225.220.126,3389,administrator,FAILED,423,4.78,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40086,2026-11-18T15:47:28.778347,RDP,45.211.134.87,3389,backup,FAILED,498,4.89,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40087,2026-11-18T15:47:30.778347,RDP,45.124.175.81,3389,user,FAILED,500,4.82,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40088,2026-11-18T15:47:32.778347,SSH,45.115.21.41,22,admin,FAILED,383,5.15,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40089,2026-11-18T15:47:34.778347,SSH,45.141.133.215,22,test,FAILED,647,4.7,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40090,2026-11-18T15:47:36.778347,SSH,45.115.228.26,22,service,FAILED,521,5.15,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40091,2026-11-18T15:47:38.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.84,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40092,2026-11-18T15:47:40.778347,REST-AuthGateway,45.240.150.70,443,administrator,FAILED,426,5.13,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40093,2026-11-18T15:47:42.778347,REST-AuthGateway,45.194.80.127,443,backup,FAILED,617,5.11,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40094,2026-11-18T15:47:44.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,2,1.62,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40095,2026-11-18T15:47:46.778347,SSH,45.108.44.162,22,test,FAILED,470,5.11,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40096,2026-11-18T15:47:48.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.45,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40097,2026-11-18T15:47:50.778347,RDP,45.144.249.3,3389,root,FAILED,512,4.92,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40098,2026-11-18T15:47:52.778347,RDP,45.145.50.236,3389,administrator,FAILED,631,4.64,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40099,2026-11-18T15:47:54.778347,REST-AuthGateway,45.160.147.90,443,oracle,FAILED,352,5.09,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40100,2026-11-18T15:47:56.778347,REST-AuthGateway,45.233.99.21,443,root,FAILED,442,4.72,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40101,2026-11-18T15:47:58.778347,RDP,45.149.86.71,3389,postgres,FAILED,388,4.53,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40102,2026-11-18T15:48:00.778347,RDP,45.134.79.136,3389,oracle,FAILED,527,5.14,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40103,2026-11-18T15:48:02.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,2,1.56,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40104,2026-11-18T15:48:04.778347,RDP,45.122.1.110,3389,oracle,FAILED,358,4.81,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40105,2026-11-18T15:48:06.778347,REST-AuthGateway,45.236.180.230,443,user,FAILED,336,4.52,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40106,2026-11-18T15:48:08.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,1,1.44,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40107,2026-11-18T15:48:10.778347,REST-AuthGateway,45.219.18.223,443,root,FAILED,543,4.71,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40108,2026-11-18T15:48:12.778347,REST-AuthGateway,45.129.61.18,443,service,FAILED,547,4.83,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40109,2026-11-18T15:48:14.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.64,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40110,2026-11-18T15:48:16.778347,RDP,45.167.81.113,3389,root,FAILED,337,4.86,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40111,2026-11-18T15:48:18.778347,REST-AuthGateway,45.211.2.222,443,backup,FAILED,420,4.83,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40112,2026-11-18T15:48:20.778347,SSH,45.243.240.119,22,oracle,FAILED,408,5.08,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40113,2026-11-18T15:48:22.778347,REST-AuthGateway,45.161.13.246,443,service,FAILED,574,4.72,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40114,2026-11-18T15:48:24.778347,SSH,45.242.174.202,22,root,FAILED,656,4.63,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40115,2026-11-18T15:48:26.778347,RDP,45.187.197.168,3389,admin,FAILED,608,4.79,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40116,2026-11-18T15:48:28.778347,REST-AuthGateway,45.212.58.244,443,backup,FAILED,535,5.2,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40117,2026-11-18T15:48:30.778347,SSH,45.199.43.204,22,service,FAILED,492,4.91,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40118,2026-11-18T15:48:32.778347,SSH,45.242.161.75,22,user,FAILED,592,4.6,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40119,2026-11-18T15:48:34.778347,REST-AuthGateway,45.181.160.250,443,backup,FAILED,577,5.11,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40120,2026-11-18T15:48:36.778347,RDP,45.228.127.111,3389,test,FAILED,332,4.51,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40121,2026-11-18T15:48:38.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.79,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40122,2026-11-18T15:48:40.778347,RDP,45.250.105.245,3389,backup,FAILED,501,4.51,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40123,2026-11-18T15:48:42.778347,RDP,45.216.108.160,3389,backup,FAILED,481,5.06,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40124,2026-11-18T15:48:44.778347,REST-AuthGateway,45.174.83.32,443,postgres,FAILED,550,4.5,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40125,2026-11-18T15:48:46.778347,RDP,45.155.14.110,3389,administrator,FAILED,416,4.94,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40126,2026-11-18T15:48:48.778347,SSH,45.213.171.159,22,backup,FAILED,400,4.81,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40127,2026-11-18T15:48:50.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.98,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40128,2026-11-18T15:48:52.778347,SSH,45.212.38.174,22,service,FAILED,584,5.1,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40129,2026-11-18T15:48:54.778347,RDP,45.223.198.8,3389,postgres,FAILED,362,4.62,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40130,2026-11-18T15:48:56.778347,REST-AuthGateway,45.228.120.70,443,oracle,FAILED,554,5.11,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40131,2026-11-18T15:48:58.778347,REST-AuthGateway,45.129.26.222,443,guest,FAILED,420,4.76,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40132,2026-11-18T15:49:00.778347,RDP,45.134.198.47,3389,guest,FAILED,470,4.96,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40133,2026-11-18T15:49:02.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.59,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40134,2026-11-18T15:49:04.778347,SSH,45.170.200.140,22,guest,FAILED,487,4.87,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40135,2026-11-18T15:49:06.778347,REST-AuthGateway,45.230.139.10,443,postgres,FAILED,475,4.51,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40136,2026-11-18T15:49:08.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.39,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40137,2026-11-18T15:49:10.778347,SSH,45.207.32.208,22,admin,FAILED,342,4.78,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40138,2026-11-18T15:49:12.778347,RDP,45.211.143.82,3389,postgres,FAILED,380,4.66,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40139,2026-11-18T15:49:14.778347,REST-AuthGateway,45.156.228.243,443,service,FAILED,351,5.17,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40140,2026-11-18T15:49:16.778347,RDP,45.105.168.223,3389,administrator,FAILED,349,4.52,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40141,2026-11-18T15:49:18.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.31,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40142,2026-11-18T15:49:20.778347,SSH,45.242.243.45,22,root,FAILED,405,4.56,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40143,2026-11-18T15:49:22.778347,RDP,45.218.153.233,3389,test,FAILED,359,4.98,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40144,2026-11-18T15:49:24.778347,RDP,45.107.172.93,3389,test,FAILED,386,5.11,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40145,2026-11-18T15:49:26.778347,REST-AuthGateway,45.165.97.110,443,administrator,FAILED,586,4.65,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40146,2026-11-18T15:49:28.778347,RDP,45.224.190.154,3389,oracle,FAILED,406,4.98,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40147,2026-11-18T15:49:30.778347,REST-AuthGateway,45.122.31.214,443,admin,FAILED,449,5.06,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40148,2026-11-18T15:49:32.778347,SSH,45.157.39.208,22,guest,FAILED,340,4.59,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40149,2026-11-18T15:49:34.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.43,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40150,2026-11-18T15:49:36.778347,RDP,45.151.42.97,3389,root,FAILED,472,4.69,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40151,2026-11-18T15:49:38.778347,RDP,45.118.143.231,3389,service,FAILED,354,4.78,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40152,2026-11-18T15:49:40.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.6,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40153,2026-11-18T15:49:42.778347,SSH,45.215.121.94,22,oracle,FAILED,481,4.95,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40154,2026-11-18T15:49:44.778347,REST-AuthGateway,45.113.23.182,443,admin,FAILED,406,4.53,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40155,2026-11-18T15:49:46.778347,SSH,45.121.13.194,22,administrator,FAILED,330,4.77,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40156,2026-11-18T15:49:48.778347,SSH,45.144.117.41,22,administrator,FAILED,584,5.09,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40157,2026-11-18T15:49:50.778347,REST-AuthGateway,45.145.61.179,443,oracle,FAILED,599,5.12,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40158,2026-11-18T15:49:52.778347,RDP,45.240.137.4,3389,oracle,FAILED,535,4.96,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40159,2026-11-18T15:49:54.778347,SSH,45.131.10.28,22,root,FAILED,623,4.62,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40160,2026-11-18T15:49:56.778347,RDP,45.225.213.11,3389,backup,FAILED,461,4.71,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40161,2026-11-18T15:49:58.778347,RDP,45.248.89.8,3389,test,FAILED,610,5.07,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40162,2026-11-18T15:50:00.778347,RDP,45.185.213.130,3389,root,FAILED,664,5.01,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40163,2026-11-18T15:50:02.778347,SSH,45.167.93.248,22,root,FAILED,477,5.14,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40164,2026-11-18T15:50:04.778347,SSH,45.162.221.207,22,postgres,FAILED,493,4.61,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40165,2026-11-18T15:50:06.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.71,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40166,2026-11-18T15:50:08.778347,REST-AuthGateway,45.218.206.18,443,oracle,FAILED,486,4.77,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40167,2026-11-18T15:50:10.778347,SSH,45.127.154.16,22,test,FAILED,458,5.08,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40168,2026-11-18T15:50:12.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.85,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40169,2026-11-18T15:50:14.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.98,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40170,2026-11-18T15:50:16.778347,SSH,45.132.226.57,22,guest,FAILED,596,4.87,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40171,2026-11-18T15:50:18.778347,SSH,45.187.231.238,22,service,FAILED,590,4.99,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40172,2026-11-18T15:50:20.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.93,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40173,2026-11-18T15:50:22.778347,REST-AuthGateway,45.233.203.6,443,admin,FAILED,656,5.19,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40174,2026-11-18T15:50:24.778347,REST-AuthGateway,45.138.181.219,443,oracle,FAILED,627,5.01,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40175,2026-11-18T15:50:26.778347,RDP,45.152.73.95,3389,administrator,FAILED,498,5.03,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40176,2026-11-18T15:50:28.778347,RDP,45.226.243.139,3389,backup,FAILED,591,4.53,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40177,2026-11-18T15:50:30.778347,RDP,45.131.128.211,3389,user,FAILED,382,4.8,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40178,2026-11-18T15:50:32.778347,SSH,45.238.70.3,22,test,FAILED,669,4.78,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40179,2026-11-18T15:50:34.778347,SSH,45.139.103.175,22,postgres,FAILED,590,4.65,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40180,2026-11-18T15:50:36.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.85,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40181,2026-11-18T15:50:38.778347,SSH,45.191.243.239,22,root,FAILED,535,4.57,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40182,2026-11-18T15:50:40.778347,RDP,45.242.144.48,3389,root,FAILED,615,4.93,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40183,2026-11-18T15:50:42.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.45,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40184,2026-11-18T15:50:44.778347,SSH,45.199.68.228,22,postgres,FAILED,358,4.78,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40185,2026-11-18T15:50:46.778347,SSH,45.135.235.62,22,postgres,FAILED,481,4.63,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40186,2026-11-18T15:50:48.778347,RDP,45.135.198.156,3389,backup,FAILED,413,4.77,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40187,2026-11-18T15:50:50.778347,SSH,45.129.188.247,22,backup,FAILED,616,5.11,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40188,2026-11-18T15:50:52.778347,REST-AuthGateway,45.240.244.221,443,user,FAILED,393,4.63,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40189,2026-11-18T15:50:54.778347,SSH,45.129.166.154,22,backup,FAILED,649,4.62,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40190,2026-11-18T15:50:56.778347,SSH,45.203.179.233,22,service,FAILED,542,5.1,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40191,2026-11-18T15:50:58.778347,REST-AuthGateway,45.203.90.212,443,guest,FAILED,606,5.01,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40192,2026-11-18T15:51:00.778347,REST-AuthGateway,45.141.176.191,443,guest,FAILED,621,4.9,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40193,2026-11-18T15:51:02.778347,SSH,45.206.112.192,22,backup,FAILED,337,4.84,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40194,2026-11-18T15:51:04.778347,SSH,45.214.73.109,22,administrator,FAILED,675,4.79,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40195,2026-11-18T15:51:06.778347,SSH,45.141.38.47,22,postgres,FAILED,448,4.61,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40196,2026-11-18T15:51:08.778347,REST-AuthGateway,45.116.206.134,443,administrator,FAILED,528,4.82,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40197,2026-11-18T15:51:10.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,2.06,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40198,2026-11-18T15:51:12.778347,RDP,45.239.49.153,3389,postgres,FAILED,554,4.56,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40199,2026-11-18T15:51:14.778347,SSH,45.229.75.128,22,administrator,FAILED,448,4.51,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40200,2026-11-18T15:51:16.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.47,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40201,2026-11-18T15:51:18.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.7,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40202,2026-11-18T15:51:20.778347,REST-AuthGateway,45.240.108.216,443,postgres,FAILED,422,5.03,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40203,2026-11-18T15:51:22.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,2.07,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40204,2026-11-18T15:51:24.778347,RDP,45.202.208.209,3389,admin,FAILED,629,4.63,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40205,2026-11-18T15:51:26.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.74,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40206,2026-11-18T15:51:28.778347,RDP,45.160.73.179,3389,administrator,FAILED,583,4.96,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40207,2026-11-18T15:51:30.778347,RDP,45.146.75.85,3389,backup,FAILED,493,4.76,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40208,2026-11-18T15:51:32.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.66,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40209,2026-11-18T15:51:34.778347,RDP,45.106.96.177,3389,test,FAILED,322,4.74,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40210,2026-11-18T15:51:36.778347,REST-AuthGateway,45.209.248.57,443,guest,FAILED,661,4.57,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40211,2026-11-18T15:51:38.778347,SSH,45.248.64.91,22,postgres,FAILED,609,5.09,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40212,2026-11-18T15:51:40.778347,RDP,45.171.44.72,3389,service,FAILED,568,5.15,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40213,2026-11-18T15:51:42.778347,SSH,45.124.240.49,22,backup,FAILED,571,4.62,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40214,2026-11-18T15:51:44.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.38,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40215,2026-11-18T15:51:46.778347,RDP,45.147.132.249,3389,oracle,FAILED,567,4.82,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40216,2026-11-18T15:51:48.778347,REST-AuthGateway,45.162.31.203,443,admin,FAILED,679,5.13,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40217,2026-11-18T15:51:50.778347,SSH,45.171.225.250,22,user,FAILED,366,4.96,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40218,2026-11-18T15:51:52.778347,RDP,45.168.153.38,3389,guest,FAILED,637,4.81,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40219,2026-11-18T15:51:54.778347,RDP,45.121.182.90,3389,administrator,FAILED,657,4.63,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40220,2026-11-18T15:51:56.778347,SSH,45.182.173.2,22,user,FAILED,575,4.66,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40221,2026-11-18T15:51:58.778347,REST-AuthGateway,45.170.144.26,443,backup,FAILED,423,4.96,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40222,2026-11-18T15:52:00.778347,SSH,45.116.182.90,22,user,FAILED,346,5.0,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40223,2026-11-18T15:52:02.778347,RDP,45.155.87.21,3389,service,FAILED,648,4.89,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40224,2026-11-18T15:52:04.778347,SSH,45.190.144.123,22,oracle,FAILED,462,4.81,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40225,2026-11-18T15:52:06.778347,REST-AuthGateway,45.177.237.41,443,user,FAILED,653,4.94,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40226,2026-11-18T15:52:08.778347,RDP,45.225.9.1,3389,guest,FAILED,558,4.91,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40227,2026-11-18T15:52:10.778347,RDP,45.244.182.18,3389,root,FAILED,405,4.64,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40228,2026-11-18T15:52:12.778347,REST-AuthGateway,45.141.31.217,443,oracle,FAILED,321,4.74,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40229,2026-11-18T15:52:14.778347,SSH,45.143.164.212,22,user,FAILED,626,5.2,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40230,2026-11-18T15:52:16.778347,RDP,45.221.37.154,3389,admin,FAILED,541,5.05,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40231,2026-11-18T15:52:18.778347,SSH,45.210.246.139,22,backup,FAILED,413,4.84,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40232,2026-11-18T15:52:20.778347,REST-AuthGateway,45.106.183.45,443,root,FAILED,593,4.83,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40233,2026-11-18T15:52:22.778347,RDP,45.140.35.148,3389,root,FAILED,572,4.73,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40234,2026-11-18T15:52:24.778347,SSH,45.169.170.161,22,administrator,FAILED,529,5.07,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40235,2026-11-18T15:52:26.778347,SSH,45.151.108.235,22,admin,FAILED,534,4.61,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40236,2026-11-18T15:52:28.778347,REST-AuthGateway,45.237.72.32,443,test,FAILED,351,4.75,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40237,2026-11-18T15:52:30.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.72,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40238,2026-11-18T15:52:32.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.32,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40239,2026-11-18T15:52:34.778347,SSH,45.202.12.64,22,root,FAILED,454,5.12,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40240,2026-11-18T15:52:36.778347,SSH,45.230.158.150,22,admin,FAILED,610,4.95,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40241,2026-11-18T15:52:38.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,3,2.0,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40242,2026-11-18T15:52:40.778347,RDP,45.104.200.102,3389,service,FAILED,362,5.19,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40243,2026-11-18T15:52:42.778347,RDP,45.213.188.211,3389,postgres,FAILED,374,5.14,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40244,2026-11-18T15:52:44.778347,RDP,45.158.94.161,3389,backup,FAILED,396,5.18,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40245,2026-11-18T15:52:46.778347,REST-AuthGateway,45.118.222.187,443,backup,FAILED,628,5.07,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40246,2026-11-18T15:52:48.778347,SSH,45.174.145.209,22,root,FAILED,478,4.89,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40247,2026-11-18T15:52:50.778347,RDP,45.104.139.12,3389,administrator,FAILED,492,4.68,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40248,2026-11-18T15:52:52.778347,SSH,45.206.88.173,22,oracle,FAILED,576,5.07,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40249,2026-11-18T15:52:54.778347,SSH,45.103.189.59,22,postgres,FAILED,674,4.8,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40250,2026-11-18T15:52:56.778347,SSH,45.114.194.201,22,user,FAILED,536,4.56,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40251,2026-11-18T15:52:58.778347,REST-AuthGateway,45.228.163.205,443,user,FAILED,532,4.8,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40252,2026-11-18T15:53:00.778347,SSH,45.247.61.220,22,test,FAILED,414,4.88,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40253,2026-11-18T15:53:02.778347,SSH,45.161.174.169,22,test,FAILED,485,4.91,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40254,2026-11-18T15:53:04.778347,RDP,45.224.85.166,3389,backup,FAILED,373,4.6,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40255,2026-11-18T15:53:06.778347,RDP,45.221.173.222,3389,backup,FAILED,505,4.81,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40256,2026-11-18T15:53:08.778347,RDP,45.149.36.99,3389,oracle,FAILED,434,4.6,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40257,2026-11-18T15:53:10.778347,REST-AuthGateway,45.132.82.62,443,backup,FAILED,591,4.64,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40258,2026-11-18T15:53:12.778347,REST-AuthGateway,45.213.204.2,443,postgres,FAILED,434,5.06,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40259,2026-11-18T15:53:14.778347,REST-AuthGateway,45.132.63.194,443,postgres,FAILED,668,5.12,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40260,2026-11-18T15:53:16.778347,REST-AuthGateway,45.209.81.61,443,oracle,FAILED,558,5.12,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40261,2026-11-18T15:53:18.778347,SSH,45.130.61.163,22,postgres,FAILED,602,5.13,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40262,2026-11-18T15:53:20.778347,SSH,45.208.166.56,22,user,FAILED,447,4.62,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40263,2026-11-18T15:53:22.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.32,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40264,2026-11-18T15:53:24.778347,SSH,45.107.150.142,22,test,FAILED,440,4.71,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40265,2026-11-18T15:53:26.778347,RDP,45.116.127.229,3389,root,FAILED,397,4.79,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40266,2026-11-18T15:53:28.778347,RDP,45.206.76.50,3389,oracle,FAILED,466,4.91,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40267,2026-11-18T15:53:30.778347,REST-AuthGateway,45.172.224.64,443,oracle,FAILED,493,5.2,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40268,2026-11-18T15:53:32.778347,REST-AuthGateway,45.105.72.246,443,postgres,FAILED,396,5.1,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40269,2026-11-18T15:53:34.778347,RDP,45.136.148.29,3389,user,FAILED,487,4.66,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40270,2026-11-18T15:53:36.778347,SSH,45.170.39.59,22,postgres,FAILED,551,5.06,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40271,2026-11-18T15:53:38.778347,SSH,45.233.215.243,22,oracle,FAILED,519,4.64,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40272,2026-11-18T15:53:40.778347,REST-AuthGateway,45.116.11.158,443,test,FAILED,506,4.79,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40273,2026-11-18T15:53:42.778347,SSH,45.109.117.186,22,admin,FAILED,409,5.11,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40274,2026-11-18T15:53:44.778347,SSH,45.240.90.5,22,backup,FAILED,431,5.02,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40275,2026-11-18T15:53:46.778347,SSH,45.127.151.147,22,oracle,FAILED,380,4.99,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40276,2026-11-18T15:53:48.778347,SSH,45.168.155.60,22,guest,FAILED,379,4.97,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40277,2026-11-18T15:53:50.778347,SSH,45.198.211.102,22,administrator,FAILED,618,4.72,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40278,2026-11-18T15:53:52.778347,SSH,45.110.117.239,22,guest,FAILED,460,4.95,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40279,2026-11-18T15:53:54.778347,RDP,45.204.196.14,3389,oracle,FAILED,607,4.91,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40280,2026-11-18T15:53:56.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.84,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40281,2026-11-18T15:53:58.778347,RDP,45.136.147.92,3389,postgres,FAILED,530,4.69,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40282,2026-11-18T15:54:00.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.61,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40283,2026-11-18T15:54:02.778347,SSH,45.211.205.23,22,administrator,FAILED,587,4.99,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40284,2026-11-18T15:54:04.778347,REST-AuthGateway,45.219.8.100,443,guest,FAILED,582,4.81,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40285,2026-11-18T15:54:06.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.57,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40286,2026-11-18T15:54:08.778347,SSH,45.241.56.109,22,service,FAILED,491,4.78,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40287,2026-11-18T15:54:10.778347,SSH,45.238.88.195,22,oracle,FAILED,439,4.87,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40288,2026-11-18T15:54:12.778347,REST-AuthGateway,45.185.130.206,443,user,FAILED,473,4.57,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40289,2026-11-18T15:54:14.778347,REST-AuthGateway,45.200.50.133,443,guest,FAILED,531,4.83,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40290,2026-11-18T15:54:16.778347,SSH,45.249.154.193,22,administrator,FAILED,466,4.54,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40291,2026-11-18T15:54:18.778347,SSH,45.217.90.34,22,guest,FAILED,545,4.82,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40292,2026-11-18T15:54:20.778347,SSH,45.158.140.81,22,postgres,FAILED,655,4.76,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40293,2026-11-18T15:54:22.778347,REST-AuthGateway,45.148.212.162,443,user,FAILED,647,5.12,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40294,2026-11-18T15:54:24.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.85,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40295,2026-11-18T15:54:26.778347,SSH,45.131.179.21,22,root,FAILED,432,5.12,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40296,2026-11-18T15:54:28.778347,REST-AuthGateway,45.132.72.241,443,root,FAILED,343,5.02,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40297,2026-11-18T15:54:30.778347,REST-AuthGateway,45.114.86.242,443,backup,FAILED,441,4.68,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40298,2026-11-18T15:54:32.778347,SSH,45.186.27.74,22,backup,FAILED,595,5.07,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40299,2026-11-18T15:54:34.778347,REST-AuthGateway,45.250.111.154,443,admin,FAILED,543,4.63,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40300,2026-11-18T15:54:36.778347,REST-AuthGateway,45.141.248.225,443,administrator,FAILED,654,4.6,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40301,2026-11-18T15:54:38.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.46,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40302,2026-11-18T15:54:40.778347,RDP,45.128.58.48,3389,backup,FAILED,411,4.84,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40303,2026-11-18T15:54:42.778347,SSH,45.102.210.18,22,guest,FAILED,636,4.84,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40304,2026-11-18T15:54:44.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.85,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40305,2026-11-18T15:54:46.778347,REST-AuthGateway,45.169.114.160,443,root,FAILED,477,4.68,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40306,2026-11-18T15:54:48.778347,RDP,45.217.148.121,3389,backup,FAILED,364,4.55,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40307,2026-11-18T15:54:50.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.99,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40308,2026-11-18T15:54:52.778347,REST-AuthGateway,45.217.180.45,443,root,FAILED,634,4.64,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40309,2026-11-18T15:54:54.778347,SSH,45.117.79.74,22,test,FAILED,514,4.66,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40310,2026-11-18T15:54:56.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.39,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40311,2026-11-18T15:54:58.778347,SSH,45.144.112.249,22,service,FAILED,672,4.62,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40312,2026-11-18T15:55:00.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,2.05,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40313,2026-11-18T15:55:02.778347,REST-AuthGateway,45.137.2.191,443,postgres,FAILED,369,4.7,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40314,2026-11-18T15:55:04.778347,RDP,45.182.25.34,3389,guest,FAILED,362,4.56,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40315,2026-11-18T15:55:06.778347,SSH,45.179.240.168,22,administrator,FAILED,525,5.19,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40316,2026-11-18T15:55:08.778347,SSH,45.211.237.151,22,guest,FAILED,601,5.11,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40317,2026-11-18T15:55:10.778347,RDP,45.135.89.223,3389,user,FAILED,477,4.87,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40318,2026-11-18T15:55:12.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.49,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40319,2026-11-18T15:55:14.778347,REST-AuthGateway,45.247.41.179,443,postgres,FAILED,531,4.94,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40320,2026-11-18T15:55:16.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.68,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40321,2026-11-18T15:55:18.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.53,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40322,2026-11-18T15:55:20.778347,REST-AuthGateway,45.238.38.219,443,test,FAILED,678,4.86,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40323,2026-11-18T15:55:22.778347,RDP,45.179.195.163,3389,test,FAILED,592,5.0,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40324,2026-11-18T15:55:24.778347,REST-AuthGateway,45.197.46.148,443,admin,FAILED,349,4.77,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40325,2026-11-18T15:55:26.778347,REST-AuthGateway,45.133.99.241,443,oracle,FAILED,482,4.96,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40326,2026-11-18T15:55:28.778347,REST-AuthGateway,45.131.121.77,443,root,FAILED,526,4.96,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40327,2026-11-18T15:55:30.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.37,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40328,2026-11-18T15:55:32.778347,RDP,45.233.177.230,3389,root,FAILED,589,4.73,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40329,2026-11-18T15:55:34.778347,RDP,45.205.221.128,3389,service,FAILED,422,4.92,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40330,2026-11-18T15:55:36.778347,REST-AuthGateway,45.110.75.90,443,test,FAILED,615,4.96,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40331,2026-11-18T15:55:38.778347,REST-AuthGateway,45.219.19.237,443,postgres,FAILED,379,4.98,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40332,2026-11-18T15:55:40.778347,SSH,45.119.238.221,22,oracle,FAILED,560,4.69,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40333,2026-11-18T15:55:42.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.8,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40334,2026-11-18T15:55:44.778347,REST-AuthGateway,45.191.210.65,443,postgres,FAILED,423,4.62,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40335,2026-11-18T15:55:46.778347,REST-AuthGateway,45.141.247.162,443,admin,FAILED,349,5.03,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40336,2026-11-18T15:55:48.778347,RDP,45.185.193.245,3389,service,FAILED,385,5.0,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40337,2026-11-18T15:55:50.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.25,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40338,2026-11-18T15:55:52.778347,RDP,45.110.214.51,3389,backup,FAILED,623,4.96,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40339,2026-11-18T15:55:54.778347,RDP,45.112.242.152,3389,postgres,FAILED,508,4.93,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40340,2026-11-18T15:55:56.778347,RDP,45.111.7.163,3389,postgres,FAILED,541,4.85,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40341,2026-11-18T15:55:58.778347,REST-AuthGateway,45.150.250.66,443,administrator,FAILED,457,4.99,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40342,2026-11-18T15:56:00.778347,REST-AuthGateway,45.115.30.122,443,root,FAILED,414,5.0,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40343,2026-11-18T15:56:02.778347,RDP,45.181.186.84,3389,root,FAILED,523,4.88,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40344,2026-11-18T15:56:04.778347,SSH,45.119.24.93,22,service,FAILED,667,5.12,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40345,2026-11-18T15:56:06.778347,SSH,45.120.241.164,22,backup,FAILED,607,4.74,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40346,2026-11-18T15:56:08.778347,RDP,45.250.148.240,3389,administrator,FAILED,543,4.51,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40347,2026-11-18T15:56:10.778347,SSH,45.160.195.11,22,postgres,FAILED,388,4.68,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40348,2026-11-18T15:56:12.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.78,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40349,2026-11-18T15:56:14.778347,REST-AuthGateway,45.190.16.205,443,oracle,FAILED,658,4.92,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40350,2026-11-18T15:56:16.778347,SSH,45.210.98.136,22,oracle,FAILED,390,5.16,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40351,2026-11-18T15:56:18.778347,SSH,45.186.57.77,22,administrator,FAILED,493,4.89,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40352,2026-11-18T15:56:20.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.7,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40353,2026-11-18T15:56:22.778347,REST-AuthGateway,45.219.5.151,443,administrator,FAILED,405,4.63,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40354,2026-11-18T15:56:24.778347,RDP,45.244.47.210,3389,oracle,FAILED,407,4.53,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40355,2026-11-18T15:56:26.778347,REST-AuthGateway,45.250.5.240,443,user,FAILED,439,4.95,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40356,2026-11-18T15:56:28.778347,SSH,45.184.35.23,22,guest,FAILED,577,4.85,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40357,2026-11-18T15:56:30.778347,SSH,45.122.30.95,22,oracle,FAILED,448,4.53,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40358,2026-11-18T15:56:32.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.56,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40359,2026-11-18T15:56:34.778347,RDP,45.166.94.216,3389,oracle,FAILED,547,4.7,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40360,2026-11-18T15:56:36.778347,RDP,45.159.173.86,3389,oracle,FAILED,494,5.01,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40361,2026-11-18T15:56:38.778347,REST-AuthGateway,45.230.28.120,443,postgres,FAILED,325,5.0,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40362,2026-11-18T15:56:40.778347,SSH,45.164.243.8,22,test,FAILED,648,4.55,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40363,2026-11-18T15:56:42.778347,RDP,45.241.234.175,3389,backup,FAILED,362,4.72,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40364,2026-11-18T15:56:44.778347,RDP,45.161.140.166,3389,guest,FAILED,579,5.14,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40365,2026-11-18T15:56:46.778347,SSH,45.167.68.236,22,test,FAILED,665,4.63,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40366,2026-11-18T15:56:48.778347,SSH,45.140.115.49,22,oracle,FAILED,469,4.59,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40367,2026-11-18T15:56:50.778347,SSH,45.108.101.163,22,postgres,FAILED,406,4.77,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40368,2026-11-18T15:56:52.778347,RDP,45.108.201.117,3389,administrator,FAILED,348,4.79,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40369,2026-11-18T15:56:54.778347,RDP,45.106.105.208,3389,root,FAILED,621,4.81,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40370,2026-11-18T15:56:56.778347,REST-AuthGateway,45.148.198.238,443,postgres,FAILED,372,5.15,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40371,2026-11-18T15:56:58.778347,REST-AuthGateway,45.168.137.191,443,test,FAILED,401,4.97,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40372,2026-11-18T15:57:00.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.44,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40373,2026-11-18T15:57:02.778347,SSH,45.191.69.90,22,backup,FAILED,389,4.96,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40374,2026-11-18T15:57:04.778347,SSH,45.200.63.10,22,test,FAILED,326,4.87,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40375,2026-11-18T15:57:06.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.24,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40376,2026-11-18T15:57:08.778347,SSH,45.250.53.42,22,postgres,FAILED,603,4.58,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40377,2026-11-18T15:57:10.778347,RDP,45.185.76.56,3389,backup,FAILED,671,4.88,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40378,2026-11-18T15:57:12.778347,REST-AuthGateway,45.181.176.9,443,root,FAILED,453,5.03,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40379,2026-11-18T15:57:14.778347,RDP,45.154.81.167,3389,root,FAILED,513,5.05,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40380,2026-11-18T15:57:16.778347,RDP,45.120.63.39,3389,test,FAILED,348,4.69,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40381,2026-11-18T15:57:18.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.75,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40382,2026-11-18T15:57:20.778347,SSH,45.140.40.64,22,administrator,FAILED,577,4.84,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40383,2026-11-18T15:57:22.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,2.06,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40384,2026-11-18T15:57:24.778347,SSH,45.209.242.177,22,postgres,FAILED,485,5.07,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40385,2026-11-18T15:57:26.778347,RDP,45.177.132.77,3389,guest,FAILED,529,4.65,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40386,2026-11-18T15:57:28.778347,REST-AuthGateway,45.127.132.36,443,user,FAILED,325,4.92,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40387,2026-11-18T15:57:30.778347,SSH,45.102.90.117,22,backup,FAILED,506,4.83,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40388,2026-11-18T15:57:32.778347,SSH,45.138.5.101,22,user,FAILED,437,4.65,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40389,2026-11-18T15:57:34.778347,RDP,45.156.134.130,3389,oracle,FAILED,532,4.9,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40390,2026-11-18T15:57:36.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.62,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40391,2026-11-18T15:57:38.778347,REST-AuthGateway,45.209.104.247,443,backup,FAILED,384,4.6,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40392,2026-11-18T15:57:40.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.56,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40393,2026-11-18T15:57:42.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.44,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40394,2026-11-18T15:57:44.778347,SSH,45.173.74.54,22,guest,FAILED,552,4.75,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40395,2026-11-18T15:57:46.778347,SSH,45.216.173.121,22,root,FAILED,655,4.65,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40396,2026-11-18T15:57:48.778347,REST-AuthGateway,45.246.125.87,443,backup,FAILED,420,4.79,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40397,2026-11-18T15:57:50.778347,SSH,45.224.237.83,22,test,FAILED,368,5.06,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40398,2026-11-18T15:57:52.778347,RDP,45.100.72.218,3389,oracle,FAILED,354,4.56,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40399,2026-11-18T15:57:54.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,2.02,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40400,2026-11-18T15:57:56.778347,SSH,45.232.172.49,22,administrator,FAILED,539,4.87,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40401,2026-11-18T15:57:58.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.73,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40402,2026-11-18T15:58:00.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.4,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40403,2026-11-18T15:58:02.778347,REST-AuthGateway,45.159.247.152,443,administrator,FAILED,431,5.13,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40404,2026-11-18T15:58:04.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.27,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40405,2026-11-18T15:58:06.778347,SSH,45.177.31.26,22,guest,FAILED,582,4.98,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40406,2026-11-18T15:58:08.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.77,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40407,2026-11-18T15:58:10.778347,SSH,45.136.201.139,22,backup,FAILED,366,4.51,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40408,2026-11-18T15:58:12.778347,RDP,45.153.182.43,3389,oracle,FAILED,642,5.19,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40409,2026-11-18T15:58:14.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.93,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40410,2026-11-18T15:58:16.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.66,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40411,2026-11-18T15:58:18.778347,SSH,45.171.69.168,22,oracle,FAILED,500,4.8,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40412,2026-11-18T15:58:20.778347,RDP,45.117.65.175,3389,oracle,FAILED,428,5.13,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40413,2026-11-18T15:58:22.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.91,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40414,2026-11-18T15:58:24.778347,REST-AuthGateway,45.185.207.95,443,service,FAILED,408,4.67,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40415,2026-11-18T15:58:26.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.96,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40416,2026-11-18T15:58:28.778347,REST-AuthGateway,45.192.109.12,443,backup,FAILED,548,5.12,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40417,2026-11-18T15:58:30.778347,REST-AuthGateway,45.184.87.126,443,oracle,FAILED,620,4.57,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40418,2026-11-18T15:58:32.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.38,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40419,2026-11-18T15:58:34.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.62,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40420,2026-11-18T15:58:36.778347,RDP,45.231.187.188,3389,user,FAILED,535,5.14,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40421,2026-11-18T15:58:38.778347,SSH,45.212.89.89,22,postgres,FAILED,390,4.86,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40422,2026-11-18T15:58:40.778347,REST-AuthGateway,45.117.119.206,443,guest,FAILED,595,4.82,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40423,2026-11-18T15:58:42.778347,SSH,45.107.97.30,22,admin,FAILED,643,4.76,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40424,2026-11-18T15:58:44.778347,RDP,45.248.155.91,3389,oracle,FAILED,396,5.01,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40425,2026-11-18T15:58:46.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.57,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40426,2026-11-18T15:58:48.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,2.0,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40427,2026-11-18T15:58:50.778347,REST-AuthGateway,45.163.50.162,443,service,FAILED,363,4.72,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40428,2026-11-18T15:58:52.778347,RDP,45.226.187.205,3389,postgres,FAILED,592,5.17,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40429,2026-11-18T15:58:54.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.7,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40430,2026-11-18T15:58:56.778347,REST-AuthGateway,45.152.168.68,443,administrator,FAILED,445,5.07,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40431,2026-11-18T15:58:58.778347,REST-AuthGateway,45.110.56.25,443,postgres,FAILED,346,4.89,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40432,2026-11-18T15:59:00.778347,SSH,45.191.35.85,22,backup,FAILED,350,4.81,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40433,2026-11-18T15:59:02.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.35,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40434,2026-11-18T15:59:04.778347,SSH,45.116.232.230,22,administrator,FAILED,576,4.68,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40435,2026-11-18T15:59:06.778347,REST-AuthGateway,45.151.11.23,443,postgres,FAILED,505,5.19,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40436,2026-11-18T15:59:08.778347,SSH,45.159.50.75,22,oracle,FAILED,410,5.19,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40437,2026-11-18T15:59:10.778347,SSH,45.119.23.111,22,postgres,FAILED,346,5.06,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40438,2026-11-18T15:59:12.778347,RDP,45.139.107.91,3389,test,FAILED,553,5.11,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40439,2026-11-18T15:59:14.778347,SSH,45.131.208.219,22,administrator,FAILED,680,5.16,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40440,2026-11-18T15:59:16.778347,SSH,45.232.66.137,22,admin,FAILED,345,4.67,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40441,2026-11-18T15:59:18.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.45,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40442,2026-11-18T15:59:20.778347,SSH,45.214.21.162,22,service,FAILED,489,4.96,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40443,2026-11-18T15:59:22.778347,REST-AuthGateway,45.145.13.113,443,guest,FAILED,625,5.13,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40444,2026-11-18T15:59:24.778347,SSH,45.110.75.236,22,administrator,FAILED,487,5.09,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40445,2026-11-18T15:59:26.778347,REST-AuthGateway,45.103.163.5,443,guest,FAILED,527,4.63,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40446,2026-11-18T15:59:28.778347,REST-AuthGateway,45.171.177.162,443,root,FAILED,405,4.7,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40447,2026-11-18T15:59:30.778347,REST-AuthGateway,45.247.182.137,443,test,FAILED,531,4.78,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40448,2026-11-18T15:59:32.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.7,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40449,2026-11-18T15:59:34.778347,REST-AuthGateway,45.100.64.71,443,backup,FAILED,489,4.52,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40450,2026-11-18T15:59:36.778347,SSH,45.173.168.111,22,test,FAILED,473,4.84,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40451,2026-11-18T15:59:38.778347,RDP,45.249.56.95,3389,root,FAILED,615,4.57,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40452,2026-11-18T15:59:40.778347,SSH,45.239.163.214,22,test,FAILED,528,4.94,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40453,2026-11-18T15:59:42.778347,RDP,45.112.188.42,3389,backup,FAILED,561,5.19,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40454,2026-11-18T15:59:44.778347,SSH,45.105.82.109,22,guest,FAILED,612,4.97,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40455,2026-11-18T15:59:46.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.85,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40456,2026-11-18T15:59:48.778347,REST-AuthGateway,45.153.218.96,443,test,FAILED,412,5.06,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40457,2026-11-18T15:59:50.778347,SSH,45.109.197.189,22,service,FAILED,412,5.04,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40458,2026-11-18T15:59:52.778347,REST-AuthGateway,45.218.183.185,443,root,FAILED,450,4.6,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40459,2026-11-18T15:59:54.778347,REST-AuthGateway,45.140.71.104,443,user,FAILED,346,4.64,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40460,2026-11-18T15:59:56.778347,REST-AuthGateway,45.235.30.20,443,backup,FAILED,454,5.2,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40461,2026-11-18T15:59:58.778347,REST-AuthGateway,45.143.191.108,443,root,FAILED,674,4.68,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40462,2026-11-18T16:00:00.778347,RDP,45.118.100.239,3389,admin,FAILED,601,4.53,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40463,2026-11-18T16:00:02.778347,RDP,45.165.194.142,3389,test,FAILED,380,5.19,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40464,2026-11-18T16:00:04.778347,REST-AuthGateway,45.215.64.27,443,oracle,FAILED,450,5.11,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40465,2026-11-18T16:00:06.778347,REST-AuthGateway,45.171.10.73,443,service,FAILED,540,4.6,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40466,2026-11-18T16:00:08.778347,SSH,45.147.154.240,22,user,FAILED,673,4.8,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40467,2026-11-18T16:00:10.778347,SSH,45.208.134.183,22,test,FAILED,367,4.86,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40468,2026-11-18T16:00:12.778347,REST-AuthGateway,45.180.134.179,443,guest,FAILED,403,4.95,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40469,2026-11-18T16:00:14.778347,SSH,45.132.152.164,22,postgres,FAILED,524,5.1,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40470,2026-11-18T16:00:16.778347,SSH,45.195.86.9,22,guest,FAILED,603,4.5,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40471,2026-11-18T16:00:18.778347,SSH,45.161.116.160,22,oracle,FAILED,442,4.58,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40472,2026-11-18T16:00:20.778347,SSH,45.190.65.178,22,oracle,FAILED,626,4.96,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40473,2026-11-18T16:00:22.778347,REST-AuthGateway,45.248.14.149,443,postgres,FAILED,603,4.51,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40474,2026-11-18T16:00:24.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.35,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40475,2026-11-18T16:00:26.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.94,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40476,2026-11-18T16:00:28.778347,SSH,45.153.51.5,22,administrator,FAILED,641,5.1,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40477,2026-11-18T16:00:30.778347,REST-AuthGateway,45.173.107.210,443,administrator,FAILED,471,4.91,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40478,2026-11-18T16:00:32.778347,RDP,45.164.107.15,3389,guest,FAILED,640,4.85,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40479,2026-11-18T16:00:34.778347,SSH,45.105.32.94,22,root,FAILED,385,5.03,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40480,2026-11-18T16:00:36.778347,REST-AuthGateway,45.239.223.186,443,administrator,FAILED,393,4.93,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40481,2026-11-18T16:00:38.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,2.02,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40482,2026-11-18T16:00:40.778347,REST-AuthGateway,45.230.1.186,443,postgres,FAILED,431,4.6,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40483,2026-11-18T16:00:42.778347,SSH,45.188.189.12,22,postgres,FAILED,368,4.58,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40484,2026-11-18T16:00:44.778347,SSH,45.200.189.215,22,user,FAILED,333,4.53,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40485,2026-11-18T16:00:46.778347,REST-AuthGateway,45.175.57.75,443,postgres,FAILED,575,4.9,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40486,2026-11-18T16:00:48.778347,REST-AuthGateway,45.156.236.161,443,administrator,FAILED,491,4.67,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40487,2026-11-18T16:00:50.778347,SSH,45.116.234.207,22,oracle,FAILED,433,4.71,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40488,2026-11-18T16:00:52.778347,RDP,45.114.120.2,3389,administrator,FAILED,585,5.08,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40489,2026-11-18T16:00:54.778347,RDP,45.209.83.174,3389,backup,FAILED,435,4.5,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40490,2026-11-18T16:00:56.778347,SSH,45.211.165.151,22,test,FAILED,590,4.73,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40491,2026-11-18T16:00:58.778347,REST-AuthGateway,45.239.226.215,443,administrator,FAILED,329,4.96,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40492,2026-11-18T16:01:00.778347,RDP,45.200.57.54,3389,user,FAILED,446,4.81,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40493,2026-11-18T16:01:02.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,2.05,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40494,2026-11-18T16:01:04.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.23,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40495,2026-11-18T16:01:06.778347,SSH,45.231.172.28,22,backup,FAILED,634,5.18,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40496,2026-11-18T16:01:08.778347,RDP,45.234.127.189,3389,test,FAILED,458,4.56,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40497,2026-11-18T16:01:10.778347,REST-AuthGateway,45.229.165.165,443,root,FAILED,482,4.7,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40498,2026-11-18T16:01:12.778347,REST-AuthGateway,45.153.6.181,443,test,FAILED,345,5.17,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40499,2026-11-18T16:01:14.778347,RDP,45.142.125.233,3389,admin,FAILED,323,4.87,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40500,2026-11-18T16:01:16.778347,RDP,45.167.27.103,3389,test,FAILED,665,5.05,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40501,2026-11-18T16:01:18.778347,RDP,45.136.17.30,3389,admin,FAILED,446,4.56,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40502,2026-11-18T16:01:20.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.65,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40503,2026-11-18T16:01:22.778347,SSH,45.216.199.158,22,guest,FAILED,433,4.79,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40504,2026-11-18T16:01:24.778347,RDP,45.134.86.243,3389,postgres,FAILED,526,5.05,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40505,2026-11-18T16:01:26.778347,SSH,45.233.37.115,22,postgres,FAILED,665,5.17,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40506,2026-11-18T16:01:28.778347,SSH,45.201.160.175,22,root,FAILED,584,4.71,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40507,2026-11-18T16:01:30.778347,REST-AuthGateway,45.141.18.157,443,administrator,FAILED,510,4.7,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40508,2026-11-18T16:01:32.778347,SSH,45.151.211.8,22,service,FAILED,408,5.04,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40509,2026-11-18T16:01:34.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.45,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40510,2026-11-18T16:01:36.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.46,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40511,2026-11-18T16:01:38.778347,RDP,45.201.171.92,3389,admin,FAILED,341,4.97,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40512,2026-11-18T16:01:40.778347,SSH,45.127.110.121,22,oracle,FAILED,678,4.55,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40513,2026-11-18T16:01:42.778347,REST-AuthGateway,45.115.250.156,443,user,FAILED,670,4.92,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40514,2026-11-18T16:01:44.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.62,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40515,2026-11-18T16:01:46.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.5,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40516,2026-11-18T16:01:48.778347,RDP,45.246.52.109,3389,oracle,FAILED,451,5.03,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40517,2026-11-18T16:01:50.778347,RDP,45.149.233.73,3389,user,FAILED,589,5.06,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40518,2026-11-18T16:01:52.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.94,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40519,2026-11-18T16:01:54.778347,REST-AuthGateway,45.216.229.247,443,administrator,FAILED,480,4.86,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40520,2026-11-18T16:01:56.778347,SSH,45.109.182.35,22,admin,FAILED,633,5.03,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40521,2026-11-18T16:01:58.778347,REST-AuthGateway,45.173.161.62,443,oracle,FAILED,532,4.66,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40522,2026-11-18T16:02:00.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.78,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40523,2026-11-18T16:02:02.778347,RDP,45.154.144.92,3389,postgres,FAILED,327,4.9,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40524,2026-11-18T16:02:04.778347,SSH,45.110.11.137,22,user,FAILED,468,5.17,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40525,2026-11-18T16:02:06.778347,SSH,45.170.139.160,22,user,FAILED,357,5.12,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40526,2026-11-18T16:02:08.778347,SSH,45.153.189.229,22,service,FAILED,503,4.88,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40527,2026-11-18T16:02:10.778347,SSH,45.158.133.41,22,administrator,FAILED,489,5.0,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40528,2026-11-18T16:02:12.778347,RDP,45.146.44.126,3389,user,FAILED,358,5.08,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40529,2026-11-18T16:02:14.778347,REST-AuthGateway,45.135.227.77,443,test,FAILED,542,4.92,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40530,2026-11-18T16:02:16.778347,RDP,45.233.114.158,3389,postgres,FAILED,618,5.12,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40531,2026-11-18T16:02:18.778347,RDP,45.204.228.206,3389,guest,FAILED,535,4.95,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40532,2026-11-18T16:02:20.778347,SSH,45.155.168.156,22,user,FAILED,371,4.65,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40533,2026-11-18T16:02:22.778347,REST-AuthGateway,45.183.112.87,443,service,FAILED,350,4.56,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40534,2026-11-18T16:02:24.778347,RDP,45.165.245.73,3389,oracle,FAILED,570,4.93,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40535,2026-11-18T16:02:26.778347,REST-AuthGateway,45.201.99.152,443,root,FAILED,381,4.68,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40536,2026-11-18T16:02:28.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.28,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40537,2026-11-18T16:02:30.778347,SSH,45.149.62.53,22,service,FAILED,514,5.06,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40538,2026-11-18T16:02:32.778347,RDP,45.123.195.193,3389,test,FAILED,508,4.85,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40539,2026-11-18T16:02:34.778347,RDP,45.114.14.30,3389,admin,FAILED,416,4.97,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40540,2026-11-18T16:02:36.778347,SSH,45.133.86.246,22,guest,FAILED,534,5.1,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40541,2026-11-18T16:02:38.778347,RDP,45.184.71.127,3389,user,FAILED,362,4.79,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40542,2026-11-18T16:02:40.778347,RDP,45.162.226.104,3389,oracle,FAILED,341,4.72,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40543,2026-11-18T16:02:42.778347,SSH,45.109.181.82,22,user,FAILED,421,4.54,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40544,2026-11-18T16:02:44.778347,SSH,45.180.57.115,22,guest,FAILED,493,5.04,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40545,2026-11-18T16:02:46.778347,SSH,45.200.100.161,22,postgres,FAILED,351,4.58,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40546,2026-11-18T16:02:48.778347,REST-AuthGateway,45.111.42.148,443,backup,FAILED,439,4.59,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40547,2026-11-18T16:02:50.778347,REST-AuthGateway,45.135.107.43,443,root,FAILED,572,5.0,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40548,2026-11-18T16:02:52.778347,RDP,45.150.149.144,3389,root,FAILED,644,5.12,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40549,2026-11-18T16:02:54.778347,SSH,45.126.82.88,22,user,FAILED,432,5.18,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40550,2026-11-18T16:02:56.778347,RDP,45.122.81.200,3389,oracle,FAILED,562,4.89,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40551,2026-11-18T16:02:58.778347,RDP,45.131.192.54,3389,oracle,FAILED,625,4.58,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40552,2026-11-18T16:03:00.778347,SSH,45.166.155.122,22,oracle,FAILED,395,4.63,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40553,2026-11-18T16:03:02.778347,REST-AuthGateway,45.112.105.120,443,admin,FAILED,367,4.76,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40554,2026-11-18T16:03:04.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.6,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40555,2026-11-18T16:03:06.778347,REST-AuthGateway,45.211.230.25,443,test,FAILED,381,4.9,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40556,2026-11-18T16:03:08.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.8,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40557,2026-11-18T16:03:10.778347,SSH,45.226.55.147,22,postgres,FAILED,635,4.95,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40558,2026-11-18T16:03:12.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.98,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40559,2026-11-18T16:03:14.778347,SSH,45.198.153.207,22,service,FAILED,321,4.64,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40560,2026-11-18T16:03:16.778347,SSH,45.101.48.152,22,administrator,FAILED,618,4.85,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40561,2026-11-18T16:03:18.778347,RDP,45.249.87.170,3389,oracle,FAILED,550,4.69,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40562,2026-11-18T16:03:20.778347,REST-AuthGateway,45.229.171.214,443,oracle,FAILED,447,5.01,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40563,2026-11-18T16:03:22.778347,RDP,45.188.134.213,3389,postgres,FAILED,522,4.56,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40564,2026-11-18T16:03:24.778347,REST-AuthGateway,45.177.63.37,443,service,FAILED,478,5.09,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40565,2026-11-18T16:03:26.778347,REST-AuthGateway,45.183.47.9,443,oracle,FAILED,362,5.05,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40566,2026-11-18T16:03:28.778347,SSH,45.212.152.246,22,service,FAILED,645,5.14,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40567,2026-11-18T16:03:30.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.33,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40568,2026-11-18T16:03:32.778347,SSH,45.143.25.69,22,guest,FAILED,508,4.79,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40569,2026-11-18T16:03:34.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.58,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40570,2026-11-18T16:03:36.778347,RDP,45.104.99.133,3389,guest,FAILED,535,5.02,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40571,2026-11-18T16:03:38.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.71,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40572,2026-11-18T16:03:40.778347,RDP,45.130.130.46,3389,service,FAILED,597,4.56,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40573,2026-11-18T16:03:42.778347,RDP,45.194.139.25,3389,service,FAILED,564,4.92,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40574,2026-11-18T16:03:44.778347,RDP,45.167.151.2,3389,backup,FAILED,628,4.66,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40575,2026-11-18T16:03:46.778347,SSH,45.147.141.234,22,postgres,FAILED,443,4.76,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40576,2026-11-18T16:03:48.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.89,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40577,2026-11-18T16:03:50.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,2.06,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40578,2026-11-18T16:03:52.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,2.05,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40579,2026-11-18T16:03:54.778347,REST-AuthGateway,45.165.12.85,443,guest,FAILED,344,4.75,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40580,2026-11-18T16:03:56.778347,REST-AuthGateway,45.240.151.237,443,administrator,FAILED,616,4.94,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40581,2026-11-18T16:03:58.778347,RDP,45.140.51.94,3389,test,FAILED,439,5.19,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40582,2026-11-18T16:04:00.778347,SSH,45.114.48.238,22,guest,FAILED,552,4.54,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40583,2026-11-18T16:04:02.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,2.01,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40584,2026-11-18T16:04:04.778347,SSH,45.120.72.45,22,service,FAILED,526,4.63,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40585,2026-11-18T16:04:06.778347,SSH,45.156.195.166,22,root,FAILED,576,4.86,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40586,2026-11-18T16:04:08.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,1,1.47,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40587,2026-11-18T16:04:10.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.6,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40588,2026-11-18T16:04:12.778347,RDP,45.144.104.107,3389,backup,FAILED,621,5.09,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40589,2026-11-18T16:04:14.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.99,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40590,2026-11-18T16:04:16.778347,SSH,45.203.86.19,22,postgres,FAILED,573,4.84,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40591,2026-11-18T16:04:18.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,2,1.85,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40592,2026-11-18T16:04:20.778347,REST-AuthGateway,45.126.75.155,443,user,FAILED,630,4.51,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40593,2026-11-18T16:04:22.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.99,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40594,2026-11-18T16:04:24.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.32,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40595,2026-11-18T16:04:26.778347,RDP,45.204.85.113,3389,guest,FAILED,618,4.68,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40596,2026-11-18T16:04:28.778347,RDP,45.221.124.168,3389,guest,FAILED,614,4.63,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40597,2026-11-18T16:04:30.778347,SSH,45.208.156.44,22,oracle,FAILED,320,4.89,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40598,2026-11-18T16:04:32.778347,RDP,45.101.245.9,3389,oracle,FAILED,617,4.79,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40599,2026-11-18T16:04:34.778347,SSH,45.109.229.194,22,administrator,FAILED,427,4.92,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40600,2026-11-18T16:04:36.778347,SSH,45.144.44.234,22,backup,FAILED,535,5.1,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40601,2026-11-18T16:04:38.778347,REST-AuthGateway,45.210.173.221,443,user,FAILED,438,4.58,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40602,2026-11-18T16:04:40.778347,REST-AuthGateway,45.196.79.160,443,administrator,FAILED,657,4.71,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40603,2026-11-18T16:04:42.778347,SSH,45.124.169.177,22,postgres,FAILED,589,5.16,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40604,2026-11-18T16:04:44.778347,REST-AuthGateway,45.196.181.101,443,test,FAILED,368,4.52,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40605,2026-11-18T16:04:46.778347,RDP,45.183.138.135,3389,admin,FAILED,368,4.99,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40606,2026-11-18T16:04:48.778347,REST-AuthGateway,45.217.194.199,443,test,FAILED,568,4.65,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40607,2026-11-18T16:04:50.778347,SSH,45.191.142.27,22,service,FAILED,364,4.5,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40608,2026-11-18T16:04:52.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.69,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40609,2026-11-18T16:04:54.778347,REST-AuthGateway,45.193.90.133,443,user,FAILED,445,4.6,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40610,2026-11-18T16:04:56.778347,SSH,45.182.183.224,22,admin,FAILED,625,4.86,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40611,2026-11-18T16:04:58.778347,REST-AuthGateway,45.155.15.126,443,root,FAILED,393,5.15,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40612,2026-11-18T16:05:00.778347,RDP,45.112.80.110,3389,administrator,FAILED,440,5.07,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40613,2026-11-18T16:05:02.778347,RDP,45.183.49.100,3389,user,FAILED,618,5.12,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40614,2026-11-18T16:05:04.778347,SSH,45.111.81.20,22,guest,FAILED,452,5.14,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40615,2026-11-18T16:05:06.778347,REST-AuthGateway,45.244.207.224,443,service,FAILED,494,5.02,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40616,2026-11-18T16:05:08.778347,REST-AuthGateway,45.170.86.205,443,admin,FAILED,495,4.67,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40617,2026-11-18T16:05:10.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,2.03,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40618,2026-11-18T16:05:12.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.25,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40619,2026-11-18T16:05:14.778347,REST-AuthGateway,45.244.180.14,443,backup,FAILED,603,5.12,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40620,2026-11-18T16:05:16.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.96,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40621,2026-11-18T16:05:18.778347,REST-AuthGateway,45.125.205.223,443,service,FAILED,514,4.99,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40622,2026-11-18T16:05:20.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.22,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40623,2026-11-18T16:05:22.778347,REST-AuthGateway,45.128.43.31,443,admin,FAILED,415,4.66,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40624,2026-11-18T16:05:24.778347,RDP,45.169.10.141,3389,guest,FAILED,544,5.05,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40625,2026-11-18T16:05:26.778347,RDP,45.143.73.75,3389,administrator,FAILED,375,4.93,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40626,2026-11-18T16:05:28.778347,SSH,45.128.105.192,22,oracle,FAILED,328,4.8,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40627,2026-11-18T16:05:30.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.49,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40628,2026-11-18T16:05:32.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.25,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40629,2026-11-18T16:05:34.778347,REST-AuthGateway,45.147.144.163,443,user,FAILED,427,4.91,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40630,2026-11-18T16:05:36.778347,REST-AuthGateway,45.174.159.164,443,root,FAILED,322,4.67,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40631,2026-11-18T16:05:38.778347,RDP,45.102.106.175,3389,oracle,FAILED,381,4.55,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40632,2026-11-18T16:05:40.778347,SSH,45.179.172.166,22,backup,FAILED,380,4.78,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40633,2026-11-18T16:05:42.778347,REST-AuthGateway,45.158.159.17,443,user,FAILED,675,4.66,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40634,2026-11-18T16:05:44.778347,RDP,45.121.10.155,3389,administrator,FAILED,642,5.0,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40635,2026-11-18T16:05:46.778347,REST-AuthGateway,45.129.161.128,443,administrator,FAILED,676,4.9,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40636,2026-11-18T16:05:48.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.89,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40637,2026-11-18T16:05:50.778347,REST-AuthGateway,45.145.151.202,443,oracle,FAILED,635,4.72,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40638,2026-11-18T16:05:52.778347,RDP,45.228.244.189,3389,oracle,FAILED,449,5.09,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40639,2026-11-18T16:05:54.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.3,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40640,2026-11-18T16:05:56.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.72,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40641,2026-11-18T16:05:58.778347,REST-AuthGateway,45.216.94.230,443,service,FAILED,585,4.78,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40642,2026-11-18T16:06:00.778347,RDP,45.157.124.244,3389,guest,FAILED,646,4.55,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40643,2026-11-18T16:06:02.778347,RDP,45.231.28.36,3389,admin,FAILED,632,5.14,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40644,2026-11-18T16:06:04.778347,SSH,45.149.200.122,22,admin,FAILED,638,4.55,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40645,2026-11-18T16:06:06.778347,SSH,45.122.56.133,22,oracle,FAILED,481,4.8,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40646,2026-11-18T16:06:08.778347,RDP,45.198.192.203,3389,postgres,FAILED,433,4.91,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40647,2026-11-18T16:06:10.778347,SSH,45.132.142.184,22,user,FAILED,388,4.61,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40648,2026-11-18T16:06:12.778347,REST-AuthGateway,45.124.240.100,443,test,FAILED,676,4.75,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40649,2026-11-18T16:06:14.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.78,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40650,2026-11-18T16:06:16.778347,REST-AuthGateway,45.247.104.236,443,postgres,FAILED,620,4.78,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40651,2026-11-18T16:06:18.778347,SSH,45.200.16.154,22,admin,FAILED,500,4.51,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40652,2026-11-18T16:06:20.778347,REST-AuthGateway,45.114.211.66,443,root,FAILED,641,4.64,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40653,2026-11-18T16:06:22.778347,RDP,45.176.109.115,3389,backup,FAILED,359,4.86,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40654,2026-11-18T16:06:24.778347,RDP,45.243.199.238,3389,admin,FAILED,664,5.0,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40655,2026-11-18T16:06:26.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.45,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40656,2026-11-18T16:06:28.778347,SSH,45.201.106.156,22,backup,FAILED,409,4.85,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40657,2026-11-18T16:06:30.778347,SSH,45.110.50.90,22,administrator,FAILED,343,4.59,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40658,2026-11-18T16:06:32.778347,REST-AuthGateway,45.235.213.24,443,administrator,FAILED,370,4.86,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40659,2026-11-18T16:06:34.778347,RDP,45.247.182.234,3389,postgres,FAILED,447,5.02,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40660,2026-11-18T16:06:36.778347,RDP,45.121.13.49,3389,root,FAILED,666,4.93,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40661,2026-11-18T16:06:38.778347,SSH,45.250.3.244,22,user,FAILED,445,5.17,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40662,2026-11-18T16:06:40.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.67,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40663,2026-11-18T16:06:42.778347,RDP,45.106.131.165,3389,backup,FAILED,357,4.58,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40664,2026-11-18T16:06:44.778347,SSH,45.149.226.83,22,guest,FAILED,431,4.94,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40665,2026-11-18T16:06:46.778347,SSH,45.175.229.150,22,postgres,FAILED,513,4.57,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40666,2026-11-18T16:06:48.778347,REST-AuthGateway,45.194.138.181,443,postgres,FAILED,579,4.73,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40667,2026-11-18T16:06:50.778347,REST-AuthGateway,45.151.43.185,443,test,FAILED,423,4.94,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40668,2026-11-18T16:06:52.778347,RDP,45.141.81.30,3389,guest,FAILED,604,4.61,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40669,2026-11-18T16:06:54.778347,SSH,45.225.193.190,22,administrator,FAILED,587,4.51,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40670,2026-11-18T16:06:56.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.4,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40671,2026-11-18T16:06:58.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.32,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40672,2026-11-18T16:07:00.778347,SSH,45.231.239.211,22,user,FAILED,440,4.89,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40673,2026-11-18T16:07:02.778347,RDP,45.111.154.93,3389,oracle,FAILED,515,5.06,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40674,2026-11-18T16:07:04.778347,REST-AuthGateway,45.113.67.40,443,admin,FAILED,487,4.64,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40675,2026-11-18T16:07:06.778347,SSH,45.219.139.205,22,user,FAILED,616,4.64,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40676,2026-11-18T16:07:08.778347,REST-AuthGateway,45.133.158.55,443,user,FAILED,406,4.85,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40677,2026-11-18T16:07:10.778347,REST-AuthGateway,45.155.227.33,443,user,FAILED,504,4.83,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40678,2026-11-18T16:07:12.778347,REST-AuthGateway,45.136.29.169,443,oracle,FAILED,528,5.2,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40679,2026-11-18T16:07:14.778347,SSH,45.121.71.151,22,test,FAILED,350,4.77,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40680,2026-11-18T16:07:16.778347,SSH,45.227.61.213,22,user,FAILED,341,4.68,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40681,2026-11-18T16:07:18.778347,REST-AuthGateway,45.124.250.23,443,guest,FAILED,622,4.8,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40682,2026-11-18T16:07:20.778347,RDP,45.233.246.103,3389,root,FAILED,377,4.7,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40683,2026-11-18T16:07:22.778347,RDP,45.204.215.201,3389,test,FAILED,378,4.81,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40684,2026-11-18T16:07:24.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.44,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40685,2026-11-18T16:07:26.778347,SSH,45.140.47.193,22,user,FAILED,383,4.72,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40686,2026-11-18T16:07:28.778347,REST-AuthGateway,45.116.92.33,443,test,FAILED,475,4.69,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40687,2026-11-18T16:07:30.778347,SSH,45.107.52.23,22,user,FAILED,575,5.06,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40688,2026-11-18T16:07:32.778347,REST-AuthGateway,45.160.161.102,443,postgres,FAILED,654,4.79,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40689,2026-11-18T16:07:34.778347,RDP,45.193.45.127,3389,test,FAILED,669,4.95,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40690,2026-11-18T16:07:36.778347,REST-AuthGateway,45.203.21.3,443,service,FAILED,637,4.65,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40691,2026-11-18T16:07:38.778347,RDP,45.172.25.175,3389,guest,FAILED,379,4.54,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40692,2026-11-18T16:07:40.778347,SSH,45.146.11.93,22,test,FAILED,563,4.89,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40693,2026-11-18T16:07:42.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.77,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40694,2026-11-18T16:07:44.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.86,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40695,2026-11-18T16:07:46.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.91,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40696,2026-11-18T16:07:48.778347,SSH,45.143.130.15,22,service,FAILED,498,5.05,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40697,2026-11-18T16:07:50.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.8,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40698,2026-11-18T16:07:52.778347,RDP,45.105.68.33,3389,admin,FAILED,538,4.8,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40699,2026-11-18T16:07:54.778347,SSH,45.131.24.236,22,admin,FAILED,449,4.86,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40700,2026-11-18T16:07:56.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.68,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40701,2026-11-18T16:07:58.778347,RDP,45.228.28.59,3389,user,FAILED,646,4.66,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40702,2026-11-18T16:08:00.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.98,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40703,2026-11-18T16:08:02.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.99,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40704,2026-11-18T16:08:04.778347,REST-AuthGateway,45.136.141.170,443,test,FAILED,627,4.56,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40705,2026-11-18T16:08:06.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.82,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40706,2026-11-18T16:08:08.778347,REST-AuthGateway,45.201.145.40,443,backup,FAILED,677,4.86,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40707,2026-11-18T16:08:10.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.66,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40708,2026-11-18T16:08:12.778347,REST-AuthGateway,45.204.214.22,443,test,FAILED,320,5.04,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40709,2026-11-18T16:08:14.778347,SSH,45.150.100.240,22,backup,FAILED,485,4.75,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40710,2026-11-18T16:08:16.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.41,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40711,2026-11-18T16:08:18.778347,RDP,45.210.229.64,3389,postgres,FAILED,628,4.73,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40712,2026-11-18T16:08:20.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.61,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40713,2026-11-18T16:08:22.778347,REST-AuthGateway,45.157.7.162,443,root,FAILED,511,4.68,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40714,2026-11-18T16:08:24.778347,RDP,45.121.118.246,3389,backup,FAILED,397,4.57,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40715,2026-11-18T16:08:26.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.99,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40716,2026-11-18T16:08:28.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.37,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40717,2026-11-18T16:08:30.778347,SSH,45.197.145.169,22,admin,FAILED,450,4.9,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40718,2026-11-18T16:08:32.778347,REST-AuthGateway,45.148.172.235,443,postgres,FAILED,652,5.11,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40719,2026-11-18T16:08:34.778347,RDP,45.151.195.227,3389,guest,FAILED,345,4.64,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40720,2026-11-18T16:08:36.778347,RDP,45.240.120.88,3389,oracle,FAILED,494,4.71,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40721,2026-11-18T16:08:38.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.36,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40722,2026-11-18T16:08:40.778347,REST-AuthGateway,45.154.182.243,443,postgres,FAILED,506,4.75,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40723,2026-11-18T16:08:42.778347,RDP,45.226.163.71,3389,root,FAILED,434,4.93,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40724,2026-11-18T16:08:44.778347,REST-AuthGateway,45.213.175.29,443,postgres,FAILED,674,5.08,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40725,2026-11-18T16:08:46.778347,REST-AuthGateway,45.238.136.65,443,user,FAILED,538,4.97,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40726,2026-11-18T16:08:48.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.31,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40727,2026-11-18T16:08:50.778347,RDP,45.239.201.189,3389,admin,FAILED,358,5.04,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40728,2026-11-18T16:08:52.778347,SSH,45.118.47.88,22,backup,FAILED,348,4.61,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40729,2026-11-18T16:08:54.778347,REST-AuthGateway,45.114.84.23,443,admin,FAILED,547,4.76,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40730,2026-11-18T16:08:56.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.55,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40731,2026-11-18T16:08:58.778347,RDP,45.229.130.240,3389,test,FAILED,493,4.54,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40732,2026-11-18T16:09:00.778347,SSH,45.102.185.26,22,admin,FAILED,573,4.6,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40733,2026-11-18T16:09:02.778347,REST-AuthGateway,45.168.34.235,443,guest,FAILED,542,5.15,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40734,2026-11-18T16:09:04.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.96,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40735,2026-11-18T16:09:06.778347,REST-AuthGateway,45.208.244.133,443,postgres,FAILED,533,4.53,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40736,2026-11-18T16:09:08.778347,SSH,45.100.185.159,22,test,FAILED,379,4.69,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40737,2026-11-18T16:09:10.778347,SSH,45.125.113.175,22,service,FAILED,448,4.67,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40738,2026-11-18T16:09:12.778347,SSH,45.192.59.68,22,admin,FAILED,619,5.17,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40739,2026-11-18T16:09:14.778347,REST-AuthGateway,45.217.195.244,443,test,FAILED,650,4.88,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40740,2026-11-18T16:09:16.778347,RDP,45.150.228.29,3389,oracle,FAILED,534,4.84,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40741,2026-11-18T16:09:18.778347,REST-AuthGateway,45.120.187.241,443,test,FAILED,426,4.5,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40742,2026-11-18T16:09:20.778347,SSH,45.151.173.10,22,backup,FAILED,642,4.96,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40743,2026-11-18T16:09:22.778347,REST-AuthGateway,45.211.52.92,443,administrator,FAILED,642,4.86,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40744,2026-11-18T16:09:24.778347,RDP,45.226.195.21,3389,root,FAILED,457,4.96,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40745,2026-11-18T16:09:26.778347,RDP,45.243.200.124,3389,user,FAILED,656,4.9,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40746,2026-11-18T16:09:28.778347,RDP,45.114.95.131,3389,guest,FAILED,554,5.08,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40747,2026-11-18T16:09:30.778347,SSH,45.119.46.1,22,service,FAILED,375,4.69,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40748,2026-11-18T16:09:32.778347,REST-AuthGateway,45.150.140.95,443,admin,FAILED,493,5.04,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40749,2026-11-18T16:09:34.778347,SSH,45.138.219.128,22,test,FAILED,343,4.74,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40750,2026-11-18T16:09:36.778347,RDP,45.105.13.32,3389,admin,FAILED,653,5.03,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40751,2026-11-18T16:09:38.778347,REST-AuthGateway,45.188.124.105,443,admin,FAILED,544,4.73,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40752,2026-11-18T16:09:40.778347,SSH,45.137.23.99,22,service,FAILED,601,4.75,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40753,2026-11-18T16:09:42.778347,SSH,45.143.228.72,22,administrator,FAILED,440,4.94,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40754,2026-11-18T16:09:44.778347,RDP,45.100.11.188,3389,backup,FAILED,474,5.13,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40755,2026-11-18T16:09:46.778347,REST-AuthGateway,45.201.76.55,443,user,FAILED,516,4.77,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40756,2026-11-18T16:09:48.778347,RDP,45.161.210.218,3389,administrator,FAILED,556,4.81,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40757,2026-11-18T16:09:50.778347,SSH,45.216.87.7,22,admin,FAILED,410,4.73,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40758,2026-11-18T16:09:52.778347,REST-AuthGateway,45.129.118.67,443,admin,FAILED,418,5.0,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40759,2026-11-18T16:09:54.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.37,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40760,2026-11-18T16:09:56.778347,RDP,45.232.248.227,3389,guest,FAILED,504,5.13,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40761,2026-11-18T16:09:58.778347,SSH,45.167.52.173,22,guest,FAILED,450,4.65,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40762,2026-11-18T16:10:00.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.79,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40763,2026-11-18T16:10:02.778347,RDP,45.170.101.2,3389,administrator,FAILED,408,4.52,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40764,2026-11-18T16:10:04.778347,SSH,45.131.248.189,22,root,FAILED,365,4.65,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40765,2026-11-18T16:10:06.778347,SSH,45.105.108.201,22,oracle,FAILED,643,5.11,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40766,2026-11-18T16:10:08.778347,REST-AuthGateway,45.219.54.8,443,user,FAILED,600,5.16,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40767,2026-11-18T16:10:10.778347,RDP,45.151.181.37,3389,backup,FAILED,384,4.85,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40768,2026-11-18T16:10:12.778347,RDP,45.141.9.131,3389,guest,FAILED,388,4.9,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40769,2026-11-18T16:10:14.778347,SSH,45.126.36.94,22,admin,FAILED,471,4.81,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40770,2026-11-18T16:10:16.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.61,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40771,2026-11-18T16:10:18.778347,RDP,45.198.9.75,3389,root,FAILED,530,4.53,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40772,2026-11-18T16:10:20.778347,RDP,45.133.119.31,3389,postgres,FAILED,513,4.62,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40773,2026-11-18T16:10:22.778347,RDP,45.161.169.99,3389,oracle,FAILED,455,4.55,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40774,2026-11-18T16:10:24.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.63,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40775,2026-11-18T16:10:26.778347,RDP,45.150.72.224,3389,user,FAILED,635,4.77,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40776,2026-11-18T16:10:28.778347,SSH,45.225.52.166,22,user,FAILED,487,4.72,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40777,2026-11-18T16:10:30.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,3,1.78,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40778,2026-11-18T16:10:32.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.75,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40779,2026-11-18T16:10:34.778347,SSH,45.153.95.100,22,postgres,FAILED,478,4.91,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40780,2026-11-18T16:10:36.778347,REST-AuthGateway,45.122.54.219,443,oracle,FAILED,513,4.91,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40781,2026-11-18T16:10:38.778347,SSH,45.214.36.29,22,admin,FAILED,438,4.94,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40782,2026-11-18T16:10:40.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.85,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40783,2026-11-18T16:10:42.778347,RDP,45.220.40.28,3389,root,FAILED,476,4.52,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40784,2026-11-18T16:10:44.778347,RDP,45.108.214.167,3389,admin,FAILED,449,4.65,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40785,2026-11-18T16:10:46.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.43,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40786,2026-11-18T16:10:48.778347,SSH,45.212.6.134,22,guest,FAILED,482,4.68,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40787,2026-11-18T16:10:50.778347,SSH,45.243.131.13,22,guest,FAILED,353,4.54,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40788,2026-11-18T16:10:52.778347,RDP,45.153.218.126,3389,backup,FAILED,622,4.79,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40789,2026-11-18T16:10:54.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,2,1.26,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40790,2026-11-18T16:10:56.778347,RDP,45.186.87.216,3389,guest,FAILED,550,4.84,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40791,2026-11-18T16:10:58.778347,RDP,45.136.185.64,3389,admin,FAILED,556,4.57,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40792,2026-11-18T16:11:00.778347,RDP,45.188.221.142,3389,root,FAILED,487,5.01,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40793,2026-11-18T16:11:02.778347,SSH,45.246.82.94,22,administrator,FAILED,656,5.03,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40794,2026-11-18T16:11:04.778347,REST-AuthGateway,45.185.145.205,443,postgres,FAILED,345,4.82,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40795,2026-11-18T16:11:06.778347,RDP,45.127.29.67,3389,administrator,FAILED,664,4.61,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40796,2026-11-18T16:11:08.778347,RDP,45.247.74.147,3389,postgres,FAILED,634,4.58,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40797,2026-11-18T16:11:10.778347,SSH,45.138.193.16,22,service,FAILED,679,4.65,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40798,2026-11-18T16:11:12.778347,SSH,45.143.210.176,22,backup,FAILED,647,4.9,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40799,2026-11-18T16:11:14.778347,REST-AuthGateway,45.100.246.157,443,administrator,FAILED,397,4.77,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40800,2026-11-18T16:11:16.778347,SSH,45.144.141.17,22,administrator,FAILED,567,5.02,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40801,2026-11-18T16:11:18.778347,SSH,45.129.85.168,22,user,FAILED,377,4.54,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40802,2026-11-18T16:11:20.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.41,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40803,2026-11-18T16:11:22.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,2.05,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40804,2026-11-18T16:11:24.778347,RDP,45.214.130.247,3389,guest,FAILED,397,4.52,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40805,2026-11-18T16:11:26.778347,REST-AuthGateway,45.249.87.190,443,administrator,FAILED,416,4.61,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40806,2026-11-18T16:11:28.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.35,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40807,2026-11-18T16:11:30.778347,REST-AuthGateway,45.237.130.65,443,user,FAILED,492,4.72,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40808,2026-11-18T16:11:32.778347,RDP,45.199.9.197,3389,service,FAILED,577,4.54,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40809,2026-11-18T16:11:34.778347,REST-AuthGateway,45.154.75.26,443,guest,FAILED,522,4.64,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40810,2026-11-18T16:11:36.778347,REST-AuthGateway,45.100.150.30,443,user,FAILED,421,4.69,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40811,2026-11-18T16:11:38.778347,SSH,45.152.15.238,22,backup,FAILED,568,4.94,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40812,2026-11-18T16:11:40.778347,REST-AuthGateway,45.142.135.143,443,test,FAILED,329,4.57,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40813,2026-11-18T16:11:42.778347,RDP,45.166.34.155,3389,guest,FAILED,406,4.5,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40814,2026-11-18T16:11:44.778347,RDP,45.118.145.77,3389,guest,FAILED,450,5.04,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40815,2026-11-18T16:11:46.778347,REST-AuthGateway,45.130.128.176,443,backup,FAILED,630,4.94,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40816,2026-11-18T16:11:48.778347,REST-AuthGateway,45.131.184.225,443,admin,FAILED,532,4.76,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40817,2026-11-18T16:11:50.778347,SSH,45.133.31.11,22,service,FAILED,598,4.82,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40818,2026-11-18T16:11:52.778347,RDP,45.119.187.9,3389,oracle,FAILED,540,5.13,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40819,2026-11-18T16:11:54.778347,SSH,45.107.75.118,22,user,FAILED,467,4.87,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40820,2026-11-18T16:11:56.778347,RDP,45.158.184.107,3389,user,FAILED,382,4.84,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40821,2026-11-18T16:11:58.778347,RDP,45.120.164.39,3389,oracle,FAILED,462,5.03,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40822,2026-11-18T16:12:00.778347,SSH,45.146.128.163,22,test,FAILED,598,4.69,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40823,2026-11-18T16:12:02.778347,REST-AuthGateway,45.186.154.116,443,postgres,FAILED,504,4.99,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40824,2026-11-18T16:12:04.778347,SSH,45.239.188.247,22,admin,FAILED,580,5.09,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40825,2026-11-18T16:12:06.778347,RDP,45.115.160.134,3389,administrator,FAILED,608,4.5,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40826,2026-11-18T16:12:08.778347,REST-AuthGateway,45.192.217.142,443,oracle,FAILED,639,4.87,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40827,2026-11-18T16:12:10.778347,REST-AuthGateway,45.152.24.126,443,user,FAILED,650,4.99,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40828,2026-11-18T16:12:12.778347,RDP,45.192.133.191,3389,user,FAILED,334,5.01,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40829,2026-11-18T16:12:14.778347,RDP,45.171.125.60,3389,service,FAILED,343,4.58,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40830,2026-11-18T16:12:16.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,2.01,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40831,2026-11-18T16:12:18.778347,RDP,45.158.177.201,3389,user,FAILED,502,4.52,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40832,2026-11-18T16:12:20.778347,REST-AuthGateway,45.202.17.145,443,backup,FAILED,614,4.54,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40833,2026-11-18T16:12:22.778347,SSH,45.177.4.204,22,administrator,FAILED,639,4.62,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40834,2026-11-18T16:12:24.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.94,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40835,2026-11-18T16:12:26.778347,RDP,45.159.81.152,3389,postgres,FAILED,428,5.2,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40836,2026-11-18T16:12:28.778347,SSH,45.183.241.123,22,administrator,FAILED,555,5.03,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40837,2026-11-18T16:12:30.778347,RDP,45.225.45.63,3389,user,FAILED,505,4.86,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40838,2026-11-18T16:12:32.778347,REST-AuthGateway,45.183.70.129,443,postgres,FAILED,374,5.01,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40839,2026-11-18T16:12:34.778347,REST-AuthGateway,45.193.118.247,443,oracle,FAILED,555,4.57,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40840,2026-11-18T16:12:36.778347,SSH,45.226.135.184,22,oracle,FAILED,528,4.85,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40841,2026-11-18T16:12:38.778347,REST-AuthGateway,45.172.73.84,443,root,FAILED,538,4.79,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40842,2026-11-18T16:12:40.778347,REST-AuthGateway,45.162.108.42,443,guest,FAILED,513,4.88,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40843,2026-11-18T16:12:42.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.32,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40844,2026-11-18T16:12:44.778347,RDP,45.188.158.126,3389,administrator,FAILED,453,4.75,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40845,2026-11-18T16:12:46.778347,REST-AuthGateway,45.238.10.134,443,service,FAILED,516,4.73,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40846,2026-11-18T16:12:48.778347,REST-AuthGateway,45.207.60.59,443,oracle,FAILED,494,4.66,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40847,2026-11-18T16:12:50.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.25,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40848,2026-11-18T16:12:52.778347,REST-AuthGateway,45.118.156.154,443,backup,FAILED,679,4.77,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40849,2026-11-18T16:12:54.778347,RDP,45.135.179.24,3389,admin,FAILED,646,4.99,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40850,2026-11-18T16:12:56.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,2.05,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40851,2026-11-18T16:12:58.778347,REST-AuthGateway,45.189.181.112,443,user,FAILED,578,5.03,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40852,2026-11-18T16:13:00.778347,RDP,45.204.25.230,3389,administrator,FAILED,574,5.18,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40853,2026-11-18T16:13:02.778347,SSH,45.191.137.94,22,user,FAILED,608,4.75,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40854,2026-11-18T16:13:04.778347,REST-AuthGateway,45.141.112.28,443,postgres,FAILED,423,4.56,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40855,2026-11-18T16:13:06.778347,REST-AuthGateway,45.239.73.116,443,oracle,FAILED,630,4.92,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40856,2026-11-18T16:13:08.778347,REST-AuthGateway,45.205.205.131,443,user,FAILED,475,4.94,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40857,2026-11-18T16:13:10.778347,REST-AuthGateway,45.206.134.26,443,test,FAILED,380,4.82,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40858,2026-11-18T16:13:12.778347,SSH,45.160.90.62,22,administrator,FAILED,482,5.1,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40859,2026-11-18T16:13:14.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.55,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40860,2026-11-18T16:13:16.778347,RDP,45.179.187.157,3389,root,FAILED,364,5.16,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40861,2026-11-18T16:13:18.778347,REST-AuthGateway,45.208.177.211,443,admin,FAILED,473,4.6,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40862,2026-11-18T16:13:20.778347,REST-AuthGateway,45.208.173.81,443,test,FAILED,486,5.2,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40863,2026-11-18T16:13:22.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.66,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40864,2026-11-18T16:13:24.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,1,1.68,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40865,2026-11-18T16:13:26.778347,SSH,45.127.36.84,22,postgres,FAILED,325,4.63,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40866,2026-11-18T16:13:28.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,2.05,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40867,2026-11-18T16:13:30.778347,SSH,45.150.52.170,22,user,FAILED,637,4.51,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40868,2026-11-18T16:13:32.778347,RDP,45.233.186.87,3389,administrator,FAILED,600,4.51,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40869,2026-11-18T16:13:34.778347,RDP,45.191.193.53,3389,admin,FAILED,639,5.02,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40870,2026-11-18T16:13:36.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,3,1.75,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40871,2026-11-18T16:13:38.778347,SSH,45.160.28.106,22,guest,FAILED,432,4.78,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40872,2026-11-18T16:13:40.778347,RDP,45.190.51.215,3389,test,FAILED,430,5.06,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40873,2026-11-18T16:13:42.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.79,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40874,2026-11-18T16:13:44.778347,REST-AuthGateway,45.154.120.152,443,service,FAILED,478,5.14,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40875,2026-11-18T16:13:46.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.92,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40876,2026-11-18T16:13:48.778347,SSH,45.171.207.218,22,user,FAILED,507,4.7,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40877,2026-11-18T16:13:50.778347,RDP,45.114.60.34,3389,guest,FAILED,350,4.92,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40878,2026-11-18T16:13:52.778347,REST-AuthGateway,45.189.102.56,443,admin,FAILED,438,5.07,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40879,2026-11-18T16:13:54.778347,RDP,45.236.60.193,3389,backup,FAILED,414,5.04,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40880,2026-11-18T16:13:56.778347,SSH,45.211.75.170,22,user,FAILED,554,5.16,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40881,2026-11-18T16:13:58.778347,RDP,45.194.61.2,3389,postgres,FAILED,650,5.12,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40882,2026-11-18T16:14:00.778347,REST-AuthGateway,45.187.82.151,443,oracle,FAILED,482,4.74,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40883,2026-11-18T16:14:02.778347,REST-AuthGateway,45.142.63.208,443,user,FAILED,540,5.07,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40884,2026-11-18T16:14:04.778347,SSH,45.223.9.201,22,root,FAILED,628,4.89,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40885,2026-11-18T16:14:06.778347,RDP,45.222.127.82,3389,user,FAILED,555,5.12,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40886,2026-11-18T16:14:08.778347,RDP,45.230.177.64,3389,backup,FAILED,590,4.75,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40887,2026-11-18T16:14:10.778347,RDP,45.233.35.41,3389,service,FAILED,444,4.71,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40888,2026-11-18T16:14:12.778347,SSH,45.120.4.23,22,guest,FAILED,593,4.98,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40889,2026-11-18T16:14:14.778347,REST-AuthGateway,45.168.97.167,443,postgres,FAILED,641,4.56,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40890,2026-11-18T16:14:16.778347,RDP,45.201.213.159,3389,postgres,FAILED,385,5.19,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40891,2026-11-18T16:14:18.778347,RDP,45.250.30.232,3389,oracle,FAILED,529,4.86,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40892,2026-11-18T16:14:20.778347,SSH,45.201.208.51,22,administrator,FAILED,461,5.12,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40893,2026-11-18T16:14:22.778347,REST-AuthGateway,45.184.193.75,443,root,FAILED,413,4.54,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40894,2026-11-18T16:14:24.778347,RDP,45.248.100.133,3389,user,FAILED,557,4.62,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40895,2026-11-18T16:14:26.778347,SSH,45.209.164.138,22,service,FAILED,380,5.16,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40896,2026-11-18T16:14:28.778347,REST-AuthGateway,45.245.38.52,443,test,FAILED,455,4.93,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40897,2026-11-18T16:14:30.778347,SSH,45.176.232.143,22,administrator,FAILED,410,5.11,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40898,2026-11-18T16:14:32.778347,RDP,45.162.197.193,3389,guest,FAILED,465,4.95,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40899,2026-11-18T16:14:34.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,2.0,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40900,2026-11-18T16:14:36.778347,REST-AuthGateway,45.227.211.69,443,root,FAILED,553,4.94,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40901,2026-11-18T16:14:38.778347,SSH,45.201.176.71,22,root,FAILED,456,4.52,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40902,2026-11-18T16:14:40.778347,RDP,45.151.156.146,3389,test,FAILED,477,5.12,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40903,2026-11-18T16:14:42.778347,REST-AuthGateway,45.102.126.131,443,root,FAILED,485,4.87,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40904,2026-11-18T16:14:44.778347,SSH,45.147.97.83,22,guest,FAILED,667,5.04,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40905,2026-11-18T16:14:46.778347,REST-AuthGateway,45.160.141.37,443,guest,FAILED,505,4.53,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40906,2026-11-18T16:14:48.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.74,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40907,2026-11-18T16:14:50.778347,SSH,45.182.79.18,22,postgres,FAILED,464,5.12,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40908,2026-11-18T16:14:52.778347,REST-AuthGateway,45.129.238.187,443,admin,FAILED,646,4.68,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40909,2026-11-18T16:14:54.778347,REST-AuthGateway,45.197.130.136,443,oracle,FAILED,410,4.96,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40910,2026-11-18T16:14:56.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,3,1.57,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40911,2026-11-18T16:14:58.778347,SSH,45.161.80.221,22,postgres,FAILED,320,4.57,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40912,2026-11-18T16:15:00.778347,SSH,45.236.129.7,22,test,FAILED,604,4.59,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40913,2026-11-18T16:15:02.778347,REST-AuthGateway,45.126.103.142,443,root,FAILED,363,4.62,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40914,2026-11-18T16:15:04.778347,SSH,45.157.6.176,22,root,FAILED,543,5.14,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40915,2026-11-18T16:15:06.778347,SSH,45.188.134.99,22,postgres,FAILED,535,5.03,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40916,2026-11-18T16:15:08.778347,RDP,45.124.230.35,3389,user,FAILED,505,4.83,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40917,2026-11-18T16:15:10.778347,SSH,45.202.171.93,22,admin,FAILED,430,5.1,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40918,2026-11-18T16:15:12.778347,REST-AuthGateway,45.166.225.113,443,service,FAILED,422,5.06,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40919,2026-11-18T16:15:14.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.93,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40920,2026-11-18T16:15:16.778347,SSH,45.231.7.57,22,guest,FAILED,632,4.57,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40921,2026-11-18T16:15:18.778347,SSH,45.169.65.23,22,service,FAILED,531,4.57,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40922,2026-11-18T16:15:20.778347,SSH,45.223.237.88,22,root,FAILED,381,4.94,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40923,2026-11-18T16:15:22.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.57,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40924,2026-11-18T16:15:24.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.63,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40925,2026-11-18T16:15:26.778347,RDP,45.229.210.92,3389,postgres,FAILED,528,5.15,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40926,2026-11-18T16:15:28.778347,RDP,45.104.194.74,3389,backup,FAILED,479,5.02,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40927,2026-11-18T16:15:30.778347,REST-AuthGateway,45.199.108.59,443,root,FAILED,543,5.1,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40928,2026-11-18T16:15:32.778347,REST-AuthGateway,45.236.178.33,443,test,FAILED,512,5.13,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40929,2026-11-18T16:15:34.778347,SSH,45.200.165.224,22,oracle,FAILED,396,4.87,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40930,2026-11-18T16:15:36.778347,SSH,45.205.190.185,22,postgres,FAILED,531,4.88,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40931,2026-11-18T16:15:38.778347,RDP,45.132.131.184,3389,admin,FAILED,459,4.91,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40932,2026-11-18T16:15:40.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.28,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40933,2026-11-18T16:15:42.778347,REST-AuthGateway,45.137.67.207,443,administrator,FAILED,478,5.13,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40934,2026-11-18T16:15:44.778347,SSH,45.201.92.202,22,guest,FAILED,567,4.82,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40935,2026-11-18T16:15:46.778347,REST-AuthGateway,45.120.25.207,443,postgres,FAILED,580,4.56,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40936,2026-11-18T16:15:48.778347,REST-AuthGateway,45.140.210.117,443,user,FAILED,363,4.71,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40937,2026-11-18T16:15:50.778347,REST-AuthGateway,45.217.245.198,443,backup,FAILED,522,4.58,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40938,2026-11-18T16:15:52.778347,REST-AuthGateway,45.201.236.216,443,backup,FAILED,492,4.88,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40939,2026-11-18T16:15:54.778347,RDP,45.230.86.154,3389,oracle,FAILED,332,5.15,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40940,2026-11-18T16:15:56.778347,REST-AuthGateway,45.183.212.178,443,administrator,FAILED,417,5.04,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40941,2026-11-18T16:15:58.778347,SSH,45.181.21.6,22,service,FAILED,481,4.76,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40942,2026-11-18T16:16:00.778347,RDP,45.238.5.141,3389,backup,FAILED,588,4.54,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40943,2026-11-18T16:16:02.778347,RDP,45.201.125.103,3389,user,FAILED,668,4.92,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40944,2026-11-18T16:16:04.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.53,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40945,2026-11-18T16:16:06.778347,SSH,45.199.114.192,22,test,FAILED,330,4.53,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40946,2026-11-18T16:16:08.778347,REST-AuthGateway,45.185.99.114,443,admin,FAILED,618,5.03,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40947,2026-11-18T16:16:10.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.81,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40948,2026-11-18T16:16:12.778347,RDP,45.196.245.165,3389,admin,FAILED,323,4.84,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40949,2026-11-18T16:16:14.778347,REST-AuthGateway,45.204.106.21,443,user,FAILED,549,5.12,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40950,2026-11-18T16:16:16.778347,SSH,45.127.20.64,22,test,FAILED,591,5.2,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40951,2026-11-18T16:16:18.778347,RDP,45.206.42.6,3389,backup,FAILED,375,4.75,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40952,2026-11-18T16:16:20.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.51,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40953,2026-11-18T16:16:22.778347,SSH,45.121.250.250,22,administrator,FAILED,527,4.6,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40954,2026-11-18T16:16:24.778347,SSH,45.217.139.123,22,guest,FAILED,517,4.89,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40955,2026-11-18T16:16:26.778347,SSH,45.160.241.134,22,oracle,FAILED,356,4.59,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40956,2026-11-18T16:16:28.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,2.03,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40957,2026-11-18T16:16:30.778347,REST-AuthGateway,45.224.160.13,443,guest,FAILED,598,4.69,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40958,2026-11-18T16:16:32.778347,SSH,45.205.40.135,22,service,FAILED,654,4.73,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40959,2026-11-18T16:16:34.778347,SSH,45.105.42.186,22,admin,FAILED,611,5.04,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40960,2026-11-18T16:16:36.778347,REST-AuthGateway,45.161.92.59,443,administrator,FAILED,644,5.01,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40961,2026-11-18T16:16:38.778347,RDP,45.223.246.25,3389,oracle,FAILED,412,4.7,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40962,2026-11-18T16:16:40.778347,REST-AuthGateway,45.101.169.248,443,guest,FAILED,677,4.72,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40963,2026-11-18T16:16:42.778347,SSH,192.168.1.105,22,dev_engineer,FAILED,2,1.58,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40964,2026-11-18T16:16:44.778347,RDP,45.103.132.150,3389,backup,FAILED,630,4.83,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40965,2026-11-18T16:16:46.778347,SSH,45.122.27.186,22,backup,FAILED,384,5.15,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40966,2026-11-18T16:16:48.778347,SSH,45.225.134.151,22,service,FAILED,439,4.61,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40967,2026-11-18T16:16:50.778347,RDP,45.217.173.117,3389,root,FAILED,478,4.85,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40968,2026-11-18T16:16:52.778347,SSH,45.150.192.156,22,service,FAILED,503,4.63,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40969,2026-11-18T16:16:54.778347,REST-AuthGateway,45.102.120.86,443,admin,FAILED,468,4.86,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40970,2026-11-18T16:16:56.778347,RDP,45.180.147.174,3389,admin,FAILED,399,5.09,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40971,2026-11-18T16:16:58.778347,SSH,45.152.142.115,22,guest,FAILED,365,4.74,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40972,2026-11-18T16:17:00.778347,SSH,45.126.122.100,22,root,FAILED,443,4.52,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40973,2026-11-18T16:17:02.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.95,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40974,2026-11-18T16:17:04.778347,SSH,45.124.41.80,22,oracle,FAILED,651,4.87,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40975,2026-11-18T16:17:06.778347,RDP,45.199.196.115,3389,administrator,FAILED,375,4.97,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40976,2026-11-18T16:17:08.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.87,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40977,2026-11-18T16:17:10.778347,RDP,45.183.41.19,3389,admin,FAILED,350,5.19,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40978,2026-11-18T16:17:12.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.58,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40979,2026-11-18T16:17:14.778347,REST-AuthGateway,45.120.164.113,443,backup,FAILED,598,5.01,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40980,2026-11-18T16:17:16.778347,REST-AuthGateway,45.207.90.231,443,guest,FAILED,420,4.84,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40981,2026-11-18T16:17:18.778347,RDP,45.148.192.16,3389,service,FAILED,550,4.88,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40982,2026-11-18T16:17:20.778347,RDP,45.164.166.90,3389,admin,FAILED,498,4.87,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40983,2026-11-18T16:17:22.778347,REST-AuthGateway,45.238.76.222,443,administrator,FAILED,526,4.55,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40984,2026-11-18T16:17:24.778347,SSH,45.120.123.108,22,backup,FAILED,352,5.08,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40985,2026-11-18T16:17:26.778347,REST-AuthGateway,45.198.144.72,443,service,FAILED,578,4.89,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40986,2026-11-18T16:17:28.778347,SSH,45.121.181.182,22,postgres,FAILED,649,4.54,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40987,2026-11-18T16:17:30.778347,REST-AuthGateway,45.244.74.236,443,test,FAILED,680,4.93,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40988,2026-11-18T16:17:32.778347,REST-AuthGateway,45.136.69.48,443,administrator,FAILED,425,4.92,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40989,2026-11-18T16:17:34.778347,SSH,45.130.125.216,22,admin,FAILED,378,4.78,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-40990,2026-11-18T16:17:36.778347,REST-AuthGateway,45.150.45.112,443,service,FAILED,447,4.88,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40991,2026-11-18T16:17:38.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.91,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-40992,2026-11-18T16:17:40.778347,REST-AuthGateway,45.224.249.120,443,test,FAILED,579,4.65,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40993,2026-11-18T16:17:42.778347,REST-AuthGateway,45.222.227.34,443,postgres,FAILED,416,4.85,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-40994,2026-11-18T16:17:44.778347,REST-AuthGateway,45.169.237.112,443,backup,FAILED,434,5.12,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40995,2026-11-18T16:17:46.778347,REST-AuthGateway,45.111.222.242,443,administrator,FAILED,561,4.69,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-40996,2026-11-18T16:17:48.778347,RDP,45.233.22.221,3389,test,FAILED,630,4.54,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40997,2026-11-18T16:17:50.778347,REST-AuthGateway,45.227.105.149,443,admin,FAILED,534,5.09,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-40998,2026-11-18T16:17:52.778347,REST-AuthGateway,45.173.208.249,443,admin,FAILED,610,4.59,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-40999,2026-11-18T16:17:54.778347,RDP,45.173.8.216,3389,oracle,FAILED,574,5.01,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41000,2026-11-18T16:17:56.778347,SSH,45.244.98.47,22,admin,FAILED,447,4.5,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41001,2026-11-18T16:17:58.778347,RDP,45.171.22.12,3389,root,FAILED,477,4.8,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41002,2026-11-18T16:18:00.778347,REST-AuthGateway,45.239.60.187,443,admin,FAILED,347,4.54,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41003,2026-11-18T16:18:02.778347,SSH,45.101.176.145,22,postgres,FAILED,599,5.14,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41004,2026-11-18T16:18:04.778347,SSH,45.189.71.154,22,oracle,FAILED,524,5.04,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41005,2026-11-18T16:18:06.778347,REST-AuthGateway,45.203.108.207,443,service,FAILED,431,4.67,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41006,2026-11-18T16:18:08.778347,RDP,45.114.63.36,3389,guest,FAILED,479,5.12,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41007,2026-11-18T16:18:10.778347,RDP,45.246.44.154,3389,test,FAILED,436,5.01,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41008,2026-11-18T16:18:12.778347,RDP,45.141.183.92,3389,admin,FAILED,376,5.1,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41009,2026-11-18T16:18:14.778347,SSH,45.164.3.222,22,root,FAILED,458,4.79,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41010,2026-11-18T16:18:16.778347,RDP,45.196.242.101,3389,root,FAILED,431,4.69,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41011,2026-11-18T16:18:18.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.7,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41012,2026-11-18T16:18:20.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.48,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41013,2026-11-18T16:18:22.778347,SSH,45.239.116.16,22,administrator,FAILED,353,4.74,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41014,2026-11-18T16:18:24.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.81,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41015,2026-11-18T16:18:26.778347,SSH,45.127.185.113,22,admin,FAILED,604,4.95,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41016,2026-11-18T16:18:28.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.65,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41017,2026-11-18T16:18:30.778347,REST-AuthGateway,45.103.204.72,443,guest,FAILED,500,4.8,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41018,2026-11-18T16:18:32.778347,REST-AuthGateway,45.146.132.19,443,test,FAILED,563,4.6,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41019,2026-11-18T16:18:34.778347,REST-AuthGateway,45.211.21.99,443,postgres,FAILED,584,4.85,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41020,2026-11-18T16:18:36.778347,REST-AuthGateway,45.117.113.217,443,guest,FAILED,352,5.16,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41021,2026-11-18T16:18:38.778347,RDP,45.223.196.41,3389,administrator,FAILED,322,4.94,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41022,2026-11-18T16:18:40.778347,SSH,45.177.5.121,22,postgres,FAILED,548,4.88,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41023,2026-11-18T16:18:42.778347,RDP,45.161.222.182,3389,oracle,FAILED,478,4.66,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41024,2026-11-18T16:18:44.778347,SSH,45.132.249.74,22,postgres,FAILED,499,5.2,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41025,2026-11-18T16:18:46.778347,SSH,45.220.87.182,22,user,FAILED,450,5.03,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41026,2026-11-18T16:18:48.778347,RDP,45.210.168.235,3389,administrator,FAILED,673,4.56,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41027,2026-11-18T16:18:50.778347,RDP,45.170.228.234,3389,test,FAILED,325,5.05,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41028,2026-11-18T16:18:52.778347,SSH,45.185.67.40,22,backup,FAILED,347,4.82,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41029,2026-11-18T16:18:54.778347,SSH,45.187.132.70,22,admin,FAILED,613,5.03,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41030,2026-11-18T16:18:56.778347,RDP,45.199.172.76,3389,user,FAILED,353,4.86,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41031,2026-11-18T16:18:58.778347,REST-AuthGateway,45.178.192.88,443,user,FAILED,652,5.12,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41032,2026-11-18T16:19:00.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.26,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41033,2026-11-18T16:19:02.778347,SSH,45.229.162.167,22,user,FAILED,561,4.57,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41034,2026-11-18T16:19:04.778347,REST-AuthGateway,45.140.47.10,443,admin,FAILED,428,4.77,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41035,2026-11-18T16:19:06.778347,RDP,45.105.185.11,3389,root,FAILED,327,5.12,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41036,2026-11-18T16:19:08.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.96,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41037,2026-11-18T16:19:10.778347,SSH,45.171.35.11,22,root,FAILED,488,5.11,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41038,2026-11-18T16:19:12.778347,RDP,45.140.87.214,3389,backup,FAILED,378,5.06,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41039,2026-11-18T16:19:14.778347,REST-AuthGateway,45.218.128.167,443,service,FAILED,504,4.9,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41040,2026-11-18T16:19:16.778347,REST-AuthGateway,45.131.169.230,443,user,FAILED,527,4.94,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41041,2026-11-18T16:19:18.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.49,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41042,2026-11-18T16:19:20.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,2.06,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41043,2026-11-18T16:19:22.778347,RDP,45.219.127.189,3389,root,FAILED,572,5.06,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41044,2026-11-18T16:19:24.778347,RDP,45.239.176.205,3389,backup,FAILED,437,4.96,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41045,2026-11-18T16:19:26.778347,SSH,45.237.188.13,22,service,FAILED,477,5.13,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41046,2026-11-18T16:19:28.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,2.08,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41047,2026-11-18T16:19:30.778347,RDP,45.155.109.106,3389,postgres,FAILED,661,4.55,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41048,2026-11-18T16:19:32.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.62,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41049,2026-11-18T16:19:34.778347,RDP,45.206.69.213,3389,user,FAILED,647,4.83,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41050,2026-11-18T16:19:36.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.71,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41051,2026-11-18T16:19:38.778347,REST-AuthGateway,45.169.21.97,443,root,FAILED,425,4.78,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41052,2026-11-18T16:19:40.778347,SSH,45.195.43.196,22,root,FAILED,321,5.18,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41053,2026-11-18T16:19:42.778347,SSH,45.225.153.115,22,user,FAILED,593,4.72,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41054,2026-11-18T16:19:44.778347,REST-AuthGateway,45.102.85.6,443,admin,FAILED,429,4.66,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41055,2026-11-18T16:19:46.778347,SSH,45.213.195.106,22,guest,FAILED,477,4.67,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41056,2026-11-18T16:19:48.778347,SSH,45.232.246.132,22,oracle,FAILED,320,5.03,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41057,2026-11-18T16:19:50.778347,SSH,45.213.178.87,22,user,FAILED,427,4.9,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41058,2026-11-18T16:19:52.778347,REST-AuthGateway,45.186.135.239,443,backup,FAILED,407,4.53,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41059,2026-11-18T16:19:54.778347,RDP,45.244.157.46,3389,postgres,FAILED,437,4.69,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41060,2026-11-18T16:19:56.778347,REST-AuthGateway,45.236.55.108,443,oracle,FAILED,651,5.15,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41061,2026-11-18T16:19:58.778347,RDP,45.241.79.118,3389,user,FAILED,398,4.5,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41062,2026-11-18T16:20:00.778347,SSH,45.125.189.75,22,user,FAILED,377,5.17,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41063,2026-11-18T16:20:02.778347,SSH,45.111.96.85,22,oracle,FAILED,358,4.9,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41064,2026-11-18T16:20:04.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.25,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41065,2026-11-18T16:20:06.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.5,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41066,2026-11-18T16:20:08.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.49,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41067,2026-11-18T16:20:10.778347,SSH,45.149.146.99,22,backup,FAILED,521,4.84,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41068,2026-11-18T16:20:12.778347,REST-AuthGateway,45.173.185.118,443,root,FAILED,625,4.5,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41069,2026-11-18T16:20:14.778347,RDP,45.230.163.148,3389,user,FAILED,413,4.56,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41070,2026-11-18T16:20:16.778347,RDP,45.176.116.101,3389,service,FAILED,647,5.06,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41071,2026-11-18T16:20:18.778347,REST-AuthGateway,45.229.77.2,443,root,FAILED,359,5.14,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41072,2026-11-18T16:20:20.778347,RDP,45.212.40.209,3389,user,FAILED,406,4.94,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41073,2026-11-18T16:20:22.778347,REST-AuthGateway,45.219.86.142,443,service,FAILED,369,4.91,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41074,2026-11-18T16:20:24.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,2,1.74,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41075,2026-11-18T16:20:26.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.62,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41076,2026-11-18T16:20:28.778347,SSH,45.176.139.37,22,root,FAILED,597,4.83,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41077,2026-11-18T16:20:30.778347,SSH,45.241.211.182,22,test,FAILED,364,5.08,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41078,2026-11-18T16:20:32.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,1.93,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41079,2026-11-18T16:20:34.778347,RDP,45.242.51.140,3389,postgres,FAILED,662,4.95,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41080,2026-11-18T16:20:36.778347,RDP,45.159.76.229,3389,test,FAILED,648,4.58,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41081,2026-11-18T16:20:38.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,3,1.84,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41082,2026-11-18T16:20:40.778347,REST-AuthGateway,45.105.100.158,443,guest,FAILED,447,5.09,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
+BF-41083,2026-11-18T16:20:42.778347,SSH,45.118.221.49,22,administrator,FAILED,428,5.0,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41084,2026-11-18T16:20:44.778347,SSH,45.215.92.173,22,administrator,FAILED,631,5.0,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41085,2026-11-18T16:20:46.778347,SSH,45.177.67.221,22,backup,FAILED,457,4.99,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41086,2026-11-18T16:20:48.778347,RDP,45.229.98.116,3389,user,FAILED,518,5.08,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41087,2026-11-18T16:20:50.778347,RDP,45.202.114.168,3389,postgres,FAILED,375,5.14,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41088,2026-11-18T16:20:52.778347,REST-AuthGateway,45.167.51.143,443,user,FAILED,616,5.07,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41089,2026-11-18T16:20:54.778347,RDP,45.250.179.96,3389,guest,FAILED,514,5.02,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41090,2026-11-18T16:20:56.778347,SSH,45.120.219.91,22,root,FAILED,500,4.57,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41091,2026-11-18T16:20:58.778347,SSH,45.219.76.82,22,backup,FAILED,591,5.05,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41092,2026-11-18T16:21:00.778347,SSH,45.185.79.39,22,oracle,FAILED,621,4.83,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41093,2026-11-18T16:21:02.778347,SSH,192.168.1.105,22,dev_engineer,SUCCESS,1,2.01,OpenSSH_8.9p1 Ubuntu-3ubuntu0.1,US,Authorized-Login,Benign
+BF-41094,2026-11-18T16:21:04.778347,REST-AuthGateway,45.172.87.140,443,service,FAILED,337,5.06,SSH-2.0-paramiko_2.8.0_bot,RU,BruteForce-CredentialSpray,Malicious
+BF-41095,2026-11-18T16:21:06.778347,RDP,45.224.91.169,3389,oracle,FAILED,589,4.58,SSH-2.0-paramiko_2.8.0_bot,BR,BruteForce-CredentialSpray,Malicious
+BF-41096,2026-11-18T16:21:08.778347,SSH,45.238.102.207,22,oracle,FAILED,363,4.58,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41097,2026-11-18T16:21:10.778347,SSH,45.244.115.177,22,guest,FAILED,566,4.91,SSH-2.0-paramiko_2.8.0_bot,CN,BruteForce-CredentialSpray,Malicious
+BF-41098,2026-11-18T16:21:12.778347,SSH,45.117.56.98,22,oracle,FAILED,356,4.91,SSH-2.0-paramiko_2.8.0_bot,IR,BruteForce-CredentialSpray,Malicious
+BF-41099,2026-11-18T16:21:14.778347,REST-AuthGateway,45.114.35.148,443,backup,FAILED,521,4.55,SSH-2.0-paramiko_2.8.0_bot,RO,BruteForce-CredentialSpray,Malicious
