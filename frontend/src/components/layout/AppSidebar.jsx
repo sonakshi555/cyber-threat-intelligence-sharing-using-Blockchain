@@ -146,50 +146,6 @@ export function AppSidebar({
             )}
           </div>
 
-          {/* Authenticated Clearance Role Card (Full in expanded, Mini dot in collapsed) */}
-          {isExpanded ? (
-            <div className="rounded-xl border border-line bg-elevated/80 p-3 animate-fade-up">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-medium tracking-wider uppercase text-subtle">
-                  Operational Clearance
-                </span>
-                <span className="text-[10px] font-mono text-ok">Active</span>
-              </div>
-              <div className="mt-1.5 flex items-center gap-2">
-                {role === 'admin' ? (
-                  <ShieldAlert className="size-4 text-danger shrink-0" />
-                ) : role === 'public' ? (
-                  <Globe className="size-4 text-accent shrink-0" />
-                ) : (
-                  <Building2 className="size-4 text-ok shrink-0" />
-                )}
-                <span className="text-xs font-semibold text-fg truncate">
-                  {role === 'admin'
-                    ? 'Consortium Admin'
-                    : role === 'public'
-                    ? 'Public Researcher'
-                    : 'Enterprise SOC Lead'}
-                </span>
-              </div>
-              <p className="mt-0.5 truncate text-[11px] font-mono text-muted">
-                {currentUser?.organization || 'Decentralized CTI Network'}
-              </p>
-            </div>
-          ) : (
-            <div
-              className="mx-auto flex size-10 items-center justify-center rounded-xl border border-line bg-elevated text-accent cursor-pointer"
-              title={`Role: ${currentUser?.role || 'User'} (${currentUser?.organization || 'CTI'})`}
-            >
-              {role === 'admin' ? (
-                <ShieldAlert className="size-4 text-danger" />
-              ) : role === 'public' ? (
-                <Globe className="size-4 text-accent" />
-              ) : (
-                <Building2 className="size-4 text-ok" />
-              )}
-            </div>
-          )}
-
           {/* Navigation Links */}
           <nav className="flex flex-col gap-1.5" aria-label="Main Navigation">
             {NAV_ITEMS.map((item) => {
@@ -243,6 +199,51 @@ export function AppSidebar({
               );
             })}
           </nav>
+
+          {/* Authenticated Clearance Role Card (Full in expanded, Mini dot in collapsed) */}
+          {isExpanded ? (
+            <div className="rounded-xl border border-line bg-elevated/80 p-3 animate-fade-up">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-medium tracking-wider uppercase text-subtle">
+                  Operational Clearance
+                </span>
+                <span className="text-[10px] font-mono text-ok">Active</span>
+              </div>
+              <div className="mt-1.5 flex items-center gap-2">
+                {role === 'admin' ? (
+                  <ShieldAlert className="size-4 text-danger shrink-0" />
+                ) : role === 'public' ? (
+                  <Globe className="size-4 text-accent shrink-0" />
+                ) : (
+                  <Building2 className="size-4 text-ok shrink-0" />
+                )}
+                <span className="text-xs font-semibold text-fg truncate">
+                  {role === 'admin'
+                    ? 'Consortium Admin'
+                    : role === 'public'
+                    ? 'Public Researcher'
+                    : 'Enterprise SOC Lead'}
+                </span>
+              </div>
+              <p className="mt-0.5 truncate text-[11px] font-mono text-muted">
+                {currentUser?.organization || 'Decentralized CTI Network'}
+              </p>
+            </div>
+          ) : (
+            <div
+              className="mx-auto flex size-10 items-center justify-center rounded-xl border border-line bg-elevated text-accent cursor-pointer"
+              title={`Role: ${currentUser?.role || 'User'} (${currentUser?.organization || 'CTI'})`}
+            >
+              {role === 'admin' ? (
+                <ShieldAlert className="size-4 text-danger" />
+              ) : role === 'public' ? (
+                <Globe className="size-4 text-accent" />
+              ) : (
+                <Building2 className="size-4 text-ok" />
+              )}
+            </div>
+          )}
+
         </div>
 
         {/* Bottom Metadata & Smart Contract Pin */}
