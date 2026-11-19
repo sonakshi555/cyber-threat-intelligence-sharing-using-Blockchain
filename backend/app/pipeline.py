@@ -15,7 +15,7 @@ class UnifiedThreatPipeline:
         "DDoS": ["packet", "flow", "bytes", "duration", "rate", "syn", "attack"],
         "Phishing": ["url", "domain", "email", "title", "redirect", "label"],
         "Malware": ["process", "payload", "file", "hash", "command", "registry"],
-        "Brute Force": ["login", "attempt", "failed", "ssh", "username", "password"],
+        "Brute Force": ["login", "attempt", "failed", "ssh", "username", "password", "patator", "port", "flow", "duration", "packet", "flag"],
         "Multi-Vector": ["ransom", "keylog", "smb", "c2", "hook", "entropy", "exfil", "privilege", "vector", "attack"],
     }
 
